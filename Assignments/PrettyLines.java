@@ -1,7 +1,6 @@
-//Bug 1: I want to be able to click anywhere in my Applet window and draw a circle perfectly around that point.
-//Bug 2: I want to be able to draw a line from my point to my previous point.  How can you retain the previous x and y values after clicking?
-//Bug 3: I want to be able to type "s" and "c" and have it switch between drawing a square and circle.  Keep the line though.
-//Bug 4: I want you to make the circle half black and half white.  You might have to look up the Graphics Class online.  Under the Method Summary, what are things you can draw?
+//1. I want to click anywhere in my Applet window and draw a circle perfectly around that point.
+//2. I want to to draw a line from my point to my previous point.  How can you retain the previous x and y values after clicking?
+//3. I want to to type "s" and "c" and have it switch between drawing a square and circle.  Keep the line though.
 
 import java.applet.*;
 import java.awt.*;
