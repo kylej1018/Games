@@ -1,5 +1,5 @@
 //Bug 1: I want to be able to click anywhere in my Applet window and draw a circle perfectly around that point.
-//Bug 2: I want to be able to draw a line from my point to my previous point.  How can you retain the previous x and y values?
+//Bug 2: I want to be able to draw a line from my point to my previous point.  How can you retain the previous x and y values after clicking?
 //Bug 3: I want to be able to type "s" and "c" and have it switch between drawing a square and circle.  Keep the line though.
 //Bug 4: I want you to make the circle half black and half white.  You might have to look up the Graphics Class online.  Under the Method Summary, what are things you can draw?
 
@@ -25,6 +25,7 @@ public class PrettyLines extends Applet implements MouseListener, KeyListener { 
 			g.drawOval(x, y, r*2, r*2); //draw circle
 			g.drawLine(0, 0, x, y);
 		}
+		//add code here for square
 	}
 
 	public void mouseClicked(MouseEvent e) { //x and y update when you click the mouse somewhere
