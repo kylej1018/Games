@@ -57,6 +57,6 @@ public class PrettyLines extends Applet implements MouseListener, KeyListener { 
 
 //Homework: Add something cool to this code.
 //Another shape or color is cool.
-//A circle radius that expands with each click is cool.
+//A circle radius that changes size with each click is cool.
 //Text/titles/instructions is cool.
 //Can you think of anything else?
