@@ -1,6 +1,6 @@
 //1. I want to click anywhere in my Applet window and draw a circle perfectly around that point.
 //2. I want to to draw a line from my point to my previous point.  How can you retain the previous x and y values after clicking?
-//3. I want to to type "s" and "c" and have it switch between drawing a square and circle.  Keep the line though.
+//3. I want to to type "s" and "c" and have it switch between drawing a square and circle.  Still want the line though.
 
 import java.applet.*;
 import java.awt.*;
