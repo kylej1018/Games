@@ -47,7 +47,7 @@ public class PrettyLines extends Applet implements MouseListener, KeyListener { 
 	public void keyPressed(KeyEvent e) {}
 	public void keyReleased(KeyEvent e) {}
 
-	public void update(Graphics g) {
+	public void update(Graphics g) { //overwrites endogenous update(g) so paint(g) doesn't erase canvas with each Event
 		paint(g);
 	}
 
