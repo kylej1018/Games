@@ -24,7 +24,7 @@ public class PrettyLines extends Applet implements MouseListener, KeyListener { 
 			g.drawOval(x, y, r*2, r*2); //draw circle
 			g.drawLine(0, 0, x, y);
 		}
-		//add code here for square
+		//For part 3, add code here for square
 	}
 
 	public void mouseClicked(MouseEvent e) { //x and y update when you click the mouse somewhere
@@ -42,7 +42,7 @@ public class PrettyLines extends Applet implements MouseListener, KeyListener { 
 		if (e.getKeyChar() == 's') {
 			shape = "square";
 		}
-		//add code here for circle
+		//For part 3, add code here for circle
 	}
 	public void keyPressed(KeyEvent e) {}
 	public void keyReleased(KeyEvent e) {}
