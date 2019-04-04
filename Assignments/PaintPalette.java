@@ -1,3 +1,9 @@
+//Splash screen
+//Change colors
+//Change brush sizes
+//Switch from circle to square and others
+//Switch from filled in to outline
+
 import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
