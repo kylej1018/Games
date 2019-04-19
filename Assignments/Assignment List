@@ -4,19 +4,19 @@ PrettyLines
 PaintPalette
 Calculator
 Mastermind
-GuessingGame
 ArrayGames
-TicTacToe
-Memory
+GuessingGame
+TicTacToe (2d)
+Memory (methods)
 Ciphers
 Hangman
 Connect4
 2048
 Trivia
 Mystery
-Elevator
+Elevator (gui)
 Blackjack
-Mosaic
+Mosaic (picture)
 Solitaire
 PaintPalette (exportable)
 Clue
