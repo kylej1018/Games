@@ -4,14 +4,14 @@ PrettyLines
 PaintPalette
 Loops
 GuessingGame
-Memory (methods)
-Mastermind
-TicTacToe (2d)
+Mastermind (methods)
+Memory (2d)
+TicTacToe
 Hangman
 Connect4
-2048
 Trivia
 Mystery
+2048
 Elevator (gui)
 Blackjack
 Mosaic (picture)
@@ -20,7 +20,7 @@ PaintPalette (exportable)
 Clue
 ???
 iPod
-HanoiTower
+HanoiTower (recursion)
 BoxedIn
 Flood
 Othello
