@@ -23,11 +23,9 @@ Solitaire
 PaintPalette (exportable)
 Clue
 ???
-iPod
 HanoiTower (recursion)
 BoxedIn
 Flood
-Othello
 MazeGenerator
 MazeSolver
 Timer
@@ -36,13 +34,11 @@ SimonSays
 Golf
 Snake
 SpaceInvaders
-BugsonDrugs
 Dodger
 Brickbreaker
 Conway
 Minichef
 ~
-Things I'd like to make:
 ShootingGallery
 Monopoly
 SpiderSolitaire
@@ -59,6 +55,7 @@ Backgammon
 Tetris
 BubbleBuster
 FruitNinja
+Othello
 Tycoon
 Filler
 MusicCatch
