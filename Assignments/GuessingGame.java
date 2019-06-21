@@ -18,12 +18,12 @@ App tools you should learn during this lesson: Random, Scanner, if, loops, and E
 
 //Basic input is achieved with the following:
 String input; //or whatever your variables are named
-Scanner sc = new Scanner(); //or you can name it something other than sc
+Scanner sc = new Scanner(System.in); //or you can name it something other than sc
 input = sc.nextLine(); //if you name your Scanner something else, replace this sc
 
 //Numberical input is achieved with the following:
 int num1; //or whatever your variables are named
-Scanner sc = new Scanner();
+Scanner sc = new Scanner(System.in);
 try {
   num1 = Integer.parseInt(sc.nextLine());
 }
