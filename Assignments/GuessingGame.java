@@ -10,7 +10,7 @@ Computer takes numerical input.  See below.
 Based on what the user guesses, the computer should provide hints.  Probably whether the user should guess bigger or smaller.
 Computer takes input & continues to respond with hints until the user guesses correctly.
 The computer should indicate success, tell the user how many tries they took, and comment, ideally in a humorous way.
-The computer offers to play again and prompts the user to type a number to express their desire (Y, N, y, n, Yes, No, YES, NO, yes, no).
+The computer offers to play again and prompts the user to respond (Y, N, y, n, Yes, No, YES, NO, yes, no).
 What if the user doesn't type what your'e expecting?
 Bonus: every time you (re)start the game, the computer offers easy or hard mode.  Hard mode should require more guesses because there are more possible numbers.
 Always comment your code.
