@@ -71,9 +71,6 @@ public class Loops { //does NOT use appletviewer.
 		//#28. Prompt two user inputs.  The second is a number to dictate advancement of the first in an advance cipher.
 			//original:  ABCDEFGHIJKLMNOPQRSTUVWXYZ
 			//coded (3): XYZABCDEFGHIJKLMNOPQRSTUVW
-
-		s.nextLine();
-
 		//#29. Prompt two user inputs.  The second is a keyword to encode the first in a keyword cipher.
 			//original: ABCDEFGHIJKLMNOPQRSTUVWXYZ
 			//coded:    SKELINGTOABCDFHJMPQRUVWXYZ (keyword = SKELLINGTON, but you can't have duplicate letters)
