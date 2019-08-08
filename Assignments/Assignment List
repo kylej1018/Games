@@ -5,13 +5,13 @@ PaintPalette
 Loops 1
 GuessingGame
 Loops 2
-Loops 3
 YearEndBonus
+Loops 3
+TicTacToe (2d)
 Loops 4
 Mystery (methods)
 Loops 5
 Hangman
-Memory (2d)
 Trivia
 Mastermind
 Connect4
@@ -39,7 +39,7 @@ Brickbreaker
 Conway
 Minichef
 ~
-TicTacToe
+Memory
 Madlibs
 ShootingGallery
 Monopoly
