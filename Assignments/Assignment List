@@ -5,7 +5,6 @@ PaintPalette
 Loops 1
 GuessingGame
 Loops 2
-Elevator (gui)
 Loops 3
 YearEndBonus
 Loops 4
@@ -16,6 +15,7 @@ Memory (2d)
 Trivia
 Mastermind
 Connect4
+Elevator
 2048
 Blackjack
 Mosaic (picture)
@@ -39,8 +39,8 @@ Brickbreaker
 Conway
 Minichef
 ~
-Madlibs
 TicTacToe
+Madlibs
 ShootingGallery
 Monopoly
 SpiderSolitaire
