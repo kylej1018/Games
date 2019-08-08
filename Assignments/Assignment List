@@ -5,18 +5,18 @@ PaintPalette
 Loops 1
 GuessingGame
 Loops 2
-Memory (2d)
+YearEndBonus
 Loops 3
-Mastermind (methods)
+Mystery (methods)
 Loops 4
-TicTacToe
+Elevator (gui)
 Loops 5
 Hangman
-Connect4
+Memory (2d)
 Trivia
-Mystery
+Mastermind
+Connect4
 2048
-Elevator (gui)
 Blackjack
 Mosaic (picture)
 Solitaire
@@ -39,6 +39,7 @@ Brickbreaker
 Conway
 Minichef
 ~
+TicTacToe
 ShootingGallery
 Monopoly
 SpiderSolitaire
