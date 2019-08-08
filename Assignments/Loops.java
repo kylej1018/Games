@@ -4,7 +4,7 @@ public class Loops { //does NOT use appletviewer.
 	public static String loc = "C:\\Users\\kylej\\Desktop\\Games\\Java\\sofiacode\\Arrays"; \\FIXME
 	public static void main (String [] args) {
 
-		//LESSON 1
+		//LESSON 1: Variable type conversion, i++ and i+= 1, for/while loops, size limits, random
 
 		Random r = new Random();
 		
@@ -21,7 +21,7 @@ public class Loops { //does NOT use appletviewer.
 		//#8. Find Fibonacci sequence up to a random number of iterations <= 20 (0, 1, 1, 2, 3, 5, 8, 13, 21...)
 		//#9. Find the Collatz sequence of a number <= 50
 
-		//LESSON 2
+		//LESSON 2: arrays, length and access
 
 		int [] sortedIntArray1 = populateNum("sortedIntArray1"); //these three lines populate some example arrays for you to work with.  Don't mess with them.
 		int [] sortedIntArray2 = populateNum("sortedIntArray2");
@@ -37,7 +37,7 @@ public class Loops { //does NOT use appletviewer.
 		//#13. Merge sortedIntArray1 and sortedIntArray2 into a new array {1, 2, 5, 6, 9} + {1, 4, 5, 6, 8} --> {1, 1, 2, 4, 5, 5, 6, 6, 8, 9}
 		//#14. Make a new array identical to unsortedIntArray1, except consecutive duplicates are deleted {1, 4, 9, 2, 2, 0} --> {1, 4, 9, 2, 0}
 
-		//LESSON 3
+		//LESSON 3: ArrayLists, size(), get, 2d
 
 		//#15. Take sortedIntArray1 and randomize it in a new array.
 		//#16. "extractsort" unsortedIntArray. The next smallest element goes to the end in new array {1, 4, 2, 3} --> {} {1} {1, 2} {1, 2, 3} {1, 2, 3, 4}
@@ -46,7 +46,7 @@ public class Loops { //does NOT use appletviewer.
 			//{1, 5, 1, 6, 2, 2, 3, 1, 5} --> {1, 2, 3, 4, 5, 6} --> {1, 1, 1, 2, 2, 3, 5, 5, 6}
 			//				  {3, 2, 1, 0, 2, 1}
 
-		//LESSON 4
+		//LESSON 4: Strings, length(), charAt(), indexOf(), compareTo(), equals()
 
 		ArrayList <String> stringArray1 = populateStr("StringArray1"); //more example arrays.  Don't mess with them.
 		ArrayList <String> stringArray2 = populateStr("StringArray2");
@@ -59,7 +59,7 @@ public class Loops { //does NOT use appletviewer.
 		//#23. Invert each word in stringArray2 {the quick brown fox} --> {eht kciuq nworb xof}
 		//#24. Make an array of only the palindromes in stringArray2
 
-		//LESSON 5
+		//LESSON 5: Scanner, toLowerCase and upper, substring(x), substring(x, y), parseInt
 
 		Scanner s = new Scanner(System.in);
 
