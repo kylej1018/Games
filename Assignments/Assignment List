@@ -6,16 +6,15 @@ Loops 1
 GuessingGame
 Loops 2
 Loops 3
-YearEndBonus (gui)
-TicTacToe (2d)
+Memory (gui)
 Loops 4
-Mystery (methods)
+TicTacToe (2d)
 Loops 5
 Hangman
-Memory
+YearEndBonus
+Mystery (methods)
 Trivia
 Mastermind
-Connect4
 2048
 Blackjack
 Mosaic (picture)
@@ -23,6 +22,7 @@ Solitaire
 PaintPalette (exportable)
 Clue
 ???
+Connect4
 HanoiTower (recursion)
 BoxedIn
 Flood
