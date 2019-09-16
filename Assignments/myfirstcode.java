@@ -4,3 +4,5 @@ public class myfirstcode {
 		System.out.print("Hello, world!");
 	}
 }
+
+//Assignment: Get this code to run.  When you've succeeded, make it print something else.
