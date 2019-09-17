@@ -2,8 +2,11 @@ import java.util.Scanner;
 import java.util.Random;
 
 /*INSTRUCTIONS
-Make an app called GuessingGame.
-It should use the command prompt, not appletviewer.
+Make an app called GuessingGame.  You should have figured out by now how to make the line about "public class".  Do not use KeyListener or MouseListener.
+It should use System.out.print and Scanner and be entirely coded within
+public static void main(String[] args) {
+  //all your code here
+}
 When the game starts, the computer should have a random number between 1 and 100.
 It should tell the user to guess.  Probably should indicate the numberical limits. (System.out.print)
 Computer takes numerical input.  See below.
@@ -14,9 +17,12 @@ The computer offers to play again and prompts the user to respond (Y, N, y, n, Y
 What if the user doesn't type what your'e expecting?
 Bonus: every time you (re)start the game, the computer offers easy or hard mode.  Hard mode should require more guesses because there are more possible numbers.
 Always comment your code.
-App tools you should learn during this lesson: Random, Scanner, if, loops, and Exceptions.*/
 
-//Basic input is achieved with the following:
+Other than Loops, most programs we've run so far use a popup JFrame window.  You'll see the words JFrame and JPanel in PaintPalette, PrettyLines, and Picture.  Not here.
+That means we can't introduce a keyListener to this program.  We'll use scanner instead.
+Most programs we run have a myPaint area.  Not here, we have a System.out.print instead.
+Scanner and System.out.print are much easier to understand than the JFrame and keyListener.  But they don't look nearly as nice, so we use them for exercises and debugging rather than actual game content.
+String input from the user is achieved with the following:*/
 String input; //or whatever your variables are named
 Scanner sc = new Scanner(System.in); //or you can name it something other than sc
 input = sc.nextLine(); //if you name your Scanner something else, replace this sc
