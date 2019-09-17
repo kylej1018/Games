@@ -8,22 +8,25 @@ Suggested features:
 ~Switch from filled in to outline
 ~Be able to clear screen to blank (or just draw a huge rectangle that "looks" blank)
 ~Set the font to Heveltica or something that doesn't look lame for g.drawString (might want to look up how - it's not that hard)
+~Procreate and similar games have "buttons" to help the user facilitate these features.  You should too.
 
-Procreate and similar games have "buttons" to help the user facilitate these features.  Some suggestions on buttons:
-Make a rectangle area and test if x is between the two bounds (or, should I say, farther than the left side && less far than the right side).  Same for y.
-If mouse is in the button boundaries when clicked, change a variable.  Then in myPaint, if variable is...whatever, then paint the smear accoridngly.  Lots of conditionals, I told you.
-
-Food for thought:
-How many of these features need a "button" area on the screen?
+Questions to answer before you start:
+How many "buttons" will you need?  How big should they be?  Where will they go?
 Could any of these have keyboard shortcuts, like brush sizes changed when the user types a number?
 Would your buttons look nicer with a black outline?
-What will you name your variables?  How many global ones will you need?  Remember, g.setColor doesn't work in mouseClicked.  g is only in myPaint.
 What can you put in your buttons so it's obvious to your user what it does?
 What can you do so that the user knows what choice is selected?  Should the active choice be a different color from the rest of the buttons?
 
-Take your time with this project.  Design what you want your screen to look like before you start.  Figure out the x and y coordinates of your buttons.
-Go in small spurts.  First, get a black circle around your mouse where you click (reference PrettyLines).  Then make it follow when you drag your mouse.  Maybe change a color or something when you type the correct key.  Maybe draw one button and change a color or something if the mouse clicks inside it.
+Now design what you want your screen to look like before you start coding.  Actually write down the x and y coordinates of your buttons.
+Once you start coding, go in small spurts.  First, get a black circle around your mouse where you click (reference PrettyLines).
+Then make it follow when you drag your mouse.
+Maybe next change a color or something when you type the correct key.
+Maybe next draw one button and change a color or something if the mouse clicks inside it.
 Comment your code.  Don't learn the hard way that commenting is not optional.
+
+Some suggestions on buttons:
+Make a rectangle area and test if x is between the two bounds (or, should I say, farther than the left side && less far than the right side).  Same for y.
+If mouse is in the button boundaries when clicked, change a global variable.  Then in myPaint, if variable is...whatever, then paint the smear or set the color.
 
 One final note...I've built double-buffering into this outline.  Let me explain what that is so you can use it in future projects.
 Odds are, your myPaint method is going to get very very large.
