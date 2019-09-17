@@ -1,6 +1,6 @@
 /*Download the Arrays.zip in the "homework" section of this Github.
 Fix the FIXME line to reflect where you saved it.
-Complete all these assignments.  Use System.out.print and println often.  Anytime something goes wrong, I use it.  I use it to see if my variables are actually what I expect.  I use it to see if I can even reach that part of the code or if it gets stuck before.  System.out.print is your best friend when debugging.
+Complete all these assignments.  You're encouraged to use System.out.print and println often for debugging - use it to see if your variables are actually what you expect.  Use it to see if you can even reach that part of the code or if it gets stuck before.
 */
 import java.io.*;
 import java.util.*;
