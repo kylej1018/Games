@@ -38,8 +38,6 @@ public class Picture {
 		//g.drawString("Hello, world!", 80, 5);
 	}
 }
-/*<applet code="picture" width=300 height=300>
-</applet>*/
 
 /*INSTRUCTIONS:
 We're going to look at and edit the area within public void myPaint(Graphics g), the rest just helps it work.
