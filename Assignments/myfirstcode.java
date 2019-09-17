@@ -5,4 +5,7 @@ public class myfirstcode {
 	}
 }
 
-//Assignment: Get this code to run.  When you've succeeded, make it print something else.
+//Assignment: Get this code to run.
+//Try putting something between the quotes in System.out.println("");
+//Try adding another System.out.print line saying something.  What is the difference between print and println?  (hint: println is pronoucnmed "print line")
+//Homework: Make it print your favorite joke.
