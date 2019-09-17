@@ -46,7 +46,7 @@ We're going to look at and edit the area within public void myPaint(Graphics g),
 Run this code.
 Psych.  You have to debug this code before it's runnable.
 What does g.drawRect do?
-What about g.drawOval, g.fillOval, and g.fillRect?
+What about g.drawOval, g.fillOval, and g.fillRect?  Suppose there's a g.drawLine?  g.fillLine?
 Add 100 to the first number in g.drawOval.  What happens to the picture?  What if that number is 0?
 What do the first two numbers indicate?  The second two?
 How does your picture change if you switch the g.drawRect and g.fillRect lines?  Does order matter?
@@ -63,4 +63,7 @@ c = Color.red;
 Try initializing c to different colors.  What colors work?  Can you find a color that doesn't work?
 What happens if you remove the // before g.drawString?
 Turns out, // is used to add comments to your code.  You should comment often so that people using (or helping with) your code can understand it easier.
+
+HOMEWORK:
+Draw me a picture.  It should use at least one draw and at least one fill statement, two or more colors, and text.
 */
