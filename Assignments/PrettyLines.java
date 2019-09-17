@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class PrettyLines extends Applet implements MouseListener, KeyListener { //use appletviewer to run
+public class PrettyLines implements MouseListener, KeyListener {
 	JFrame window = new JFrame("PrettyLines");
 	JPanel pane;
 	
@@ -66,10 +66,8 @@ public class PrettyLines extends Applet implements MouseListener, KeyListener { 
 	public void keyPressed(KeyEvent e) {}
 	public void keyReleased(KeyEvent e) {}
 }
-/*<applet code="PrettyLines" width=1300 height=800>
-</applet>*/
 
-/*Last time, we worked only in the myPaint area.  We'll do some of that this time, but now you'll also be looking at global variables and input areas.
+/*Last time, we worked only in the myPaint area.  We'll do some myPaint() this time, but now you'll also be looking at global variables and input areas.
 You'll need to know some things before trying to debug this code.
 
 Variables!  There are a few different types of variables to know.
@@ -104,7 +102,11 @@ You can use < or >, or == for equal to.  You need 2 equals signs, otherwise, it 
 If you want to use "not" greater than, you use != to say it.  >= is greater than or equal to, <= is less than or equal to.
 If you have a boolean b, you can even say if(b) or if(!b).
 If this condition is met, the code below it will execute.  If not, it will skip that code.
-Can you find an example in this code?
+Can you find an example of a conditional in this code?
+You may also want to test if two things are true - check these examples!
+if(a == 3 && b < 1) "If a is 3 and b is less than 1"
+if(a == 3 || b < 1) "If a is 3 or b is less than 1"
+if(a != 3 && !(b < 1)) "If a is not 3 and not-(b is less than 1)"
 
 Homework:
 1. I want to click anywhere in my Applet window and draw a circle perfectly around that point.
