@@ -22,12 +22,13 @@ Here are some useful operators
   !> not greater than
 
 You can even use the ! symbol like this:
-  boolean b = true;
-  if(!b) {
+  boolean condition1 = true;
+  if(!condition1) {
     //code
   }
+This will only execute if condition1 is false.
 
-You may also want to test if two things are true - check these examples!
+You may also want to test if two things are true - check these examples with a and b both variables of type int.
 if(a == 3 && b < 1) "If a is 3 and b is less than 1"
 if(a == 3 || b < 1) "If a is 3 or b is less than 1"
 if(a != 3 && !(b < 1)) "If a is not 3 and not-(b is less than 1)"
@@ -53,6 +54,20 @@ In this example, only the code in the brackets around the last "else" got execut
 You can have as many "else if" conditionals as you want.  This example had 2.
 You can have a final "else" statement to capture EVERYTHING not yet covered...or just leave it out.
 
+You can put a conditional inside your conditional if you want.
+Make sure you're keeping track of your brackets and indent properly.
+if(condition1) {
+  if(condition2) {
+    //code
+  }
+  if(condition3) {
+    //code
+    if(condition4) {
+      //code
+    }
+  }
+}
+
 By convention, it's frowned upon to use ==true or ==false in your code.
-Instead of if(b == true)
-Use if(b)
+Instead of if(condition == true)
+Use if(condition)
