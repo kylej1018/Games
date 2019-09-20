@@ -26,6 +26,31 @@ public class Loops {
 		//#14. Make a new array identical to unsortedIntArray1, except consecutive duplicates are deleted {1, 4, 9, 2, 2, 0} --> {1, 4, 9, 2, 0}
 	}
 	
+	public static int [] populateNum(String s) { //this is how the computer reads the text files.  Don't mess with this.
+		ArrayList <String> arr1 = populateStr(s);
+		int [] arr2 = new int[arr1.size()];
+		for(int i = 0; i < arr1.size(); i++) {
+			arr2[i] = Integer.parseInt(arr1.get(i));
+		}
+		return arr2;
+	}
+
+	public static ArrayList <String> populateStr(String s) { //this is how the computer reads the text files.  Don't mess with this.
+		ArrayList <String> arr = new ArrayList<String>();
+		String loc2 = loc + "\\" + s + ".txt";
+		try {
+			File f = new File(loc2);
+			BufferedReader br = new BufferedReader(new FileReader(f));
+			String input = br.readLine();
+			while(input != null) {
+				arr.add(input);
+				input = br.readLine();
+			}
+		}
+		catch(Exception e) {}
+		return arr;
+	}
+	
 	public static void printArray (int [] arr) { //this prints your arrays for you
 		for(int i = 0; i < arr.length; i++) {
 			System.out.print(" "+arr[i]);
