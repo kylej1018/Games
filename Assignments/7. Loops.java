@@ -25,4 +25,19 @@ public class Loops {
 		//#13. Merge sortedIntArray1 and sortedIntArray2 into a new array {1, 2, 5, 6, 9} + {1, 4, 5, 6, 8} --> {1, 1, 2, 4, 5, 5, 6, 6, 8, 9}
 		//#14. Make a new array identical to unsortedIntArray1, except consecutive duplicates are deleted {1, 4, 9, 2, 2, 0} --> {1, 4, 9, 2, 0}
 	}
+	
+	public static void printArray (int [] arr) { //this prints your arrays for you
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(" "+arr[i]);
+		}
+		System.out.println();
+	}
+
+	public static void printArray (ArrayList <String> arr) { //this prints your arrays for you
+		for(int i = 0; i < arr.size(); i++) {
+			System.out.print(" "+arr.get(i));
+		}
+		System.out.println();
+	}
+}
 }
