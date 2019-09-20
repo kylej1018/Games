@@ -19,7 +19,32 @@ public class Loops {
 		//#18. "countsort" unsortedIntArray  Find range & make a 2D array.  First dimension = all ints in range.  In second dimension, number of occurrences of each int.
 		  //{1, 5, 1, 6, 2, 2, 3, 1, 5} --> {1, 2, 3, 4, 5, 6} --> {1, 1, 1, 2, 2, 3, 5, 5, 6}
 		  //                                {3, 2, 1, 0, 2, 1}
-    }
+	}
+	
+  	public static int [] populateNum(String s) { //this is how the computer reads the text files.  Don't mess with this.
+		ArrayList <String> arr1 = populateStr(s);
+		int [] arr2 = new int[arr1.size()];
+		for(int i = 0; i < arr1.size(); i++) {
+			arr2[i] = Integer.parseInt(arr1.get(i));
+		}
+		return arr2;
+	}
+
+	public static ArrayList <String> populateStr(String s) { //this is how the computer reads the text files.  Don't mess with this.
+		ArrayList <String> arr = new ArrayList<String>();
+		String loc2 = loc + "\\" + s + ".txt";
+		try {
+			File f = new File(loc2);
+			BufferedReader br = new BufferedReader(new FileReader(f));
+			String input = br.readLine();
+			while(input != null) {
+				arr.add(input);
+				input = br.readLine();
+			}
+		}
+		catch(Exception e) {}
+		return arr;
+	}
     
 	public static void printArray (int [] arr) { //this prints your arrays for you
 		for(int i = 0; i < arr.length; i++) {
