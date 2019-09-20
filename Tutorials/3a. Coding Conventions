@@ -3,6 +3,9 @@ You won't know what every term in this document means yet.  Please refer back to
 ~ = etiquette or convention
 blank = background
 
+Semicolons:
+#Basically every line in java ends with a semicolon.  The only ones that don't open a curly bracket, or close an existing curly bracket.
+
 Comments:
 #You should comment often so that people using (or helping with) your code can understand it easier.
 #Use /* and */ for multi-line comments.  Use // for comments on one line.
@@ -32,12 +35,30 @@ Indentation:
 #Indent code inside curly brackets so it's easier to read.
 ~It doesn't really matter how much, but be consistent.  Recommended: 1 tab or three spaces.
 ~If you have curly brackets inside curly brackets, indent the interior part another tab or three spaces.
+~Don't indent without reason.
 
 Spaces:
 ~Avoid extra blank lines.  There are some exceptions - if you're separating a bunch of related variables, it can help readability to have them separated by a blank line.
+~Have a space around each operator but not before the semicolon or before a square bracket.
+  int x = 3; //not int x=3;
+  int[] x = new int[3]; //not int [] x=new int [3] ;
+  int x = y * z; //not y*z
 
+Brackets:
+#Every opening curly bracket needs a closing bracket.  Same for parentheses.
+~Put an opening bracket on the end of a line but a closing bracket gets its own, unindendent.
+  while(i < 100) {
+    i++;
+  }
+
+Import statements:
+~If only one class is used from a package, import that class by name.  If two or more, use the * symbol.
+
+Other:
+~Don't use the continue statement.
 
 Conditionals:
+~Don't use ==true or ==false in your code.
 
-Semicolons:
-#Basically every line in java ends with a semicolon.  The only ones that don't open a curly bracket, or close an existing curly bracket.
+Methods:
+~Try to return a value that is assigned at multiple points instead of having multiple returns.
