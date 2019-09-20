@@ -1,4 +1,5 @@
-/*INSTRUCTIONS:
+/*
+INSTRUCTIONS:
 We're going to look at and edit the area called public void myPaint(Graphics g).  Don't worry about the rest.
 Download and save this code as picture.java.
 If you've never used command prompt, look at Tutorial 2a.
