@@ -12,6 +12,7 @@ Import Statements:
  These are three distinct import statements.  The * means "everything in that package."  So the entire contents of java.awt are imported in the first line.
  java.awt.event is not in the java.awt package.  Common misconception.
  java.lang.Object IS in the java.lang folder.  I know this because Object is capitalized, meaning it's a class, but everything before it is not, meaning it's a package.
+~If only one class is used from a package, import that class by name.  If two or more, use the * symbol.
 
 Class:
 #Below import statements is something like public class PrettyLines.
