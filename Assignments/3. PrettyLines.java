@@ -1,4 +1,5 @@
-/*Last time, we worked only in the myPaint area.  We'll do some myPaint() this time, but now you'll also be looking at global variables and user input.
+/*
+Last time, we worked only in the myPaint area.  We'll do some myPaint this time, but now you'll also be looking at global variables and Listener interfaces.
 Read through all the tutorials for section 3 before starting.
 You might want to brush up on Tutorial 2b.
 
