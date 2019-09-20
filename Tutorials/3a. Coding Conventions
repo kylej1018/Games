@@ -51,9 +51,6 @@ Brackets:
     i++;
   }
 
-Import statements:
-~If only one class is used from a package, import that class by name.  If two or more, use the * symbol.
-
 Other:
 ~Don't use the continue statement.
 
@@ -62,3 +59,4 @@ Conditionals:
 
 Methods:
 ~Try to return a value that is assigned at multiple points instead of having multiple returns.
+~Declare methods in the order they're called.  Listeners go at the bottom, unless they call additional methods.
