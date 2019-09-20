@@ -8,64 +8,6 @@ public class Loops {
 	public static String loc = "C:\\Users\\kylej\\Desktop\\"; \\FIXME
 	public static void main (String [] args) {
 
-		/*LESSON 1 things to know before starting:
-		So, variables are great.  Ints, Strings, doubles, all that.  But how do they interact?
-		If you put an int and a double in the same equation, the answer is a double.  If you print 10/5.0, the answer is 2.0, not 2.
-		What if you really wanted that to be an int?  You typecast like so: (int)(10/5.0) produces 2, not 2.0
-		You could typecast variables as well. a = 0.0; (int)a will give you 0.
-		What will be your output if you divide 7/2?  It's not 3.5, so you should try it.
-		But Strings take priority.  If you print 1+2, you'll get 3.  If you print 1.0 + "2", you'll get "1.02".
-
-		Math operators.  +, -, *, and / are pretty self-explanatory.  ^ (power) does not exist.  % is cool, it gives you the remainder when two numbers are divided, like how 9%5 is 4.
-		Sometimes you don't want to re-initialize an int variable, you just want it to change value.
-		You can do i *= 2, which is like saying i = i*2.
-		i -= 5 subtracts 5 from i.
-		i += 1 increments i by 1 but most programmers will just say i++;
-
-		Loops.
-		Sometimes you want to do something a bunch of times.  There are two loops to do that with, called for-loops and while-loops.
-		For-loops execute a set number of times.  They look like this:
-		for(int i = 1; i <= 100; i += 2) {
-			//do code
-		}
-		The first bit establishes the iteration variable i, which starts at 1.  It will keep track of which loop we are on.
-		The second bit is a boolean that must be true for the loop to execute - i must be less than or equal to 100.
-		The third bit happens every time the loop completes - i increments by 2.
-		Thus, this loop will happen fifty times.  On the fifty first time, i will go from 99 to 101 and the loop will "break" and the code will continue.
-		It is very good to have loops break.  If they run forever, life sucks.
-
-		While-loops execute "while" the condition is true.  They look like this:
-		while(i <= 100) {
-			//do code
-		}
-		So you probably need to make i get bigger inside the loop, or else it will never break.
-		Every for loop can be replaced with a while loop (although for loops, it's easier to read what you expect).
-		Not every while loop can be replaced with a for loop.  Sometimes you just don't know how much you need to do something.  There is at least one of these in LESSON 1's assignments.
-
-		Here's a loop for you to run:
-			for(int i = 0; i > -1800000000  || i < -1900000000; i = i + 50000) {
-				System.out.println(""+i);
-			}
-		What happened?  Your computer reached its maximum size limit.  It can only think about 2,147,483,647 things before it runs out of bits and has to reset in this very strange way.
-		Look up the Year 2038 problem.  What does that have to do with this number?
-
-		Random.  A random number generator is made with Random r = new Random();  You can assign a variable to r.nextInt() and that variable will have been randomly generated.  Please only make one Random r per code.
-		
-		Before each operation, System.out.print the task number.
-		Please print these operations in complete sentences, like "66 + 44 = 100" so you can tell when your math is wrong.
-
-		*/
-		Random r = new Random();
-		//#1. Sum two random numbers <= 1000
-		//#2. Subtract two random numbers <= 1000
-		//#3. Multiply two random numbers <= 100
-		//#4. Divide two doubles <= 1000
-		//#5. Divide two ints <= 1000 and print quotient and fraction remainder ("50/9 = 5 5/9")
-		//#6. Raise a random number <=10 to the power of another number <= 10
-		//#7. Find the factorial of a random number <= 15
-		//#8. Find Fibonacci sequence up to a random number of iterations <= 20 (0, 1, 1, 2, 3, 5, 8, 13, 21...) (look up what this sequence is)
-		//#9. Find the Collatz sequence of a number <= 50 (look up what this is)
-
 		/*LESSON 2 things to know before starting:
 		Before each transformation, System.out.print the task number.
 		Sometimes you need lots of variables remembered.  We store them in a list called an "array."
