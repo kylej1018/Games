@@ -6,7 +6,7 @@ boolean = literally only can have the values true, false.  Sometimes you can hav
 char = a character, surrounded by single quotes.  Could be 'a', 'g', 'A', '.', '#', or ' '.
 String = a bunch of text, surrounded by double quotes.  Could be "mytext", "this is not a string", or " ".  The word String is capitalized.
 
-For example, the value 8 is an int, the value 8.0 is a double, the value '8' is a char, and the value "8" is a String.
+For example, the value 8 is an int, the value 8.0 is a float, the value '8' is a char, and the value "8" is a String.
 
 If they're declared in curly brackets, they're local variables and other parts of your code can't use them.
 The opposite of local variables is global variables, which are established right after the class line.
