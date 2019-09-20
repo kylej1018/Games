@@ -1,0 +1,24 @@
+There is no truly random number.  A computer can generate a pseudo-random number using a random number library, which looks like this:
+274984581245010976102157617509191238
+It *looks* random and will be useful in a majority of coding you do.
+
+To use it, you have to make a random number generator ONCE per code.
+  Random r = new Random();
+and then actually generate a number as many times as you like.
+  int x = r.nextInt();
+  double x = r.nextDouble();
+  float x = r.nextFloat();
+  boolean x = r.nextBoolean(); //not a number, obviously
+
+You can set boundaries of r.nextInt():
+  int x = r.nextInt(100); //will give you a random number between 0 and 99 inclusive.
+What if you really wanted it from 1 to 100?
+  int x = r.nextInt(100) + 1;
+But not
+  int x = r.nextInt(100 + 1); //this will give you a random number between 0 and 100 inclusive.
+
+r.nextDouble() and r.nextFloat() have a lower bound of 0.0 and an upper bound of 1.0 inclusive.
+What if you really wanted it from 0.0 to 100.0?
+  float x = r.nextFloat() * 100;
+What if you wanted it from 1.0 to 100?
+  float x = r.nextFloat() * 99 + 1;
