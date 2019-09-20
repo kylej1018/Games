@@ -22,12 +22,12 @@ Paste the path you saved earlier.
 Press "Move Up" until your path is at the top.
 Press OK a bunch of times to exit all these popups.
 
-Now you can actually code.  Open Notepad and paste the sample code from myfirstcode.java in my Github's Assignments page.
-Save that as myfirstcode.java on your Desktop
+Now you can actually code.  Open Notepad and paste the sample code from MyFirstCode.java in the Assignments page.
+Save that as MyFirstCode.java on your Desktop.
 Search Cortana for Command Prompt and click the first hit.
 Enter cd Desktop
 Enter javac myfirstcode.java
 If there were errors, stop and ask for help.
 If there were no errors, enter java myfirstcode
 
-It's traditional for your first assignment to be getting the computer to say "Hello, world!"  You've taken your first real step.
+It's traditional for your first assignment to be getting the computer to say "Hello, world!"  You've taken your first real step towards learning programming!
