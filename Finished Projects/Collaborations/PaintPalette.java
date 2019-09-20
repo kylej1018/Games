@@ -1,22 +1,28 @@
-import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-public class PaintPalette extends Applet implements MouseListener, MouseMotionListener, KeyListener { //use appletviewer to run
-	int x = -100; //x and y are mouse locations
-	int y = -100;
-	int r = 25; //size
 
+public class PaintPalette implements MouseListener, MouseMotionListener, KeyListener {
+	int x = -50; 
+	int y = -50;
+	int r = 25;
+	int scrollx = 8;
+	int scrolly = 275;
+	boolean onscroll = false;
+	boolean isFilled = true;
+	Color rainbow = Color.black;
 	boolean splash = true;
 	boolean clear = false; //for clearing screen under certain conditions
 	String shape = "circle"; //shape can be circle, square, triangle, or star
 	boolean buttonupdate = false; //if a key is pressed, repaint buttons but don't actually draw the shape
 	Font myFont = new Font("Helvetica", Font.BOLD, 20); //name of font, Font.BOLD or PLAIN or ITALIC, font size
 
-	Image buff; //these four variables are for double buffering
+	JFrame window;
+	JPanel pane;
+	Dimension screen;
+	Image buffImg; //these four variables are for double buffering
 	Graphics g2;
-	int screenwidth; //screenwidth and height keep track of user's computer screen size
-	int screenheight;
+	int screenwidth, screenheight; //screenwidth and height keep track of user's computer screen size
 
 	int[] trix = new int[3]; //all these []s are for drawing triangles and stars
 	int[] triy = new int[3];
@@ -28,16 +34,46 @@ public class PaintPalette extends Applet implements MouseListener, MouseMotionLi
 	int[] starbuttony;
 	int z; //for painting shape buttons. Note all buttons are 30x30
 
-	public void init() {
-		addMouseListener(this);
-		addMouseMotionListener(this);
-		addKeyListener(this);
+	public static void main(String[] args) {
+		PaintPalette game = new PaintPalette();
+	}
 
-		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize(); //resizes applet to computer screen size
+	public PaintPalette() { //constructor
+		preInit();
+		init();
+	}
+
+	public void preInit() {
+		window = new JFrame("PaintPalette");
+		pane = new JPanel() {
+			@Override
+			public void paintComponent(Graphics g) {
+				buffer(g);
+			}
+
+			public void buffer(Graphics g) {
+				if(buffImg == null) { //for double-buffering
+					buffImg = createImage(screenwidth, screenheight);
+				}
+				myPaint(buffImg.getGraphics()); //don't override paint(), it produces errors
+				g.drawImage(buffImg, 0, 0, pane);
+			}
+		};
+		screen = Toolkit.getDefaultToolkit().getScreenSize(); //resizes applet to computer screen size
 		screenwidth = (int)screen.getWidth();
 		screenheight = (int)screen.getHeight();
-		resize(screenwidth, screenheight);
+		window.setSize(screenwidth, screenheight);
 
+		pane.addMouseListener(this);
+		pane.addMouseMotionListener(this);
+		pane.addKeyListener(this);
+		pane.setFocusable(true);
+		window.add(pane);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setVisible(true);
+	}
+
+	public void init() {
 		//a bunch of variables to make drawing shape-changing buttons easier
 		z = 30*17; //x-coordinate for triangle button
 		tributtonx = new int[]{z+15, z+5, z+25};
@@ -48,7 +84,7 @@ public class PaintPalette extends Applet implements MouseListener, MouseMotionLi
 		z = z-90; //x-coordinate for cirle button
 	}
 
-	public void paint(Graphics g) {
+	public void myPaint(Graphics g) {
 		//An outline of paint() method, in this order:
 		//1. Set things like font, color
 		//2. Draw "paint smears" according to where user clicks
@@ -57,14 +93,23 @@ public class PaintPalette extends Applet implements MouseListener, MouseMotionLi
 		//5. Draw splash screen
 
 		g.setFont(myFont);
-
-		g.setColor(Color.black); //user paints black shapes
+		g.setColor(rainbow);
 
 		if(shape.equals("circle") && x>30 && y>30 && !buttonupdate) { //draw circle at x,y
-			g.fillOval(x-r, y-r, r*2, r*2);
+			if (isFilled && y>30 && onscroll == false) { 
+				g.fillOval(x-r, y-r, r*2, r*2);
+			}
+			if (!isFilled && y>30 && onscroll == false) { 
+				g.drawOval(x-r, y-r, r*2, r*2);
+			}
 		}
 		if(shape.equals("square") && x>30 && y>30 && !buttonupdate) { //draw square at x,y
-			g.fillRect(x-r, y-r, r*2, r*2);
+			if (isFilled && y>30 && onscroll == false) { 
+				g.fillRect(x-r, y-r, r*2, r*2);
+			}
+			if (!isFilled && y>30 && onscroll == false) { 
+				g.drawRect(x-r, y-r, r*2, r*2);	
+			}
 		}
 		if(shape.equals("triangle") && x>30 && y>30 && !buttonupdate) { //draw triangle at x,y
 			trix[0] = x;
@@ -73,7 +118,12 @@ public class PaintPalette extends Applet implements MouseListener, MouseMotionLi
 			triy[0] = y-r;
 			triy[1] = y+r;
 			triy[2] = y+r;
-			g.fillPolygon(trix, triy, 3);
+			if (isFilled && y>30 && onscroll == false) { 
+				g.fillPolygon(trix, triy, 3);
+			}
+			if (!isFilled && y>30 && onscroll == false) { 
+				g.drawPolygon(trix, triy, 3);
+			}
 		}
 		if(shape.equals("star") && x>30 && y>30 && !buttonupdate) { //draw star at x,y
 			starx[0] = x;
@@ -96,7 +146,12 @@ public class PaintPalette extends Applet implements MouseListener, MouseMotionLi
 			stary[7] = y+(r/5);
 			stary[8] = y-(r/5);
 			stary[9] = y-(r/5);
-			g.fillPolygon(starx, stary, 10);
+			if (isFilled && y>30 && onscroll == false) { 
+				g.fillPolygon(starx, stary, 10);
+			}
+			if (!isFilled && y>30 && onscroll == false) { 
+				g.drawPolygon(starx, stary, 10);
+			}
 		}
 
 		if(clear) { //clears screen
@@ -104,8 +159,6 @@ public class PaintPalette extends Applet implements MouseListener, MouseMotionLi
 			g.fillRect(0, 0, screenwidth+1, screenheight+1);
 			clear = false;
 		}
-
-		g.drawImage(buff, 0, 0, this); //I was having issues with drawing not repainting upon size change, or minimizing. Adding this line to paint transfers the buffered image when, paint for some reason is called by the computer and not through update()
 
 		if(!splash) { //buttons were appearing before splash screen
 			g.setColor(Color.gray); //draw buttons
@@ -140,10 +193,108 @@ public class PaintPalette extends Applet implements MouseListener, MouseMotionLi
 			g.drawString("w", z+41, 18);
 			g.drawString("e", z+72, 20);
 			g.drawString("r", z+103, 20);
+
+			g.setColor(Color.gray); //draw color buttons
+			g.fillRect(70, 0, 270, 30);
+			g.setColor(Color.white); //draw active color button
+			if(rainbow == Color.white) {
+				g.fillRect(70, 0, 30, 30);
+			}
+			if(rainbow == Color.red) {
+				g.fillRect(100, 0, 30, 30);
+			}
+			if(rainbow == Color.orange) {
+				g.fillRect(130, 0, 30, 30);
+			}
+			if(rainbow == Color.yellow) {
+				g.fillRect(160, 0, 30, 30);
+			}
+			if(rainbow == Color.green) {
+				g.fillRect(190, 0, 30, 30);
+			}
+			if(rainbow == Color.blue) {
+				g.fillRect(220, 0, 30, 30);
+			}
+			if(rainbow == Color.magenta) {
+				g.fillRect(250, 0, 30, 30);
+			}
+			if(rainbow == Color.gray) {
+				g.fillRect(280, 0, 30, 30);
+			}
+			if(rainbow == Color.black) {
+				g.fillRect(310, 0, 30, 30);
+			}
+			g.setColor(Color.black); //draw black circles in color buttons
+			g.drawRect(70, 0, 30, 30);
+			g.drawOval(70, 0, 30, 30);
+			g.drawRect(100, 0, 30, 30);
+			g.drawOval(100, 0, 30, 30);
+			g.drawRect(130, 0, 30, 30);
+			g.drawOval(130, 0, 30, 30);
+			g.drawRect(160, 0, 30, 30);
+			g.drawOval(160, 0, 30, 30);
+			g.drawRect(190, 0, 30, 30);
+			g.drawOval(190, 0, 30, 30);
+			g.drawRect(220, 0, 30, 30);
+			g.drawOval(220, 0, 30, 30);
+			g.drawRect(250, 0, 30, 30);
+			g.drawOval(250, 0, 30, 30);
+			g.drawRect(280, 0, 30, 30);
+			g.drawOval(280, 0, 30, 30);
+			g.drawRect(310, 0, 30, 30);
+			g.drawOval(310, 0, 30, 30);
+			g.setColor(Color.white); //draw colors in color buttons
+			g.fillOval(70, 0, 30, 30);
+			g.setColor(Color.red);
+			g.fillOval(100, 0, 30, 30);
+			g.setColor(Color.orange);
+			g.fillOval(130, 0, 30, 30);
+			g.setColor(Color.yellow);
+			g.fillOval(160, 0, 30, 30);
+			g.setColor(Color.green);
+			g.fillOval(190, 0, 30, 30);
+			g.setColor(Color.blue);
+			g.fillOval(220, 0, 30, 30);
+			g.setColor(Color.magenta);
+			g.fillOval(250, 0, 30, 30);
+			g.setColor(Color.gray);
+			g.fillOval(280, 0, 30, 30);
+			g.setColor(Color.black);
+			g.fillOval(310, 0, 30, 30);
+
+			if(isFilled) {
+				g.setColor(Color.white);
+			}
+			if(!isFilled) {
+				g.setColor(Color.gray);
+			}
+			g.fillRect(400, 0, 30, 30);
+			g.setColor(Color.black);
+			g.drawRect(400, 0, 30, 30);
+			g.drawString("FILL", 403, 20);
+		
+			g.setColor(Color.gray); //scroll bar
+			g.fillRect(0, 65, 30, 315);
+			g.setColor(Color.black);
+			g.drawLine(15, 80, 15, 365);
+			g.fillRect(scrollx, scrolly, 16, 15);
+			g.drawString("1", 0, 347);
+			g.drawString("2", 0, 317);
+			g.drawString("3", 0, 287);
+			g.drawString("4", 0, 257);
+			g.drawString("5", 0, 227);
+			g.drawString("6", 0, 197);
+			g.drawString("7", 0, 167);
+			g.drawString("8", 0, 137);
+			g.drawString("9", 0, 107);
+			if(onscroll) {
+				g.setColor(Color.white);
+				g.drawRect(scrollx, scrolly, 16, 15);
+			}
 		}
 
 		if(splash) { //draws splashscreen on first time paint is called
-			int h = this.getSize().height; //bisects the screen
+			int h = (int)screen.getHeight(); //bisects the screen
 			g.setColor(Color.black);
 			g.fillRect(0, 0, screenwidth, h/2);
 			g.setColor(Color.white);
@@ -170,8 +321,7 @@ public class PaintPalette extends Applet implements MouseListener, MouseMotionLi
 		}
 		buttonupdate = false;
 	}
-
-	public void mouseClicked(MouseEvent e) {}
+		
 	public void mousePressed(MouseEvent e) {
 		splash = false;
 		if(x < 0 && y < 0) { //for first click
@@ -179,9 +329,43 @@ public class PaintPalette extends Applet implements MouseListener, MouseMotionLi
 			shape = "circle";
 			myFont = new Font("Helvetica", Font.PLAIN, 12);
 		}
-
-		x = e.getX(); //updating mouse coordinates
+		x = e.getX();
 		y = e.getY();
+		if(x >= scrollx && x<= scrollx + 18 && y >= scrolly && y <= scrolly + 14) {
+			onscroll = true;
+		}
+
+		if(x>70 && x<100 && y<30) { 
+			rainbow = Color.white;
+		}		
+		if(x>100 && x<130 && y<30) { 
+			rainbow = Color.red;
+		}
+		if(x>130 && x<160 && y<30) { 
+			rainbow = Color.orange;
+		}
+		if(x>160 && x<190 && y<30) { 
+			rainbow = Color.yellow;
+		}
+		if(x>190 && x<220 && y<30) { 
+			rainbow = Color.green;
+		}
+		if(x>220 && x<250 && y<30) { 
+			rainbow = Color.blue;
+		}
+		if(x>250 && x<280 && y<30) { 
+			rainbow = Color.magenta;
+		}
+		if(x>280 && x<310 && y<30) { 
+			rainbow = Color.gray;
+		}
+		if(x>310 && x<340 && y<30) { 
+			rainbow = Color.black;
+		}
+
+		if(x > 400 && x < 430 && y < 30) {
+			isFilled = !isFilled;
+		}
 
 		if(x < 30 && y < 30) { //clicking clear button
 			clear = true;
@@ -201,25 +385,110 @@ public class PaintPalette extends Applet implements MouseListener, MouseMotionLi
 				shape = "star";
 			}
 		}
-
-		repaint();
+		pane.repaint();
 	}
 
-	public void mouseReleased(MouseEvent e) {}
+	public void mouseReleased(MouseEvent e) {
+		x = e.getX();
+		y = e.getY();
+		if(onscroll) {
+			buttonupdate = true;
+			onscroll = false;
+			pane.repaint();
+		}
+	}
+
+	public void mouseClicked(MouseEvent e) {}
 	public void mouseEntered(MouseEvent e) {}
 	public void mouseExited(MouseEvent e) {}
-
+	
 	public void mouseDragged(MouseEvent e) {
-		if(splash == false) {
-			x = e.getX(); //updating mouse coordinates only available after first click
-			y = e.getY();
-			repaint();
+		x = e.getX();
+		y = e.getY();
+		if (onscroll == true) {
+			scrolly = y;
+			if (scrolly < 80) {
+				scrolly = 80;
+			}
+			if (scrolly > 350) {
+				scrolly = 350;
+			}
+
+			if (scrolly > 320) {
+				r = 3;
+			}
+		    	else if (scrolly > 290) {
+				r = 10;
+			}
+		   	else if (scrolly > 260) {
+				r = 25;
+			}
+		    	else if (scrolly > 230) {
+				r = 40;
+			}
+		    	else if (scrolly > 200) {
+				r = 50;
+			}
+		   	else if (scrolly > 170) {
+				r = 65;
+			}
+		    	else if (scrolly > 140) {
+				r = 80;
+			}
+		    	else if (scrolly > 110) {
+				r = 90;
+			}
+		    	else {
+				r = 100;
+			}
 		}
+		pane.repaint();
 	}
 
 	public void mouseMoved(MouseEvent e) {}
 
 	public void keyTyped(KeyEvent e) {
+		if (e.getKeyChar() == '1') {
+			r = 3;
+			scrolly = 335;
+		}
+		if (e.getKeyChar() == '2') {
+			r = 10;
+			scrolly = 305;
+		}
+		if (e.getKeyChar() == '3') {
+			r = 25;
+			scrolly = 275;
+		}
+		if (e.getKeyChar() == '4') {
+			r = 40;
+			scrolly = 245;
+		}
+		if (e.getKeyChar() == '5') {
+			r = 50;
+			scrolly = 215;
+		}
+		if (e.getKeyChar() == '6') {
+			r = 65;
+			scrolly = 185;
+		}
+		if (e.getKeyChar() == '7') {
+			r = 80;
+			scrolly = 155;
+		}
+		if (e.getKeyChar() == '8') {
+			r = 90;
+			scrolly = 125;
+		}
+		if (e.getKeyChar() == '9') {
+			r = 100;
+			scrolly = 95;
+		}
+
+		if(Character.toLowerCase(e.getKeyChar()) == 'f') { //change fill status
+			isFilled = !isFilled;
+		}
+
 		if(Character.toLowerCase(e.getKeyChar()) == 'q') { //change shape with keyboard
 			shape = "circle";
 		}
@@ -233,20 +502,9 @@ public class PaintPalette extends Applet implements MouseListener, MouseMotionLi
 			shape = "star";
 		}
 		buttonupdate = true;
-		repaint();
+		pane.repaint();
 	}
 
 	public void keyPressed(KeyEvent e) {}
 	public void keyReleased(KeyEvent e) {}
-
-	public void update(Graphics g) {
-		if(buff == null) { //for double-buffering
-			buff = createImage(screenwidth, screenheight);
-			g2 = buff.getGraphics();
-		}
-		paint(g2);
-		g.drawImage(buff, 0, 0, this);
-	}
 }
-/*<applet code="PaintPalette" width=1300 height=800>
-</applet>*/
