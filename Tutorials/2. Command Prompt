@@ -1,0 +1,15 @@
+Useful commands:
+cd Desktop/mycodingprojects/InProgress/PrettyLines
+change directory to Desktop/mycodingprojects/InProgress/PrettyLines
+
+cd ..
+change directory up a folder
+
+dir
+Lists all contents of a directory
+
+javac myfirstcode.java
+Compiles a project.  Sometimes lists errors and the location lines.  YOu can go to a location line in Notepad by clicking Ctl+G and typing "61" or any other number.
+
+java myfirstcode
+Runs a project that has been compiled.
