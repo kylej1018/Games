@@ -1,0 +1,39 @@
+You could argue that Strings are, in a way, arrays of chars.  Which might explain why they're not primitive, and why they're capitalized.
+Let's say we have String s = "apple";
+You can figure out how long an unknown array is with int x = s.length;
+You can find the char at an index with s.charAt(0), which would be 'a' in this case (yes, Strings start at 0 too).
+You can find the first index of a smaller String with s.indexOf("p"), which would be 1 in this case.
+You can find the last index of a smaller String with s.lastIndexOf("le"), which would be 3 in this case.
+You can test alphabetical order of Strings with s1.compareTo(s2).
+  If the answer is > 0, s1 is first alphabetically.  If the answer is < 0, s2 is.  If the answer is 0, they have the same letters.
+You can make a string all the same case with s.toUpperCase() or s.toLowerCase();
+You can split off part of a string at a certain index.
+  String s2 = s.substring(2);
+    ^will be "ple", or from index 2 inclusive to the end of s - chars at 2, 3, 4...
+  String s3 = s.substring(0, 2);
+    ^will be "ap", or from index 0 inclusive to index 2 exclusive - chars at 0, 1.
+   
+It'd be nice to ask if two Strings are the same.
+  String s1 = "apple";
+  String s2 = "apple";
+But if you test s1 == s2, the answer is false.  Here's why.
+Remember how we said there are primitive variables?  If you compare them with ==, it's going to ask if they have the same VALUE.
+Strings are not primitive.  If you compare them with ==, it's going to ask if they are the same OBJECT.  Which they aren't.
+s1 and s2 are stored in totally different places in your computer.  They're different objects.
+The way around this is to test if s1.equals(s2), which will return true if they have the same text and false if not.
+
+Beware of setting things equal to one another if they're not primitive!
+If you make a new array named arr2 but you do it like this:
+int [] arr2 = arr1;
+that's bad.  Every time you change something in arr1, it will change in arr2 also.  Your computer has assigned them the same object.
+You're better off with the following
+  arr2 = new int[arr1.length];
+Then make a loop to copy each element of arr1 over to arr2.
+
+Finally, arrays and ArrayLists have convenient ways to change a single element.  Strings don't.
+If you want to change a single letter in Strings, the best way to do that is to use substring.
+  String s = "There is a typo in this sintence.";
+  s = s.substring(0, 24) + "e" + s.substring(26);
+  
+  String s = "There is a typoo in this sentence.";
+  s = s.substring(0, 15) + s.substring(16);
