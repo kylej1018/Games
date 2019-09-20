@@ -12,7 +12,7 @@ public class Loops {
 		So, variables are great.  Ints, Strings, doubles, all that.  But how do they interact?
 		If you put an int and a double in the same equation, the answer is a double.  If you print 10/5.0, the answer is 2.0, not 2.
 		What if you really wanted that to be an int?  You typecast like so: (int)(10/5.0) produces 2, not 2.0
-		You could typecast variables as well. double a = 0.0; (int)a will give you 0.
+		You could typecast variables as well. a = 0.0; (int)a will give you 0.
 		What will be your output if you divide 7/2?  It's not 3.5, so you should try it.
 		But Strings take priority.  If you print 1+2, you'll get 3.  If you print 1.0 + "2", you'll get "1.02".
 
@@ -59,7 +59,7 @@ public class Loops {
 		//#1. Sum two random numbers <= 1000
 		//#2. Subtract two random numbers <= 1000
 		//#3. Multiply two random numbers <= 100
-		//#4. Divide two doubles <= 1000
+		//#4. Divide two floats <= 1000
 		//#5. Divide two ints <= 1000 and print quotient and fraction remainder ("50/9 = 5 5/9")
 		//#6. Raise a random number <=10 to the power of another number <= 10
 		//#7. Find the factorial of a random number <= 15
