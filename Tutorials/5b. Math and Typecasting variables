@@ -3,7 +3,9 @@ Math Operators:
 ^ (power) does not exist.
 % gives you the remainder when two numbers are divided.
   9 % 5 is 4 (reminder is 4)
-  5 % 9 is 5 (reminder is 5).
+  5 % 9 is 5 (reminder is 5)
+And yes, Java follows mathematical order of operations.
+  3 + 5 * 2 is 13, not 30.
 
 Sometimes you don't want to re-initialize an int variable, you just want it to change value.
 You can do x *= 2, which is faster than typing x = x * 2.
