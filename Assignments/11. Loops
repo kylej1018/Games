@@ -16,7 +16,7 @@ public class Loops {
 		ArrayList <String> stringArray2 = populateStr("StringArray2");
 		ArrayList <String> keywordCipher = populateStr("KeywordCipher");
     
-    //#19. Find and delete duplicates in stringArray1 {abc, def, ghi, jkl, abc, mno} --> {abc, def, ghi, jkl, mno}
+		//#19. Find and delete duplicates in stringArray1 {abc, def, ghi, jkl, abc, mno} --> {abc, def, ghi, jkl, mno}
 		//#20. Add elements to stringArray2 so all have same number of entries as letters in name {a, bc, def, gh} --> {a, bc, bc, def, def, def, gh, gh}
 		//#21. Create an arraylist spelling numbers in unsortedIntArray {1, 2, 3, 4} --> {one, two, three, four}
 		//#22. Alphabetize stringArray2 "insertsort", where the next element is placed in a new array between already alphabetically organized words.
@@ -24,7 +24,7 @@ public class Loops {
 		//#24. Make an array of only the palindromes in stringArray2
   }
     
-  public static int [] populateNum(String s) { //this is how the computer reads the text files.  Don't mess with this.
+	public static int [] populateNum(String s) { //this is how the computer reads the text files.  Don't mess with this.
 		ArrayList <String> arr1 = populateStr(s);
 		int [] arr2 = new int[arr1.size()];
 		for(int i = 0; i < arr1.size(); i++) {
