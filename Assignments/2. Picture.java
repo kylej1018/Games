@@ -20,6 +20,7 @@ What if you start g.drawString and g.drawRect at the same coordinates?  What cor
 HOMEWORK:
 Draw me a picture.  It should use at least one draw and at least one fill statement, two or more colors, and text.
 */
+
 import javax.swing.*;
 import java.awt.*;
 
