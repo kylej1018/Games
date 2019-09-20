@@ -33,6 +33,26 @@ if(a == 3 || b < 1) "If a is 3 or b is less than 1"
 if(a != 3 && !(b < 1)) "If a is not 3 and not-(b is less than 1)"
   The bottom one is equivalent to saying "If a is not 3 and b is greater than or equal to 1"
 
+Sometimes you need "else" statements.  They look like this.
+boolean condition1 = false;
+boolean condition2 = false;
+boolean condition3 = false;
+if(condition1) {
+  //code
+}
+else if(condition2) {
+  //code
+}
+else if(condition 3) {
+  //code
+}
+else {
+  //code
+}
+In this example, only the code in the brackets around the last "else" got executed.
+You can have as many "else if" conditionals as you want.  This example had 2.
+You can have a final "else" statement to capture EVERYTHING not yet covered...or just leave it out.
+
 By convention, it's frowned upon to use ==true or ==false in your code.
 Instead of if(b == true)
 Use if(b)
