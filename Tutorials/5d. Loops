@@ -1,0 +1,28 @@
+Sometimes you want to do something a bunch of times.  There are two loops to do that with, called for-loops and while-loops.
+For-loops execute a set number of times.  They look like this:
+  for(int i = 1; i <= 100; i += 2) {
+    //do code
+  }
+The first bit establishes the iteration variable i, which starts at 1.  It will keep track of which loop we are on.
+The second bit is a boolean that must be true for the loop to execute - i must be less than or equal to 100.
+The third bit happens every time the loop completes - i increments by 2.
+Thus, this loop will happen fifty times.  On the fifty first time, i will go from 99 to 101 and the loop will "break" and the code will continue.
+It is very good to have loops break.  If they run forever, your code will be stuck.
+The keyword "break;" can break a loop from inside. But it's better, if possible, to set the iteration variable to something that will end the loop on the next pass (i = 101).
+The keyword "continue;" can skip to the next interation, skipping any remaining code in the loop and restarting at the top of the loop.  It's frowned upon to use continue.
+
+While-loops execute "while" the condition is true.  They look like this:
+  while(i <= 100) {
+    //do code
+  }
+You probably need to make i get bigger inside the loop, or else it will never break.
+Every for loop can be replaced with a while loop (although for loops, it's easier to read what you expect).
+Not every while loop can be replaced with a for loop.  Sometimes you just don't know how much you need to do something.  There is at least one of these in Loops Lesson 1's assignments.
+
+Here's a loop for you to run:
+	for(int i = 0; i > -1800000000  || i < -1900000000; i = i + 50000) {
+		System.out.println(""+i);
+	}
+What happened?  Your computer reached its maximum size limit.  It can only think about 2,147,483,647 things before it runs out of bits and has to reset in this very strange way.
+Relevant comic - https://xkcd.com/571/
+Light reading for fun - https://en.wikipedia.org/wiki/Year_2038_problem
