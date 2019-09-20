@@ -11,7 +11,6 @@ Suggested features:
 ~Procreate and similar games have "buttons" to help the user facilitate these features.  You should too.
 */
 
-import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
