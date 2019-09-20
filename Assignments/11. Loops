@@ -12,7 +12,7 @@ public class Loops {
 		int [] sortedIntArray1 = populateNum("sortedIntArray1"); //these three lines populate some example arrays for you to work with.  Don't mess with them.
 		int [] sortedIntArray2 = populateNum("sortedIntArray2");
 		int [] unsortedIntArray = populateNum("unsortedIntArray");
-    ArrayList <String> stringArray1 = populateStr("StringArray1"); //more example arrays.  Don't mess with them.
+		ArrayList <String> stringArray1 = populateStr("StringArray1"); //more example arrays.  Don't mess with them.
 		ArrayList <String> stringArray2 = populateStr("StringArray2");
 		ArrayList <String> keywordCipher = populateStr("KeywordCipher");
     
