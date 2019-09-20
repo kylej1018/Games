@@ -2,18 +2,6 @@
 Read through all the tutorials for section 3 before starting.
 You might want to brush up on Tutorial 2b.
 
-Conditionals!  Sometimes you only want things to happen "if" a statement is true.
-Inside the parentheses is a boolean or a boolean expression (see Variables! above).
-You can use < or >, or == for equal to.  You need 2 equals signs, otherwise, it thinks you're ASSIGNING a variable to a value rather than comparing.
-If you want to use "not" greater than, you use != to say it.  >= is greater than or equal to, <= is less than or equal to.
-If you have a boolean b, you can even say if(b) or if(!b).
-If this condition is met, the code below it will execute.  If not, it will skip that code.
-Can you find an example of a conditional in this code?
-You may also want to test if two things are true - check these examples!
-if(a == 3 && b < 1) "If a is 3 and b is less than 1"
-if(a == 3 || b < 1) "If a is 3 or b is less than 1"
-if(a != 3 && !(b < 1)) "If a is not 3 and not-(b is less than 1)"
-
 Assignment:
 1. I want to click anywhere in my window and draw a circle perfectly around that point.
 2. I want to draw a line from my point to my previous point.  How can you retain the previous x and y values after clicking?
