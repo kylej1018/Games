@@ -1,7 +1,7 @@
 /*INSTRUCTIONS:
 We're going to look at and edit the area called public void myPaint(Graphics g).  Don't worry about the rest.
 Download and save this code as picture.java.
-Look at Tutorial 2a if you've never used command prompt before.
+If you've never used command prompt, look at Tutorial 2a but not 2b.  Tutorial 2b has answers to some of these questions.
 Compile and run this code.  Figure out how to debug it.
 Delete the line that says g.drawRect, compile, and re-run it.  What does g.drawRect do?
 What about g.drawOval, g.fillOval, and g.fillRect?  Suppose there's a g.drawLine?  g.fillLine?
