@@ -4,7 +4,7 @@ Complete all these assignments.
 import java.io.*;
 import java.util.*;
 public class Loops {
-	public static void main (String [] args) {
+  public static void main (String [] args) {
     Random r = new Random();
     //#1. Sum two random numbers <= 1000
     //#2. Subtract two random numbers <= 1000
