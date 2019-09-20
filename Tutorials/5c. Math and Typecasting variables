@@ -1,0 +1,50 @@
+Math Operators:
++, -, *, and / are pretty self-explanatory.
+^ (power) does not exist.
+% gives you the remainder when two numbers are divided.
+  9 % 5 is 4 (reminder is 4)
+  5 % 9 is 5 (reminder is 5).
+
+Sometimes you don't want to re-initialize an int variable, you just want it to change value.
+You can do x *= 2, which is faster than typing x = x * 2.
+x -= 5 subtracts 5 from i.
+i += 1 increments i by 1.
+i++ also increments i by 1 and is faster than i += 1 or i = i + 1;
+
+Variable Precision:
+You convert a variable value to a higher-precision variable value by using any math operator.
+10 * 1.0 will convert the int 10 to a float 10.0 because float is a higher-precision variable.
+5.0 + "" will convert the float 5.0 to a String "5.0" because String is a higher-precision variable.
+5.0 + "2" will result in "5.02" because it converts 5.0 to "5.0"
+(5.0 + 2) + "" will result in "7.0" because 2 is converted to 2.0 and added to 5.0 before the sum is turned into a String.
+
+This makes division complicated.
+If you put an int and a float in the same equation, the answer is a float.
+  3.0 / 2.0 is 1.5
+  3.0 / 2 is 1.5
+  3 / 2.0 is 1.5
+  3 / 2 is 1
+Java will round down after dividing if every number is an int!
+
+Decreasing Precision:
+  10 / 5.0 is 2.0
+Sometimes printing 2.0 is an ugly answer and you just want 2 instead.
+You typecast like so:
+  (int)(10 / 5.0) is 2
+  10 / (int) 5 is also 2
+Since typecasting a double as an int rounds down, examine these examples:
+  10.0 / 3.5 is 2.85714
+  10 / 3.5 is 2.85714
+  (int) (10 / 3.5) is 2
+    ^equal to (int) 2.857
+  10 / ((int) 3.5) is 3
+    ^equal to 10 / 3
+  (float) (10 / (int) 3.5) is 3.0
+    ^equal to (float) (10 / 3)
+  ((float) 10) / (int) 3.5 is 3.33333
+    ^equal to 10.0 / 3, which becomes 10.0 / 3.0
+  (float) 10 / (int) 3.5 is 3.33333
+    ^Note that (float) 10 happens before the division!
+You could typecast variables as well.
+  float a = 0.0;
+  (int) a will give you 0.
