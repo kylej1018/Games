@@ -1,0 +1,41 @@
+Sometimes you want your user to have some say over the code.  You do this by "implementing Listener interfaces."
+This happens in the same line as class, using the keyword Implements.  You can list as many as you want, in any order.
+  public class PrettyLines implements MouseListener, KeyListener
+These are two examples of Listener interfaces.  The other common one is MouseMotionListener.
+A Listener interface waits for an Event to happen on your computer, and then runs code based on what happened.
+An Event might be when your mouse clicks, or when your mouse leaves the active window, or you press the spacebar.
+
+If you implement a Listener, you need to have some methods, even if they're blank.
+If you implement MouseListener, you need: mousePressed, mouseReleased, mouseEntered, mouseExited, mouseClicked
+If you implement KeyListener, you need: keyTyped, keyPressed, keyReleased
+If you implement MouseMotionListener, you need: mouseMoved, mouseDragged
+Here's examples of how to put those methods in.
+  public void mousePressed(MouseEvent e)
+  public void keyTyped(KeyEvent e)
+  Obviously, the mouse events get a MouseEvent and the key events get a KeyEvent
+If you have one of these listeners, you need ALL its methods.
+They can be blank with the curly brackets just like {} but they have to be in your code.
+
+A method executes when the event happens.  For example, when the mouse enters your screen, the mouseEntered method executes.
+If you can't tell by the name when each method executes, check out this link:
+  https://www.geeksforgeeks.org/mouselistener-mousemotionlistener-java/
+You can google the KeyListener methods too.
+When a method executes, any code inside the curly brackets happens.  You can make *anything* happen on a mouse click, but here's some extra useful suggestions.
+In any of the MouseListener or MouseMotionListener methods, you might say
+  int x = e.getX();
+  int y = e.getY();
+which will, respectively, store the X and Y coordinates of the mouse event (like a click) in some int variables.
+In the KeyListener method, you can have
+  char c = e.getKeyChar();
+which will store the button you pressed in a char variable.
+At the bottom of any non-blank Listener method, you'll want to include
+  pane.repaint();
+
+
+When a mouse or keyboard action happens, it activates the code in the appropriate brackets.
+You can get some information about each action.
+In KeyListener, e.getKeyChar() tells you what button got pressed.  You can assign it to a char variable.
+In MouseListener and MouseMotionListener, e.getX() and e.getY() respectively return the X and Y coordinates of the mouse event.  You can assign them to int variables.
+You'll nearly always want a pane.repaint() in every mouse or key method where you have code.  Otherwise, how would you know if anything changed?
+Look in the code for where it says pane.addMouseListener(this) and pane.addKeyListener(this).  That's absolutely essential for this to work.
+You also need a pane.setFocusable(true) if you want KeyListener to work.  You don't really need to know what it does for now.
