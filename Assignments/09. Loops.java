@@ -13,6 +13,8 @@ public class Loops {
 		int [] sortedIntArray2 = populateNum("sortedIntArray2");
 		int [] unsortedIntArray = populateNum("unsortedIntArray");
 		
+		Random r = new Random();
+		
 		//#15. Take sortedIntArray1 and randomize it in a new array.
 		//#16. "extractsort" unsortedIntArray. The next smallest element goes to the end in new array {1, 4, 2, 3} --> {} {1} {1, 2} {1, 2, 3} {1, 2, 3, 4}
 		//#17. "bubblesort" unsortedIntArray. Trade misplaced duos. {1, 4, 2, 3, 1} --> {1, 2, 4, 3, 1} {1, 2, 3, 4, 1} {1, 2, 3, 1, 4} {1, 2, 1, 3, 4} {1, 1, 2, 3, 4}
