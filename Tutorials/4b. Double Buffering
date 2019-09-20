@@ -1,0 +1,26 @@
+I've already built double buffering into PaintPalette.  It's nice to know what it is so you can transfer it to other projects.
+
+Odds are, your myPaint method is going to get very very large in some projects.
+In fact, your computer may call pane.repaint() in a Listener method before myPaint even finishes.
+That will make your computer flicker.  It looks bad.  But here's the secret.
+Instead of painting on your screen, we're going to paint on a secret invisible image.  I usually name it named buffImg, like buffered image.
+If that finishes, then it will transfer the finished buffImg  to your screen.
+So the thing happening on your screen is now only one line long: "Transfer" instead of "everything in myPaint".  Flickering avoided.
+
+public void buffer(Graphics g) {
+	if(buffImg == null) {
+		buffImg = createImage(screenwidth, screenheight); //if we haven't made buffImg yet, make buffImg
+	}
+	myPaint(buffImg.getGraphics()); //this is the long part.  It does myPaint on buffImg, not on your screen.
+	g.drawImage(buffImg, 0, 0, pane); //If the long part finishes, transfer the completed buffImg to your screen.
+}
+
+What if myPaint doesn't finish its job on buffImg before pane.repaint() happens?
+Well, repaint() schedules a call to a hidden method update().  Update doesn't happen automatically, it only happens "when the system is ready."
+When update() happens, it channels all the repaint() calls and other hidden things in your computer that ask it to update.
+update() calls another hidden method, paint().
+paint() calls a method named paintComponent().  You will see paintComponent in PaintPalette.
+paintComponent calls a method named myPaint(), which you will edit.
+So if pane.repaint() happens before myPaint() finishes, it just chills in update() with any other pane.repaint() calls until myPaint does finish.
+Double-buffering may result in your screen channeling two repaint() calls in the next g.drawImage.
+But this happens so fast, your human eye won't notice if it was two repaint() calls at once, or two really fast g.drawImage calls.
