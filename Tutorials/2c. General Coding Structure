@@ -19,13 +19,6 @@ Class:
 
 Variables:
 #After the class statement is often a collection of variables, like int x = 10;
-#Variables are established by a "Declare" where you specify the type of variable (int) and the name (x).
-#After the "Declare" statement is an "Initialization" statement where the variable is set equal to a value (10).
-#You can Declare and Initialize a variable on the same line:
- int x = 10;
-#or on different lines:
- int x;
- x = 10;
 #You can declare a variable anywhere (local variable) but you can only use it within those curly brackets.  The reason there are lots at the beginning (global variables) is because ALL curly brackets can use them.
 
 Keywords:
