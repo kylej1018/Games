@@ -1,0 +1,43 @@
+You won't know what every term in this document means yet.  Please refer back to it often.
+# = need to know
+~ = etiquette or convention
+blank = background
+
+Comments:
+#You should comment often so that people using (or helping with) your code can understand it easier.
+#Use /* and */ for multi-line comments.  Use // for comments on one line.
+~You should write variable names, method names, and method parameters so it's so obvious what they do, you shouldn't have to comment.
+~But you should comment many of the following:
+~  At the top of your code, what the program does and when it was last updated
+~  Variable declarations
+~  Methods.  In a header, include the purpose, the parameters, and the return.
+~  Classes and interfaces, in a header.
+~  Anytime you have to interact with the user - print statements, input/listener statements, System statements.
+~  FIXMEs.  A FIXME is a line of code you know needs fixed.  If you can, specify what's wrong.
+~  Loops.
+
+Naming things:
+#Anything with multiple "words" gets each word capitalized and spaces removed like so:
+  thisIsAnExample
+#Don't start a name with a number, but you can put a number in the middle of the name.
+#Don't name things any of these keywords: https://en.wikipedia.org/wiki/List_of_Java_keywords
+~Variable and method names start with a lowercase letter.
+  double salary = 18.50;
+~Constants are all capitals with undercases and get the keyword "final"
+  final int MAXIMUM_PEOPLE_ALLOWED = 100;
+~Class and interfaces start with a capital letter.
+  public class MyFirstCode
+
+Indentation:
+#Indent code inside curly brackets so it's easier to read.
+~It doesn't really matter how much, but be consistent.  Recommended: 1 tab or three spaces.
+~If you have curly brackets inside curly brackets, indent the interior part another tab or three spaces.
+
+Spaces:
+~Avoid extra blank lines.  There are some exceptions - if you're separating a bunch of related variables, it can help readability to have them separated by a blank line.
+
+
+Conditionals:
+
+Semicolons:
+#Basically every line in java ends with a semicolon.  The only ones that don't open a curly bracket, or close an existing curly bracket.
