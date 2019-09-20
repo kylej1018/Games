@@ -5,10 +5,11 @@ PaintPalette
 Loops 1
 GuessingGame
 Loops 2
-Loops 3
 Memory (gui)
+Loops 3
+Connect4
 Loops 4
-TicTacToe (2d)
+TicTacToe
 Loops 5
 Hangman
 YearEndBonus
@@ -19,10 +20,9 @@ Mastermind
 Blackjack
 Mosaic (picture)
 Solitaire
-PaintPalette (exportable)
 Clue
 ???
-Connect4
+LogicPuzzle
 HanoiTower (recursion)
 BoxedIn
 Flood
@@ -51,7 +51,6 @@ ClickTheBall
 TrainTracks
 Freecell
 Mancala
-LogicPuzzle
 Backgammon
 Tetris
 BubbleBuster
