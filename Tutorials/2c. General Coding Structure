@@ -1,0 +1,42 @@
+# = need to know
+blank = background knowledge
+
+Here's the basic outline of every code:
+
+Import Statements:
+#Codes usually start with import statements.  When you downloaded Java, you downloaded a lot of helpful things, but your code won't use them unless they're imported.
+#If your code returns an error when compiling that it doesn't recognize something or it thinks you should define it, double-check with the Internet what imports you need.
+ import java.awt.*;
+ import java.awt.event.*;
+ import java.lang.Object;
+ These are three distinct import statements.  The * means "everything in that package."  So the entire contents of java.awt are imported in the first line.
+ java.awt.event is not in the java.awt package.  Common misconception.
+ java.lang.Object IS in the java.lang folder.  I know this because Object is capitalized, meaning it's a class, but everything before it is not, meaning it's a package.
+
+Class:
+#Below import statements is something like public class PrettyLines.
+#Whatever the word is after "class" is what you need to save as the name of your java file.
+
+Variables:
+#After the class statement is often a collection of variables, like int x = 10;
+#Variables are established by a "Declare" where you specify the type of variable (int) and the name (x).
+#After the "Declare" statement is an "Initialization" statement where the variable is set equal to a value (10).
+#You can Declare and Initialize a variable on the same line:
+ int x = 10;
+#or on different lines:
+ int x;
+ x = 10;
+#You can declare a variable anywhere (local variable) but you can only use it within those curly brackets.  The reason there are lots at the beginning (global variables) is because ALL curly brackets can use them.
+
+Keywords:
+#There are some things you CAN'T name your variables because they're reserved keywords for specific java functions.
+ A complete list is here: https://en.wikipedia.org/wiki/List_of_Java_keywords
+
+Main:
+#After the variables is something called public static void main(String[] args)
+ Don't delete it.  It's usually essential.
+
+Public Void:
+#After main is a series of curly-bracket-enclosed areas labeled public void.
+ These are called methods.  A popular method is called the paint method, which looks like this: public void paint(Graphics g)
+ You'll learn how to make your own methods later.
