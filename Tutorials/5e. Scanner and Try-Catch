@@ -6,7 +6,7 @@ Remember from Tutorial 5a that you can use System.out.print or println to debug.
 You should use System.out.print to print your Loops results as well.
 
 Scanner is how you take input from the user.
-Like random, you have to declare a new Scanner object like so, once per code:
+Like Random, you have to declare a new Scanner object ONCE per code:
   Scanner sc = new Scanner(System.in);
 Then you can take as much input as you want with
   String s = sc.nextLine();
