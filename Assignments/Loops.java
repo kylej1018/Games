@@ -59,7 +59,7 @@ public class Loops {
 		//#1. Sum two random numbers <= 1000
 		//#2. Subtract two random numbers <= 1000
 		//#3. Multiply two random numbers <= 100
-		//#4. Divide two floats <= 1000
+		//#4. Divide two doubles <= 1000
 		//#5. Divide two ints <= 1000 and print quotient and fraction remainder ("50/9 = 5 5/9")
 		//#6. Raise a random number <=10 to the power of another number <= 10
 		//#7. Find the factorial of a random number <= 15
