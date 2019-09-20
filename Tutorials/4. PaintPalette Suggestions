@@ -1,0 +1,60 @@
+Questions to answer before starting:
+What features are you including?
+  How many colors?  How many brush sizes?
+How many "buttons" will you need?
+  How many do you need for each feature?
+  How big should they be?  Try doing a g.drawRect to figure out what looks nice.
+  Where will your buttons be located?
+    Design what you want your screen to look like before you start coding.  Actually write down the x and y coordinates of your buttons.
+Could any of your features have redundant keyboard shortcuts?  Some users prefer mouse, some prefer keys.
+  If user types a number, brush size might change.  Bigger number = bigger size.
+  If they type c or s, shape might change between circle or square.
+What should be the hierarchy in myPaint?
+  Should you be able to paint over the top of your buttons?  Probably not.
+  Should your buttons show up on top of your splash screen?  Probably not.
+  What does your clear-screen feature need to cover?
+  Hint for clearing screen:
+    Draw a huge white rectangle.  It looks like a blank screen.  It should be big enough to cover the user's screen, and then some.
+
+Once you start coding, go in small spurts.  First, get a black circle around your mouse where you click (reference PrettyLines).
+Then make it follow when you drag your mouse.
+Maybe next change a color or something when you type the correct key.
+Maybe next draw one button and change a color or something if the mouse clicks inside it.
+Comment your code.  Don't learn the hard way that commenting is not optional.
+
+Hints for buttons:
+The hard thing about buttons is that you test them in mousePressed but you draw the result in myPaint.
+You can't do g.drawRect inside mousePressed, and you can't do e.getX() inside myPaint.
+Thus, you need global variables.  Have a global variable for each feature.  What variable type is appropriate?
+  Brush size is a number.  Probably an int.
+  Your shape will be either empty or filled.  You could use a boolean named filled, which is either true or false.
+  Shape is either a circle or a square.  Probably another boolean.
+  Splash screen will either be present or not.
+  Screen will either be cleared or not.
+  For colors, you might make a String.  Or you could actually use a Color variable type.  Picture.java included this line:
+    Color c = Color.black;
+  and then setColor to c later.
+  
+For each button:
+  In myPaint, draw a rectangle.
+  In mousePressed, figure out what x and y of the mouse pressed event are.
+  If x and y are in that rectangle, change the global variable associated with that button.
+    If x is greater than the left side && x is less than the right side, x is in the correct range.  Same for y.
+  In myPaint, set up a conditional for that global variable and draw something as needed.
+    For instance, if circle is true, draw a circle.  If circle is false, draw a square.
+  How can you help your user keep track of what your buttons do?
+    Sure, you could just have a bunch of text in your buttons.  But that doens't look nice.
+    If you can have a symbol instead of text, you should do it.  Maybe, for instance a green circle to suggest "this button changes color to green".
+    If you just have a green circle to indicate "green," what happens if they paint the entire screen green?  Your button is hard to see.  I recommend an outline.
+    But how will they know what color they've selected?  Maybe change the outline of the "active" button to another color.
+  How can you tell your user what your keys will do?
+  Maybe each button needs a drawString so the user knows what key will be equivalent to clicking the button.
+
+Cool trick for keyTyped:
+Option 1: they type two different keys and, for example the circle changes from filled to empty on 'e' and empty to filled on key 'f'.
+Option 2: they type f repeatedly and fill becomes empty and empty might become fill every time.
+  You could use an if followed by else, or use this trick:
+    boolean filled = true;
+    if(condition) {
+      filled = !filled; //if it's true, it becomes false.  If it's false, it becomes true.
+    }
