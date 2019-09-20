@@ -1,32 +1,20 @@
-/*Download the Arrays.zip in the "homework" section of this Github.
+/*
+Download the Arrays.zip in the "Extras" section of this Github and unzip it.
 Fix the FIXME line to reflect where you saved it.
-Complete all these assignments.  You're encouraged to use System.out.print and println often for debugging - use it to see if your variables are actually what you expect.  Use it to see if you can even reach that part of the code or if it gets stuck before.
+Complete all these assignments.  Print the task # before each answer.
+
+I've made some example arrays.  Do not change anything in these arrays; you will use them throughout this code.  Make a new array and if needed, use a loop to copy the elements over.
+
+Finally, when you want to print the contents of an array named arr, use this line:
+	printArray(arr);
+I made printArray for this code, it won't work in other codes.
 */
+
 import java.io.*;
 import java.util.*;
 public class Loops {
 	public static String loc = "C:\\Users\\kylej\\Desktop\\"; \\FIXME
 	public static void main (String [] args) {
-
-		/*LESSON 2 things to know before starting:
-		Before each transformation, System.out.print the task number.
-		Sometimes you need lots of variables remembered.  We store them in a list called an "array."
-		Making an array of ints named "arr" is not too hard.  Check it out:
-		int [] arr = new int[10];
-		The [10] means that this list has 10 numbers.  You need to know how big your array is right when you make it.
-
-		You can figure out how long an unknown array is with int size = arr.length
-		You can access an element in an array with int x = arr[5], which returns the element at Place 5.
-		Here's the rub.  Place 5 is not the fifth place.
-		ARRAYS START AT 0.  The first element is arr[0].  The second element is arr[1], and so on.
-		There is nothing at arr[arr.length].  If you have an array with length 3, its indexes are 0, 1, and 2.  There is no 3.
-		The last element is at arr[arr.length - 1].
-		
-		I've made some example arrays.  Do not change anything in these arrays; you will use them throughout this code.  Make a new array and if needed, use a loop to copy the elements over.
-		
-		Finally, when you want to print the contents of an array, use printArray(arr).  I made it for this code, it won't work in other codes.
-		*/
-
 		int [] sortedIntArray1 = populateNum("sortedIntArray1"); //these three lines populate some example arrays for you to work with.  Don't mess with them.
 		int [] sortedIntArray2 = populateNum("sortedIntArray2");
 		int [] unsortedIntArray = populateNum("unsortedIntArray");
