@@ -9,10 +9,9 @@ Memory (gui)
 Loops 3
 Connect4
 Loops 4
-TicTacToe
+YearEndBonus or TicTacToe
 Loops 5
 Hangman
-YearEndBonus
 Mystery (methods)
 Trivia
 Mastermind
@@ -26,26 +25,26 @@ LogicPuzzle
 HanoiTower (recursion)
 BoxedIn
 Flood
-MazeGenerator
-MazeSolver
+MazeGenerator & MazeSolver
 Timer
 WordFlash
 SimonSays
-Golf
 Snake
-SpaceInvaders
-Dodger
-Brickbreaker
+ShootingGallery
 Conway
 Minichef
 ~
 Madlibs
-ShootingGallery
+TicTacToe & Connect4 Revisited
+Golf
 Monopoly
 SpiderSolitaire
 Minesweeper
 Pong
 Cribbage
+SpaceInvaders
+Dodger
+Brickbreaker
 Checkers
 ClickTheBall
 TrainTracks
@@ -74,4 +73,3 @@ Deckbuilder
 CivilizationEvolution
 3DRender
 Horror
-Website
