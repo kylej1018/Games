@@ -1,4 +1,5 @@
 Paint uses a coordinate system.  (0, 0) is at the upper left corner of your window.  (10, 5) is 10 pixels right and 5 pixels down.
+It does not hurt your code for things to start or extend off the edge of your screen; sometimes that's easier than actually deleting an object.
 
 g.drawRect(x, y, w, h);
 Draws the outline of a rectangle.
