@@ -24,7 +24,7 @@ public class PaintPalette implements MouseListener, MouseMotionListener, KeyList
 	int screenwidth, screenheight; //screenwidth and height keep track of user's computer screen size
 
 	public static void main(String[] args) {
-		PaintPalette game = new PaintPalette();
+		new PaintPalette();
 	}
 	
 	public void init() {
