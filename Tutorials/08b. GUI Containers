@@ -1,0 +1,40 @@
+A container is essentially a collection of components.  A common example is a JPanel.
+  JPanel pane = new JPanel();
+  pane.add(myButton);
+If you add three buttons to a component, and then the component is moved (say, by the user resizing their window), the three buttons will stay together.
+That's the benefit of doing GUI with components & containers instead of how we did it in PaintPalette.  It organizes for you.
+
+Sometimes you want to paint on a component.  You may remember a snippet like this from PaintPalette:
+  JPanel pane = new JPanel() {
+    public void paintComponent(Graphics g) {
+      super.paintComponent(g); //does the normal hidden painting thing
+      myPaint(g); //does YOUR painting thing if you have a myPaint area in your code somewhere
+    }
+  };
+  pane.addMouseListener(this); //you'll need all the methods for this Listener.  You can google them if you forgot.
+  pane.addMouseMotionListener(this);
+You'll notice this looks really similar to Option 2 above.  We created a new Object and then immediately gave it a very specific purpose.
+You should then add a myPaint(Graphics g) area below.
+You can even do double-buffering with a JPanel by calling buffer(g) insteade of myPaint(g) and copying the buffer() method from Tutorial 4b.
+
+Okay great, you have several JPanels that organize components.  There's one last step: organizing your JPanels.
+You want to organize them in a JFrame.
+That takes care of all the effort of generating a popup window.
+There are some useful things you can do to help your code.
+  JFrame window = new JFrame("title"); //replace to title your window something different
+  window.add(pane); //add the JPanel
+  window.setVisible(true); //makes the window...visible.
+  window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //terminates the program when you click the red x in the corner.
+Why those last two aren't automatic, I'll never know.
+
+When you look things up, sometimes Frame is called JFrame and sometimes not.  Why?
+When Java first came out, all the GUI was handled by the "AWT" class seen in import java.awt
+AWT GUIs did not have the J.
+This was not a very efficient class, so they created the "Swing" class seen in import javax.swing
+The swing class is more efficient and easier to transfer between machines and operating systems...and has the J.
+Thus, these are both valid:
+  Button b1 = new Button(); //awt version
+  Jbutton b2 = new JButton(); //swing version
+They look a little different, they act the same, but the swing version is better for your computer.
+
+Confused?  Need visuals or more examples?  Additional reading: https://www.ntu.edu.sg/home/ehchua/programming/java/j4a_gui.html
