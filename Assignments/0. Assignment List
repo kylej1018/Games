@@ -25,7 +25,7 @@ Timer
 Snake
 ShootingGallery (class)
 SimonSays (GUI)
-GridWorld
+GridWorld: CircleBug, BoxBug, SpiralBug, DrugBug, JumpBug
 Conway
 Minichef
 ~
