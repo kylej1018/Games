@@ -5,13 +5,14 @@ PaintPalette
 Loops 1
 GuessingGame
 Loops 2
-Mystery (methods)
+Memory
 Loops 3
 Connect4
 Loops 4
 YearEndBonus or TicTacToe
 Loops 5
 Hangman
+Mystery (methods)
 Trivia
 Blackjack
 Mosaic (picture)
@@ -22,10 +23,9 @@ HanoiTower (recursion)
 BoxedIn
 MazeGenerator & MazeSolver
 Timer
-SimonSays
 Snake
 ShootingGallery (class)
-Memory (gui)
+SimonSays (GUI)
 Conway
 Minichef
 ~
