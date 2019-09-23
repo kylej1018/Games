@@ -18,7 +18,7 @@ public class Loops {
     
     Scanner sc = new Scanner(System.in);
     
-		//#25. Prompt user input.  Print out the same thing but replace all O/o with 0, E/e with 3, L/l with 1, and S/s with 5
+		//#25. Prompt user input.  Translate the input to Pig Latin and print it out.
 		//#26. Prompt user input. Alphabetize each word in the sentence but don't reverse the whole sentence. {the quick brown fox} --> {eht cikqu bnorw fox}
 		//#27. Prompt user input and perform a reverse cipher
 			//original: ABCDEFGHIJKLMNOPQRSTUVWXYZ
