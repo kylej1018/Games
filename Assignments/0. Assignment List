@@ -23,7 +23,7 @@ BoxedIn
 MazeGenerator & MazeSolver
 Timer
 Snake
-ShootingGallery (class)
+SpaceInvaders (class)
 GridWorld: CircleBug, BoxBug, SpiralBug, DrugBug, JumpBug
 SimonSays (GUI)
 Conway
@@ -41,7 +41,7 @@ SpiderSolitaire
 Minesweeper
 Pong
 Cribbage
-SpaceInvaders
+ShootingGallery
 Dodger
 Brickbreaker
 Checkers
