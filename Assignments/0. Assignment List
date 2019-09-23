@@ -21,7 +21,7 @@ Mosaic (picture)
 HanoiTower (recursion)
 BoxedIn
 MazeGenerator & MazeSolver
-Timer
+Wordflash (timer)
 Snake
 SpaceInvaders (class)
 GridWorld: CircleBug, SpiralBug, SnoozeBug, DrugBug, JumpBug
@@ -32,16 +32,16 @@ Minichef
 Madlibs
 Clue
 LogicPuzzle
-Mancala
+TicTacToe
 Mastermind
 2048
 Golf
 Monopoly
+Mancala
 SpiderSolitaire
 Minesweeper
 Pong
 Cribbage
-ShootingGallery
 Dodger
 Brickbreaker
 Checkers
@@ -50,7 +50,7 @@ ClickTheBall
 TrainTracks
 Freecell
 Mancala
-WordFlash
+ShootingGallery
 Backgammon
 Tetris
 BubbleBuster
