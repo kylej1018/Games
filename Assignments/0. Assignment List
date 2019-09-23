@@ -24,8 +24,8 @@ MazeGenerator & MazeSolver
 Timer
 Snake
 ShootingGallery (class)
-SimonSays (GUI)
 GridWorld: CircleBug, BoxBug, SpiralBug, DrugBug, JumpBug
+SimonSays (GUI)
 Conway
 Minichef
 ~
