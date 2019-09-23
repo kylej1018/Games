@@ -1,0 +1,30 @@
+Sometimes you want to be able to run a program just by double-clicking a file.  That's when we use jar files.
+
+1. Complete program code for MyProgram.java.  Program must activate through public static void main(String []args)
+2. Compile to generate MyProgram.class
+3. In folder with MyProgram, make a document named manifest.txt containing the following, with the two blank lines after:
+Main-Class: MyProgram
+
+
+4. In command prompt, use cd navigate to folder with MyProgram.  You're about to create a jar file.
+5. Type the following into command prompt:
+jar cfm MyProgram.jar manifest.txt *
+You can replace the star with MyProgram.class as long as there's only one.
+6. Your new jar file should open on double-click, along with command prompt. Steps 7-8 get rid of command prompt, so only do them if you're not using it.
+7. Make a text document named MyProgram.bat containing the following:
+start javaw -jar -Xms1024m -Xmx1024m MyProgram.jar
+8. Bat file should open on double-click without command prompt.
+9. Recommended: Make a shortcut to your jar (or bat if you have one) file somewhere more convenient.
+10. If you're giving other people these files, they really only need the jar and bat file, but their computer also needs a java download, preferably the same version as what you have.
+
+Any changes to your program require recompiling (duh) and making new jar file (step 4-5), but the bat file needs no adjustment.
+
+If jar file doesn't open on step 6...
+a. Search Windows Start Menu for "regedit"
+b. HKEY_CURRENT_USER/Software/Microsoft/Windows/CurrentVersion/Explorer/FileExts
+c. If .jar folder exists, right-click and delete it
+d. HEKY_CLASSES_ROOT/jar_auto_file/shell/open/command
+e. Double-click (Default)
+f. Type the following, with appropriate location:
+"C:\Program Files\Java\jdk1.8.0_221\bin\java.exe" "-jar" "%1" %*
+g. Press OK to exit all these windows.  Jar file should open.
