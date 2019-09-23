@@ -1,0 +1,11 @@
+The problem with several JPanels in a JFrame is figuring out how to organize them.
+The answer is Layouts.  Take a look at your options here: https://docs.oracle.com/javase/tutorial/uiswing/layout/visual.html
+If you want a GridLayout:
+  window.setLayout(new GridLayout(2, 2, 0, 0))); //makes a 2x2 grid with 0 space between buttons.
+  window.add(new JButton("1"));
+  window.add(new JButton("2"));
+  window.add(new JButton("3"));
+  window.add(new JButton("4"));
+
+You can also set a Layout to a JPanel.
+Using layouts within panels within layouts is the secret to getting the look you want.  Look up examples of the different layouts.
