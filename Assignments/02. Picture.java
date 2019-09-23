@@ -33,10 +33,6 @@ public class Picture {
 	}
 	
 	public Picture() {
-		init();
-	}
-
-	public void init() {
 		pane = new JPanel() {
 			@Override
 			public void paintComponent(Graphics g) {
