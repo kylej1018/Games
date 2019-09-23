@@ -24,7 +24,7 @@ MazeGenerator & MazeSolver
 Timer
 Snake
 SpaceInvaders (class)
-GridWorld: CircleBug, BoxBug, SpiralBug, DrugBug, JumpBug
+GridWorld: CircleBug, SpiralBug, SnoozeBug, DrugBug, JumpBug
 SimonSays (GUI)
 Conway
 Minichef
