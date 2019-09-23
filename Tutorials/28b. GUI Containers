@@ -27,7 +27,10 @@ There are some useful things you can do to help your code.
   window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //terminates the program when you click the red x in the corner.
 Why those last two aren't automatic, I'll never know.
 
-When you look things up, sometimes Frame is called JFrame and sometimes not.  Why?
+You still need a main method, though.
+Construct a new Object with the name of your class there.  If your class has an intrinsic JFrame, main will cause it to launch.
+
+Sometimes Frame is called JFrame and sometimes not.  Why?
 When Java first came out, all the GUI was handled by the "AWT" class seen in import java.awt
 AWT GUIs did not have the J.
 This was not a very efficient class, so they created the "Swing" class seen in import javax.swing
