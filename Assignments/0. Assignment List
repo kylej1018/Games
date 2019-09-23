@@ -17,7 +17,6 @@ Trivia
 Blackjack
 Mosaic (picture)
 Solitaire
-Clue
 ???
 HanoiTower (recursion)
 BoxedIn
@@ -25,12 +24,14 @@ MazeGenerator & MazeSolver
 Timer
 Snake
 ShootingGallery (class)
+GridWorld
 SimonSays (GUI)
 Conway
 Minichef
 ~
-LogicPuzzle
 Madlibs
+Clue
+LogicPuzzle
 TicTacToe & Connect4 Revisited
 Mastermind
 2048
