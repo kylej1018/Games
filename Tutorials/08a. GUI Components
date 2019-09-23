@@ -1,3 +1,6 @@
+The greatest Java GUI reading on the Internet: https://www.ntu.edu.sg/home/ehchua/programming/java/j4a_gui.html
+You may want to reference it for visuals and examples for all the GUI tutorials.
+
 What is a component?
 A component is something that can respond to an Event, like a button, a check box, a drop-down menu.
 Let's pretend we're wanting to add a button that says "Click!" to your window.
