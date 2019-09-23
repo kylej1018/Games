@@ -36,5 +36,3 @@ Thus, these are both valid:
   Button b1 = new Button(); //awt version
   Jbutton b2 = new JButton(); //swing version
 They look a little different, they act the same, but the swing version is better for your computer.
-
-Confused?  Need visuals or more examples?  Additional reading: https://www.ntu.edu.sg/home/ehchua/programming/java/j4a_gui.html
