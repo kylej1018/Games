@@ -25,11 +25,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Picture {
-	JFrame window = new JFrame("Picture");
+	JFrame window = new JFrame();
 	JPanel pane;
 	
 	public static void main(String [] args) {
-		Picture pic = new Picture();
+		new Picture();
 	}
 	
 	public Picture() {
