@@ -28,7 +28,7 @@ public class PrettyLines implements MouseListener, KeyListener {
 	String shape = "circle";
 	
 	public static void main(String[] args) {
-		PrettyLines program = new PrettyLines();	
+		new PrettyLines();	
 	}
 	
 	public PrettyLines() {
