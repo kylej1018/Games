@@ -47,9 +47,8 @@ Brickbreaker
 Checkers
 Flood
 ClickTheBall
-TrainTracks
 Freecell
-Mancala
+TrainKeeper
 ShootingGallery
 Backgammon
 Tetris
@@ -59,8 +58,8 @@ Othello
 Tycoon
 Filler
 MusicCatch
-MortalKombat
 Pitch
+MortalKombat
 ReverseCheckers
 CandyCrush
 DinerDash
@@ -73,5 +72,5 @@ TowerDefense
 Roguelike
 Deckbuilder
 CivilizationEvolution
-3DRender
+RayTracer
 Horror
