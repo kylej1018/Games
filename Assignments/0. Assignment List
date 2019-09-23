@@ -5,37 +5,35 @@ PaintPalette
 Loops 1
 GuessingGame
 Loops 2
-Memory (gui)
+Mystery (methods)
 Loops 3
 Connect4
 Loops 4
 YearEndBonus or TicTacToe
 Loops 5
 Hangman
-Mystery (methods)
 Trivia
-Mastermind
-2048
+Memory (gui)
 Blackjack
 Mosaic (picture)
 Solitaire
 Clue
 ???
-LogicPuzzle
 HanoiTower (recursion)
 BoxedIn
-Flood
 MazeGenerator & MazeSolver
 Timer
-WordFlash
 SimonSays
 Snake
 ShootingGallery
 Conway
 Minichef
 ~
+LogicPuzzle
 Madlibs
 TicTacToe & Connect4 Revisited
+Mastermind
+2048
 Golf
 Monopoly
 SpiderSolitaire
@@ -46,10 +44,12 @@ SpaceInvaders
 Dodger
 Brickbreaker
 Checkers
+Flood
 ClickTheBall
 TrainTracks
 Freecell
 Mancala
+WordFlash
 Backgammon
 Tetris
 BubbleBuster
