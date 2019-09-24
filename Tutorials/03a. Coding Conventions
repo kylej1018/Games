@@ -1,7 +1,6 @@
 You won't know what every term in this document means yet.  Please refer back to it often.
 # = need to know
 ~ = etiquette or convention
-blank = background
 
 Semicolons:
 #Basically every line in java ends with a semicolon.  The only ones that don't open a curly bracket, or close an existing curly bracket.
