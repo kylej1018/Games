@@ -13,6 +13,8 @@ That additional method is called actionPerformed.
   public void actionPerformed(ActionEvent e) {
     //code here
   }
+This also means you need, in your class line, to implement ActionListener.
+
 You may have noticed a problem that wasn't present for a keyboard or mouse listener: What if there's more than one button?
 Option 1 is to see where the event came from:
   if(e.getSource().equals(myButton)) {
