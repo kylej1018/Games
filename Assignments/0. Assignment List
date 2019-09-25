@@ -13,16 +13,16 @@ YearEndBonus or TicTacToe
 Loops 5
 Hangman
 Mystery (methods)
-Blackjack (Images)
+Blackjack (Images & music)
 Solitaire
 Mosaic (Image Manipulation)
 Trivia (ASCII)
 ???
-HanoiTower & Sierpinski splash (recursion)
+HanoiTower & Sierpinski splash (recursion & Big-O)
 BoxedIn
 MazeGenerator & MazeSolver
 Wordflash (timer)
-Snake (music)
+Snake
 SpaceInvaders (class)
 GridWorld: CircleBug, SpiralBug, SnoozeBug, DrugBug, JumpBug
 SimonSays (GUI)
@@ -72,5 +72,5 @@ TowerDefense
 Roguelike
 Deckbuilder
 CivilizationEvolution
-RayTracer
 Horror
+RayTracer
