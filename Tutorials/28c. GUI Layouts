@@ -8,4 +8,5 @@ If you want a GridLayout:
   window.add(new JButton("4"));
 
 You can also set a Layout to a JPanel.
-Using layouts within panels within layouts is the secret to getting the look you want.  Look up examples of the different layouts.
+Using layouts within panels within layouts is the secret to getting the look you want.
+Further suggested reading: https://docs.oracle.com/javase/tutorial/uiswing/layout/index.html
