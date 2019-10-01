@@ -15,5 +15,9 @@ But you should still check.
   System.out.println(var1);
 You'll have to go through the troubled area, line by line, and figure out where your variable is changing unexpectedly.
 
+I will strongly recommend to use your System.out.print lines NOT indented, not even a little.
+It can be a little tricky to remember the lines that are crucial for your code and the lines that were just for testing.
+You'll want to delete the latter after you debug, and they're easier to find if not indented.
+
 The other debugging method involves buying a duck:
 https://www.reddit.com/r/ProgrammerHumor/comments/61ng5u/duck_debugging_xpost_rtumblr/
