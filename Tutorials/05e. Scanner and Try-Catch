@@ -15,8 +15,9 @@ sc.nextLine() always gives you a String.  But sometimes you want numbers.  You n
   try {
     num1 = Integer.parseInt(sc.nextLine()); //tries to turn the nextLine into a String.  If it fails, it jumps to the curly brackets after catch.
   }
-  catch (Exception e) {}
+  catch (Exception ex) {}
 Remember, num1 has to be declared outside the try-catch curly brackets, or else it's too local.
+Don't confuse yourself by naming both your MouseEvent e and your Exception e.
 
 What is a try-catch block?
 Exceptions happen when the user does something they're not supposed to.
