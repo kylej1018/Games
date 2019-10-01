@@ -20,7 +20,7 @@ Trivia (ASCII)
 ???
 HanoiTower & Sierpinski splash (recursion & code efficiency (Big-O, memory, codelines)
 BoxedIn
-MazeGenerator & MazeSolver
+MazeGenerator & MazeSolver w/ dragon curve
 Wordflash (timer)
 Snake
 SpaceInvaders (class)
