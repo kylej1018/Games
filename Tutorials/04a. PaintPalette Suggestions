@@ -6,7 +6,7 @@ How many "buttons" will you need?
   How big should they be?  Try doing a g.drawRect to figure out what looks nice.
   Where will your buttons be located?
     Design what you want your screen to look like before you start coding.  Actually write down the x and y coordinates of your buttons.
-Could any of your features have redundant keyboard shortcuts?  Some users prefer mouse, some prefer keys.
+Could any of your features have keyboard shortcuts that do the same thing as your onscreen buttons?  After all, some users prefer mouse, some prefer keys.
   If user types a number, brush size might change.  Bigger number = bigger size.
   If they type c or s, shape might change between circle or square.
 What should be the hierarchy in myPaint?
