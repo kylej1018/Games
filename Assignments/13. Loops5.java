@@ -15,8 +15,8 @@ public class Loops5 {
 		ArrayList <String> stringArray1 = populateStr("StringArray1"); //more example arrays.  Don't mess with them.
 		ArrayList <String> stringArray2 = populateStr("StringArray2");
 		ArrayList <String> keywordCipher = populateStr("KeywordCipher");
-    
-    Scanner sc = new Scanner(System.in);
+
+		Scanner sc = new Scanner(System.in);
     
 		//#25. Prompt user input.  Translate the input to Pig Latin and print it out.
 		//#26. Prompt user input. Alphabetize each word in the sentence but don't reverse the whole sentence. {the quick brown fox} --> {eht cikqu bnorw fox}
