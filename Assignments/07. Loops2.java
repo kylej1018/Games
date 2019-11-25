@@ -12,7 +12,7 @@ I made printArray for this code, it won't work in other codes.
 
 import java.io.*;
 import java.util.*;
-public class Loops {
+public class Loops2 {
 	public static String loc = "C:\\Users\\kylej\\Desktop\\"; \\FIXME
 	public static void main (String [] args) {
 		int [] sortedIntArray1 = populateNum("sortedIntArray1"); //these three lines populate some example arrays for you to work with.  Don't mess with them.
