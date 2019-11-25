@@ -32,4 +32,4 @@ Main:
 
 Public Void:
 #After main is a series of curly-bracket-enclosed areas labeled public void.
- These are called methods. You'll learn how to make your own methods later.
+ These are called methods.  You'll learn how to make your own methods later.
