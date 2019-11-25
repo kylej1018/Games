@@ -6,7 +6,7 @@ For-loops execute a set number of times.  They look like this:
 The first bit establishes the iteration variable i, which starts at 1.  It will keep track of which loop we are on.
 The second bit is a boolean that must be true for the loop to execute - i must be less than or equal to 100.
 The third bit happens every time the loop completes - i increments by 2.
-Thus, this loop will happen fifty times.  On the fifty first time, i will go from 99 to 101 and the loop will "break" and the code will continue.
+Thus, this loop will happen fifty times.  On the fifty-first time, i will go from 99 to 101 and the loop will "break" and the code will continue.
 It is very good to have loops break.  If they run forever, your code will be stuck.
 The keyword "break;" can break a loop from inside. But it's better, if possible, to set the iteration variable to something that will end the loop on the next pass (i = 101).
 The keyword "continue;" can skip to the next interation, skipping any remaining code in the loop and restarting at the top of the loop.  It's frowned upon to use continue.
