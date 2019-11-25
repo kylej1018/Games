@@ -7,7 +7,23 @@ You can figure out how long an unknown array is with int x = arr.length;
 You can access an element in an array with int x = arr[5], which returns the element at Index 5.
 You can assign an element in an array with arr[5] = 100, which assigns the value 100 to Index 5.
 
-Here's the rub.  Place 5 is not the fifth place.
+If you know immediately what you want in your array, you can assign it with curly brackets.
+  int [] arr = {1, 2, 3};
+
+Here's the rub.  Index 5 is not the fifth place.
 ARRAYS START AT 0.  The first element is arr[0].  The second element is arr[1], and so on.
 There is nothing at arr[arr.length].  If you have an array with length 3, its indexes are 0, 1, and 2.  There is no 3.
 The last element is at arr[arr.length - 1].
+
+One more thing.  When you're creating a new array, you want to avoid the following:
+  //let's say you have a populated int [] arr1
+  int [] arr2 = arr1;
+Every time you change something in arr2, it changes what's in arr1.  Your computer thinks they're the same array.
+How do you get around this?  There are two common solutions.
+
+1. Initialize arr2 with the NEW keyword and set it equal to arr1's size.
+  int [] arr2 = new int[arr1.length];
+Then, use a loop to go through every index in arr2 (from 0 to arr2.length - 1) and assign everything the value in arr1.
+
+2. int [] arr2 = arr1.clone();
+Now, changing something in arr2 won't change what's in arr1.
