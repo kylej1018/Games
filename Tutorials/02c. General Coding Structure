@@ -1,4 +1,5 @@
 # = need to know
+~ = covention
 blank = background knowledge
 
 Here's the basic outline of every code:
@@ -27,10 +28,8 @@ Keywords:
  A complete list is here: https://en.wikipedia.org/wiki/List_of_Java_keywords
 
 Main:
-#After the variables is something called public static void main(String[] args)
- Don't delete it.  It's usually essential.
+#After the variables is something called public static void main(String[] args) and it's usually essential for the code.
 
 Public Void:
 #After main is a series of curly-bracket-enclosed areas labeled public void.
- These are called methods.  A popular method is called the paint method, which looks like this: public void paint(Graphics g)
- You'll learn how to make your own methods later.
+ These are called methods. You'll learn how to make your own methods later.
