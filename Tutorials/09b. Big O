@@ -1,0 +1,47 @@
+Why does Assignment #9 have you sorting the same thing in several different ways?
+It probably seems to you that all of them complete really quickly, and true, they're pretty interchangeable for an array of size 100.
+Sometimes programmers have bigger challenges.  The human genome has ~3,000,000,000 base pairs to sort through.
+You don't want to be sitting at your computer for 5 years while that executes.
+So programmers have come up with a concept called Big O.
+Big O is defined as the longest possible time a program could take to execute, worst-case scenario.
+Your computer takes more time when it has to execute more actions, like comparing or assigning variables.
+Getting Big O to be smaller is often the secret to making a 5-year task take 5 minutes.
+
+Why is it called Big O?  It stands for order of magnitude and can also be written O(n).
+What is an order of magnitude?  It's a power of 10.
+Let's say you have jelly beans in a jar and you have to guess how many there are.
+500 is a pretty good guess.
+But honestly, anything between 100-900 is a pretty good guess.
+If you guess 50, that's not very accurate.  If you guess 5,000, that's not very accurate.  If you guess 50,000, that's extremely inaccurate.
+That's because 100-900 is all within one order of magnitude.  50 is one order of magnitude away.  5,000 is also.  50,000 is two orders of magnitude away.
+In calculating the Big-O worst-case time taken by a program, programmers are okay with approximating.  They just want the order of magnitude.
+Letting a program execute for 500 minutes isn't that much worse than 250 minutes.  But imagine letting it execute for 5,000 minutes??
+
+Okay, so how do we calculate Big O for each of our sort functions?
+Note that it's always dependent on the size of the array, which we'll call n.  If there are 100 elements, n=100.
+Extract Sort
+  You would need to cycle through the original array and pull out your target (number of actions = n).
+  Then you would need to cycle through every element in the second array before you found its home (number of actions = n^2 because each element cycles through each other element).
+  Thus, O(n) = n + n^2
+  Which is basically the same as O(n) = n^2 for big lists.
+Bubble Sort
+  In a worst-case scenario, you would need to swap every element with every other element (number of actions = n^2).
+  Thus, O(n) = n^2
+Count Sort
+  In a worst-case scenario, you would cycle through the original array and populate your 2D array (number of actions = n).
+  Then you would cycle through your 2D array and populate your final array (number of actions = n).
+  Thus, O(n) = 2n
+  Which is basically the same as O(n) = n because it's within an order of magnitude.
+  Even if you needed to cycle through your array a third time to find its numerical range, 3n is still within an order of magnitude.
+  
+What does all this mean?
+It means that Count Sort is WAY more efficient for your computer's time than Extract and Bubble Sort because n is WAY less than n^2.
+Even 2n, 3n, or 5n is WAY less than n^2.
+So this approximation turns out to be pretty useful in figuring out which to use for big data.
+
+Is it ever useful to use Bubble Sort?  Of course!
+But you have to know that your data is NOT worst-case scenario - as in, it's very nearly sorted already.
+
+There are even more ways to sort numbers.  One of the most efficient consists of breaking down a list into two smaller lists and then merging them.
+You got to explore this a little in Loops 2, where you combined two sorted lists.
+For this, O(n) = n*log(n), which is better than bubble but not quite as fast as Count Sort.
