@@ -44,4 +44,4 @@ But you have to know that your data is NOT worst-case scenario - as in, it's ver
 
 There are even more ways to sort numbers.  One of the most efficient consists of breaking down a list into two smaller lists and then merging them.
 You got to explore this a little in Loops 2, where you combined two sorted lists.
-For this, O(n) = n*log(n), which is better than bubble but not quite as fast as Count Sort.
+For this, O(n) = n*log(n), which is better than Bubble but not quite as fast as Count Sort.
