@@ -21,14 +21,15 @@ Trivia (ASCII)
 HanoiTower & Sierpinski splash (recursion & code efficiency (Big-O, memory, codelines)
 BoxedIn
 MazeGenerator & MazeSolver w/ dragon curve
-Wordflash (timer)
-Snake
+Snake (timer)
 SpaceInvaders (class)
 GridWorld: CircleBug, SpiralBug, SnoozeBug, DrugBug, JumpBug
 SimonSays (GUI)
 Conway
-Minichef (Website)
+Website (accounts, connection)
+Minichef
 ~
+Wordflash
 Madlibs
 Clue
 LogicPuzzle
@@ -40,8 +41,7 @@ Mancala
 SpiderSolitaire
 Minesweeper
 Pong
-Cribbage (Internet)
-Dodger
+Cribbage
 Brickbreaker
 Checkers
 Flood
