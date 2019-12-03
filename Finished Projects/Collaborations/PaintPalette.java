@@ -48,10 +48,6 @@ public class PaintPalette implements MouseListener, MouseMotionListener, KeyList
 		pane = new JPanel() {
 			@Override
 			public void paintComponent(Graphics g) {
-				buffer(g);
-			}
-
-			public void buffer(Graphics g) {
 				if(buffImg == null) { //for double-buffering
 					buffImg = createImage(screenwidth, screenheight);
 				}
