@@ -22,3 +22,15 @@ What if you really wanted it from 0.0 to 100.0?
   float x = r.nextFloat() * 100;
 What if you wanted it from 1.0 to 100?
   float x = r.nextFloat() * 99 + 1;
+
+Once in a while, you want something that is random but repeatable.
+We call this a "seed."
+If you seed a random number generator and ask it for ten numbers, it will look like ten random numbers.
+But if you make a different random number generator, set it to the same seed, and ask it for ten numbers, it will give you the same ten random numbers as above.
+You can do this in two ways.  The first way sets the seed upon initialization of Random.
+  long seed = 3.0; //a long is a type of variable with a decimal, like double or int.  It can be set to anything.
+  Random r = new Random(seed);
+Or you can reset the seed of an existing Random.
+  long seed = 3.0;
+  Random r = new Random();
+  r.setSeed(3.0);
