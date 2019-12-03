@@ -38,6 +38,9 @@ What does all this mean?
 It means that Count Sort is WAY more efficient for your computer's time than Extract and Bubble Sort because n is WAY less than n^2.
 Even 2n, 3n, or 5n is WAY less than n^2.
 So this approximation turns out to be pretty useful in figuring out which to use for big data.
+As an example, let's say n = 10,000, and let's say each task takes 0.01 second.
+You could get through O(n) = n = 10,000 tasks in 100 seconds.  That's about 2 minutes (900, a larger number within this order of magnitude is 15 minutes).
+You could get through O(n) = n^2 = 100,000,000 tasks in 1,000,000 seconds.  That's about 11.5 days and (9,000,000 is 3 months).
 
 Is it ever useful to use Bubble Sort?  Of course!
 But you have to know that your data is NOT worst-case scenario - as in, it's very nearly sorted already.
