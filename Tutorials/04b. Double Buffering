@@ -1,7 +1,7 @@
 I've already built double buffering into PaintPalette.  It's nice to know what it is so you can transfer it to other projects.
 
 Odds are, your myPaint method is going to get very very large in some projects.
-In fact, your computer may call pane.repaint() in a Listener method before myPaint even finishes.
+In fact, your computer may call pane.repaint() in a key or mouse Listener method before myPaint even finishes.
 That will make your computer flicker.  It looks bad.  But here's the secret.
 Instead of painting on your screen, we're going to paint on a secret invisible image.  I usually name it named buffImg, like buffered image.
 If that finishes, then it will transfer the finished buffImg  to your screen.
@@ -24,3 +24,12 @@ paintComponent calls a method named myPaint(), which you will edit.
 So if pane.repaint() happens before myPaint() finishes, it just chills in update() with any other pane.repaint() calls until myPaint does finish.
 Double-buffering may result in your screen channeling two repaint() calls in the next g.drawImage.
 But this happens so fast, your human eye won't notice if it was two repaint() calls at once, or two really fast g.drawImage calls.
+
+When do your projects need double-buffering?
+When it has to do a big myPaint and there are lots of repaint methods.
+Typically, your projects need double buffering when you have mouseMotionListener.
+It's rare that you can click or type fast enough to make the screen flicker.
+But, say, your mouse moving across the screen?  That triggers an event for every pixel...which calls a repaint.
+Basically, when you notice flickering, copy and paste the relevant code.
+That includes both the chunk in this document, as well as this declaration in your global variables:
+	Image buffImg;
