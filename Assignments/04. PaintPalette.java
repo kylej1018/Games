@@ -20,7 +20,6 @@ public class PaintPalette implements MouseListener, MouseMotionListener, KeyList
 	JPanel pane;
 	Dimension screen;
 	Image buffImg; //for double buffering
-	Graphics g2; // for double buffering
 	int screenwidth, screenheight; //screenwidth and height keep track of user's computer screen size
 
 	public static void main(String[] args) {
