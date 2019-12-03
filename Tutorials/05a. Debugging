@@ -2,7 +2,7 @@ Review MyFirstCode to remember the difference between print and println.
 
 Most of the time, command prompt won't compile your code and will tell you directly what your problem is.
   ; expected, line 240
-Other times, it claims not to recognize an "undefined" variable.  8/10 times, this is because a local variable needed to be less local.  2/10 times, you need another import statement.
+Other times, it claims not to recognize an "undefined" variable that you know you defined.  8/10 times, this is because a local variable needed to be less local.  2/10 times, you need another import statement.
 
 But there's a few times when the code compiles correctly and gets weird when running.
 The question you should ask when debugging is, "Is my code in the wrong spot, or is my code in the right spot but messing with my variables?"
@@ -11,8 +11,9 @@ The most helpful line you can include is:
 If your command prompt never shows TEST, then your code never made it to that point.  It's stuck somewhere earlier, and you should TEST a few lines up to find the problem.
 If your command prompt does show TEST, then your code is in the right place but it's messing with your variables.
 Sure, you know what you expect your variable to be, and you know the computer has no reason to give it the wrong value.  Check anyways.
-  System.out.println(var1);
-You'll have to go through the troubled area, line by line, and figure out where your variable is changing unexpectedly.
+  System.out.println(num);
+If your command prompt shows the variable is correct, the problem is further down.  If it's wrong, the problem is further up.
+You need to find the exact line where your program is failing, regardless of if it's altering your variable values or getting stuck.
 
 I will strongly recommend to use your System.out.print lines NOT indented, not even a little.
 It can be a little tricky to remember the lines that are crucial for your code and the lines that were just for testing.
