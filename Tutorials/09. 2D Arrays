@@ -1,7 +1,8 @@
 You can have two-dimensional arrays.  They look like this:
-  int [][] arr = new int [3][5];
-That command makes a 3x5 grid.
+  char [][] arr = new char [3][5];
+That command makes a 3x5 grid of chars, but you could easily make one for ints or booleans.
 You access the first element at arr[0][0] and the last one at arr[2][4].
+Technically, your computer reads a 2D array as an array (size 3) of arrays (size 5).
+
 You could even have three, four, or higher dimensional arrays.
   int [][][][] arr = new int[4][4][4][4];
-That command makes a hypercube.
