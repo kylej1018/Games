@@ -15,10 +15,13 @@ ARRAYS START AT 0.  The first element is arr[0].  The second element is arr[1], 
 There is nothing at arr[arr.length].  If you have an array with length 3, its indexes are 0, 1, and 2.  There is no 3.
 The last element is at arr[arr.length - 1].
 
-One more thing.  When you're creating a new array, you want to avoid the following:
-  //let's say you have a populated int [] arr1
+IMPORTANT: Arrays are NOT primitive variables.
+Primitive variables are booleans, chars, ints, and doubles.  Not arrays, and not Strings.
+There are also primitive variables called bytes, shorts, longs, and floats, but they're not as often used.
+Beware of setting things equal to one another if they're not primitive!
+If you make a new array named arr2 but you do it like this:
   int [] arr2 = arr1;
-Every time you change something in arr2, it changes what's in arr1.  Your computer thinks they're the same array.
+that's bad.  Every time you change something in arr2, it will change in arr1 also, and vice versa.  Your computer thinks they're the same object.
 How do you get around this?  There are two common solutions.
 
 1. Initialize arr2 with the NEW keyword and set it equal to arr1's size.
@@ -27,3 +30,8 @@ Then, use a loop to go through every index in arr2 (from 0 to arr2.length - 1) a
 
 2. int [] arr2 = arr1.clone();
 Now, changing something in arr2 won't change what's in arr1.
+
+This problem doesn't happen in primitive variables.
+  int y = x;
+Your computer knows to just assign the value of x to y, and it won't think they're the same object.
+You can change y and it won't change x.  You can change x and it won't change y.
