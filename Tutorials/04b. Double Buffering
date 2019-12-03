@@ -7,7 +7,7 @@ Instead of painting on your screen, we're going to paint on a secret invisible i
 If that finishes, then it will transfer the finished buffImg  to your screen.
 So the thing happening on your screen is now only one line long: "Transfer" instead of "everything in myPaint".  Flickering avoided.
 
-public void buffer(Graphics g) {
+public void paintComponent(Graphics g) {
 	if(buffImg == null) {
 		buffImg = createImage(screenwidth, screenheight); //if we haven't made buffImg yet, make buffImg
 	}
