@@ -23,6 +23,8 @@ Button to side for rules.
 Reset button: ask if easy or hard.
 If hard mode, Joker card: exits game but reveals all surrounding cards until next click.
 
+You should only need MouseListener.  There's no real use for KeyListener or MouseMotionListener.
+
 Tasks:
 ~Splash & initial prompt
 ~Game display & initialization
@@ -39,8 +41,6 @@ import javax.swing.*;
 public class Memory implements MouseListener {
 	JFrame window;
 	JPanel pane;
-	Image buffImg; //for double buffering
-	int screenwidth, screenheight; //screenwidth and height keep track of user's computer screen size
 
 	public static void main(String [] args) {
 		Memory game = new Memory();
@@ -57,15 +57,7 @@ public class Memory implements MouseListener {
 			@Override
 			public void paintComponent(Graphics g) {
 				super.paintComponent(g);
-				buffer(g);
-			}
-
-			public void buffer(Graphics g) {
-				if(buffImg == null) { //for double-buffering
-					buffImg = createImage(screenwidth, screenheight);
-				}
-				myPaint(buffImg.getGraphics()); //don't override paint(), it produces errors
-				g.drawImage(buffImg, 0, 0, pane);
+				myPaint(g);
 			}
 		};
 		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize(); //resizes applet to computer screen size
@@ -93,7 +85,4 @@ public class Memory implements MouseListener {
 	public void mouseClicked(MouseEvent e) {}
 	public void mouseEntered(MouseEvent e) {}
 	public void mouseExited(MouseEvent e) {}
-
-	public void mouseDragged(MouseEvent e) {}
-	public void mouseMoved(MouseEvent e) {}
 }
