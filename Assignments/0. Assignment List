@@ -27,7 +27,7 @@ SpaceInvaders (class)
 GridWorld: CircleBug, SpiralBug, SnoozeBug, DrugBug, JumpBug
 SimonSays (GUI)
 Conway
-Minichef
+Minichef (Website)
 ~
 Madlibs
 Clue
@@ -58,7 +58,6 @@ Tycoon
 Filler
 MusicCatch
 Pitch
-MortalKombat
 ReverseCheckers
 CandyCrush
 DinerDash
@@ -69,6 +68,7 @@ Platformer
 OrbitingSheep
 TowerDefense
 Roguelike
+MortalKombat
 Deckbuilder
 CivilizationEvolution
 Horror
