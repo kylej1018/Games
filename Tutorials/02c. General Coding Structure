@@ -10,9 +10,11 @@ Import Statements:
  import java.awt.*;
  import java.awt.event.*;
  import java.lang.Object;
- These are three distinct import statements.  The * means "everything in that package."  So the entire contents of java.awt are imported in the first line.
- java.awt.event is not in the java.awt package.  Common misconception.
+ These are three distinct import statements.  The * means "everything in that package."  So the entire contents of the java.awt package are imported in the first line.
+ java.awt.event is not in the java.awt package.  Common misconception.  It's a whole separate package.
  java.lang.Object IS in the java.lang folder.  I know this because Object is capitalized, meaning it's a class, but everything before it is not, meaning it's a package.
+ Thus, if I have java.lang.* then I don't need java.lang.Object
+ These packages and the classes inside them all live in your computer system, in the same file where you downloaded Java.
 ~If only one class is used from a package, import that class by name.  If two or more, use the * symbol.
 
 Class:
