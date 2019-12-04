@@ -53,6 +53,7 @@ Backgammon
 Tetris
 BubbleBuster
 FruitNinja
+Euchre
 Othello
 Tycoon
 Filler
@@ -60,12 +61,12 @@ MusicCatch
 DSTMod
 Pitch
 ReverseCheckers
-CandyCrush
+Platformer
+RayTracer
 DinerDash
 LunarLander
 BuildingSim
 EscapeRoom
-Platformer
 OrbitingSheep
 TowerDefense
 Roguelike
@@ -73,5 +74,4 @@ MortalKombat
 Deckbuilder
 CivilizationEvolution
 Horror
-RayTracer
 LegoSH
