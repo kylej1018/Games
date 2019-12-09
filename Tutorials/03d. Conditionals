@@ -31,6 +31,7 @@ This will only execute if condition1 is false.
 You may also want to test if two things are true - check these examples with a and b both variables of type int.
 if(a == 3 && b < 1) "If a is 3 and b is less than 1"
 if(a == 3 || b < 1) "If a is 3 or b is less than 1"
+if(a == 3 ^ b < 1) "If a is 3 or b is less than 1, but not both"
 if(a != 3 && !(b < 1)) "If a is not 3 and not-(b is less than 1)"
   The bottom one is equivalent to saying "If a is not 3 and b is greater than or equal to 1"
 If you want to test if a is between two numbers, you must write
