@@ -73,7 +73,7 @@ public class PrettyLines implements MouseListener, KeyListener {
 	public void mouseExited(MouseEvent e) {}
 
 	public void keyTyped(KeyEvent e) { //shape updates when you type the correct letter
-		if (e.getKeyChar() == 's') {
+		if(e.getKeyChar() == 's') {
 			shape = "square";
 		}
 		//For part 3, add code here for circle
