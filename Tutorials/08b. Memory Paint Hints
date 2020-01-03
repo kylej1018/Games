@@ -1,0 +1,17 @@
+A 2D array is great for storing simple information like whether a card is visible, hidden, or removed from the game.
+To paint that, it's a basic series of conditionals and not what this tutorial is about.
+The challenge comes when it comes to translating a 2D chart to a visual paint.
+Let's say you start your cards such that the upper-left is stored in array arr at [0][0].
+Consider the "card" at arr[1][1].  It is one down and one right.
+In your paint area, you'd draw that with the line - g.fillRect(x, y, width height);
+But what are x and y?
+
+Well, for the card in the upper left, at arr[0][0], x and y can be 0, 0.
+The card at arr[1][1] wouldn't be at the x and y coordinates 1, 1...that'd be really quiet.
+It would be one "width" over and one "height" down.
+The card at arr[2][2] would be at two "widths" over and one "height" down.
+The card at arr[1][2] would be at one "width" over and two "heights" down.
+In other words, to get the x and y coordinates, you need to think of each card's location as arr[x][y], and multiply x by widths and y by heights.
+
+Is that all there is?  If you do that, your cards will take up ALL the space in your grid...and that will no longer make them look like cards.
+You should plan to have a lil border around each one.  Let that be a global variable.
