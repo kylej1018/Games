@@ -26,8 +26,8 @@ Now you can actually code.  Open Notepad and paste the sample code from MyFirstC
 Save that as MyFirstCode.java on your Desktop.
 Search Cortana for Command Prompt and click the first hit.
 Enter cd Desktop
-Enter javac myfirstcode.java
+Enter javac Myfirstcode.java
 If there were errors, stop and ask for help.
-If there were no errors, enter java myfirstcode
+If there were no errors, enter java Myfirstcode
 
 It's traditional for your first assignment to be getting the computer to say "Hello, world!"  You've taken your first real step towards learning programming!
