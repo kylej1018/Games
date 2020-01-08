@@ -7,7 +7,7 @@ Take note of the path - something like C:\Program Files\Java\jdk1.8.0_221\bin
   Click on the following folders: Java, then the one that says "jdk" with a bunch of numbers, then bin.
   Right-click the address bar at the top of your file explorer and copy that.  THAT is the path.
 
-If you have an Apple, you'll have to look up how to edit environment variables. Windows users, keep reading.
+If you have an Apple device, you'll have to look up how to edit environment variables. Windows users, keep reading.
 Search Cortana for Edit the system environmental variables and click the first hit.
 Make sure you're on the Advanced tab, then click Environment Variables...
 Under the top box (User variables), click New...
