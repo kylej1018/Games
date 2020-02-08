@@ -1,3 +1,30 @@
+One of the trickiest concepts you'll face for a while in programming is how to populate a 2D array.
+Figuring out its size is usually easier said than done.
+How many pieces of data do you have to store?  That's the area of a 2D array.
+But when you initialize it with the New keyword, you only tell it how many rows and columns.  That has to be equal to your area when multiplied.
+If you're looking at a piece of data, the row it's on, the column it's on, and the actual data may be three different numbers.
+If you lose track, make a little sample in Excel or something to reference.
+
+Automatically filling a 2D array is hard too.  Here are three different ways to construct loops for automatically populating int arrays.
+Example 1: Make a 2D array of all prime numbers from 1-100.  Each row is a different tens digit, each column a different ones digit.
+Solution 1: This one is smartest with a nested for-loop.  Your array would be 10x10.
+  The outer loop keeps track of if you're in 10's, 20's 30's, etc. but also keeps track of the row you're on in your array.
+  The inner loop loops from 0-9 every time the outer loop iterates.  If it's prime, it goes in the array.
+Example 2: Make a 2D array of a video game character's max health and mana as he progresses through 25 levels.
+Solution 2: This one makes some sense with two different loops.  Health and mana usually don't increase at the same rate, right?  Your array would be 3x25.
+  The first loop tells you when health increases.  You'd figure out the formula, something like 3HP every five levels.
+  The second loop tells you when mana increases.  It's probably a different formula, maybe 5MP every 8 levels.
+  The third row wasn't specifically asked for, but it should be the level.
+     You don't always know what will be useful later in the code.  What if one day you want to know what level you're at when you have 20HP and 15MP?
+     Maybe you'll never use this.  But it's so little work now, and it would be so hard to add in later once you've forgotten your code.
+  Could you combine these into one loop?  Maybe, if you were clever with the % operator.  But that sounds like a math bug waiting to happen.
+Example 3: Make a 2D array where the first row counts from 1-100 and the second row counts from 100-1.
+Solution 3: One loop is sufficient.  Your array can be 2x100.
+   Let's say your iteration variable is i, as in for(int i = 0...).  Every time i increases, you fill the spot at [0][i] with i and the spot at [1][i] with 100-i.
+   Just a reminder, rows and columns don't matter.  If your array is 100x2, you fill the spot at [i][0] with i and the spot at [1][i] with 100-i.
+   
+You don't always use the iteration variable for filling an array!
+
 A 2D array is great for storing simple information like whether a card is visible, hidden, or removed from the game.
 To paint that, it's a basic series of conditionals and not what this tutorial is about.
 The challenge comes when it comes to translating a 2D chart to a visual paint.
@@ -14,4 +41,4 @@ The card at arr[1][2] would be at one "width" over and two "heights" down.
 In other words, to get the x and y coordinates, you need to think of each card's location as arr[x][y], and multiply x by widths and y by heights.
 
 Is that all there is?  If you do that, your cards will take up ALL the space in your grid...and that will no longer make them look like cards.
-You should plan to have a lil border around each one.  Let that be a global variable.
+You should plan to have a lil border around each one.
