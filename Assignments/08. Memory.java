@@ -1,39 +1,3 @@
-/*
-Make a Memory game, where a player turns over two of many facedown cards and tries to find the match.
-It should have the following components:
-
-At startup:
-Splashscreen.
-Ask if easy (3x4) or hard (5x5).
-Start a game.
-Computer shuffles and distributes 12 or 25 cards, facedown, in a grid.
-Player chooses a card, it flips over.
-Player chooses a second card, if flips over.
-If they match, cards "exit" the game (stay flipped over or move to side?)
-If they don't match, the next click by the player, regardless of where, reverts the cards.
-
-The player has a sequence of three clicks - first card, second card, revert.  Computer needs to track which we're on.
-Each card has one of three values: Faceup (additional values based on size), Facedown, or Exited.
-
-Scoring:
-When a player makes a match, score +10.
-Game should keep track of how many times a cards is turned over.  If >2, score -5.
-
-Button to side for rules.
-Reset button: ask if easy or hard.
-If hard mode, Joker card: exits game but reveals all surrounding cards until next click.
-
-You should only need MouseListener.  There's no real use for KeyListener or MouseMotionListener.
-
-Tasks:
-~Splash & initial prompt
-~Game display & initialization
-~Drawing of all the faceup cards
-~Clicking cards to turn over
-~Evaluate match and possible exit
-~Joker card
-*/
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
