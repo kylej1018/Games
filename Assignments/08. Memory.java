@@ -25,8 +25,8 @@ public class Memory implements MouseListener {
 			}
 		};
 		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize(); //resizes applet to computer screen size
-		screenwidth = (int)screen.getWidth();
-		screenheight = (int)screen.getHeight();
+		int screenwidth = (int)screen.getWidth();
+		int screenheight = (int)screen.getHeight();
 		window.setSize(screenwidth, screenheight);
 
 		pane.addMouseListener(this);
