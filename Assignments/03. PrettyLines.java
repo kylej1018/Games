@@ -39,7 +39,6 @@ public class PrettyLines implements MouseListener, KeyListener {
 		pane = new JPanel() {
 			@Override
 			public void paintComponent(Graphics g) {
-				super.paintComponent(g);
 				myPaint(g);
 			}
 		};
