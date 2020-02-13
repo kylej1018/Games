@@ -2,8 +2,8 @@ One of the trickiest concepts you'll face for a while in programming is how to p
 Figuring out its size is usually easier said than done.
 How many pieces of data do you have to store?  That's the area of a 2D array.
 But when you initialize it with the New keyword, you only tell it how many rows and columns.  That has to be equal to your area when multiplied.
-If you're looking at a piece of data, the row it's on, the column it's on, and the actual data may be three different numbers.
-If you lose track, make a little sample in Excel or something to reference.
+The row a piece of data is on, the column it's on, and the actual data may be three different numbers.
+If you lose track, it's helpful make a little sample in Excel or something to reference.
 
 Automatically filling a 2D array is hard too.  Here are three different ways to construct loops for automatically populating int arrays.
 Example 1: Make a 2D array of all prime numbers from 1-100.  Each row is a different tens digit, each column a different ones digit.
@@ -41,4 +41,11 @@ The card at arr[1][2] would be at one "width" over and two "heights" down.
 In other words, to get the x and y coordinates, you need to think of each card's location as arr[x][y], and multiply x by widths and y by heights.
 
 Is that all there is?  If you do that, your cards will take up ALL the space in your grid...and that will no longer make them look like cards.
-You should plan to have a lil border around each one.
+You should plan to have a lil border around each one.  If you are drawing something two cards over, you need to add 2x whatever the border is.
+It's also nice to add a margin on the left of your playing area.  And another one on top.  That way, if you want to shift the game over, you change the value of one variable.
+
+So each card should be drawn at these x, y values:
+x = (# cards to the left * card width) + (# cards to the left * border width) + left margin
+y = (# cards above * card height) + (# cards above * border width) + right margin
+
+Just a reminder, you better not hard-code any of these numbers.  If your border is 15 pixels, you make a variable called border and set it equal to 15.
