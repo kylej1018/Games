@@ -1,0 +1,75 @@
+By now you've hopefully fiddled around in Eclipse.  I'm going to show you some powerful tools to make your life easier.
+
+Note:
+If you have a * on the tab at the top of your coding area, the code hasn't been saved.  Make sure to run it once before closing.
+
+Key:
+Red x's are "Problems" that will keep your code from compiling (forgetting a ;).
+Yellow !'s are "Warnings" that make your code inefficient, but not impossible to compile (extra import statements).
+"Errors" are something actually wrong with the Eclipse software.  Ask for help on these.
+"Exceptions" only occur after the code is compiled and you try to run something impossible and the program breaks (calculating 10/0).
+"Bugs" are something where your code compiles and works, but keeps outputting something unexpected (variable doesn't print).
+
+Automatic Import:
+So let's say one of your global variables is not recognized by the code (type BufferedImage img; to test it out).
+It'll get underlined in red and flagged with a little red x near the line number.
+If you hover over that x, you'll see a summary of the problem: BufferedImage isn't a type of variable in your code.
+Push Ctl + Shift + O, all import statements you need are added automatically.
+Problem solved.
+
+Warnings:
+Delete BufferedImage img;
+The import statement now is underlined in yellow and flagged with a little yellow ! near the line number.
+If you hover over that !, you'll see a warning: that import statement is never used.
+Thus, you know what to delete to make your code efficient.
+You can always click the x's and !'s, and choose from the suggested fixes by double-clicking the menu that pops up.
+
+Exceptions:
+Add this line, under public static void main(String[] args)
+  System.out.println(10/0);
+Your code is happy to compile, there's no problem with trying to divide by 0.  Your computer knows what numbers are, and what division is.
+Except that it doesn't execute successfully.  Your console, which should be open, displays all exceptions.
+In this case, it's something called an ArithmaticException at HelloWorld.java:4
+The name of the Exception often gives you a clue.  The final number tells you what line the problem is.
+And unlike Notepad, Eclipse has line numbers for you to find it easier.
+Change 10/0.  Problem solved.
+
+Clear Console:
+There's a little icon that looks like a white paper with a gray x.  It lets you clear the console if it's full of distracting text.
+
+Run Previous Code:
+Sure, you can open your favorite .java file from the Package Explorer window and switch between active codes with the tabs above your coding area.
+But if you don't need to see the code and just want to run something?
+Next to the green "Run" icon, there's a dropdown arrow.
+Press it, and you can see the last few things you tried to run.
+
+Automatic Code Completion:
+Sometimes Eclipse will offer to complete your code using the Content Assist window.
+It will list possible methods or variables it thinks you might use.
+If you see something pop up that you like, you can double-click, or use the arrow keys and push Enter.
+
+Format:
+Ctl + I fixes all your indentation problems.
+Ctl + Shift + F fixes all your indentation problems and extra blank spaces and weird line breaks.
+If you select a bracket and push Ctl + Shift + P, it will bounce to the other bracket.
+
+Faster System.out.println()
+Write syso and push Ctl + Space.
+
+Toggle Comment:
+Highlight a block of text.
+Ctl + 7 makes it commented.
+Ctl + 7 again makes it uncommented.
+
+Variables:
+Highlight a variable name.  You can see it has been highlighted everywhere in your code!
+Let's say you want to rename a variable...everywhere in your code.
+Highlight one instance, right click > Refactor > Rename
+Whatever you rename it, it changes every time that variable appears in your code.
+
+Adding Code Around Your Code:
+Highlight code and push Alt + Shift + Z.
+You can select a for-loop, a try-catch block, or other things to put this code inside.
+
+Other Keyboard Shortcuts:
+Ctl + Shift + L gives you a list of all shortcuts.
