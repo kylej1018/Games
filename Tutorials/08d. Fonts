@@ -1,0 +1,58 @@
+g.drawString is nice and all, but sometimes just doesn't look very good.
+The good news is you can change it with the following:
+  g.setFont(new Font("Helvetica", Font.PLAIN, 15));
+As you can see, this line requires:
+~the name of your font (in double quotes)
+~one of the following:
+  Font.PLAIN
+  Font.BOLD
+  Font.ITALIC
+  Font.BOLD + Font.ITALIC
+    *You can see there's no underline option.  You have to g.drawLine manually.
+~The size of your font.  15 means it is 15 pixels tall, the same height as g.drawRect(100, 100, 15, 15);
+
+Now, what all Fonts are available?
+It turns out that it depends on YOUR computer system.
+I've created a little application that makes a popup that retrieves all the different fonts on your system.
+Feel free to mess around with it, change the spacing, whatever pleases you.
+
+import java.awt.*;
+import javax.swing.*;
+
+public class FontTest {
+	JFrame window = new JFrame();
+	JPanel pane;
+
+	public static void main(String[] args) {
+		new FontTest();
+	}
+	
+	public FontTest() {
+		init();
+	}
+
+	public void init() {
+		pane = new JPanel() {
+			@Override
+			public void paintComponent(Graphics g) {
+				myPaint(g);
+			}
+		};
+		
+		pane.setFocusable(true);
+		window.setSize(300, 300);
+		window.add(pane);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setVisible(true);
+	}
+	
+	public void myPaint(Graphics g) {
+		Font [] allFonts = GraphicsEnvironment.getLocalGraphicsEnvironment().getAllFonts();
+		System.out.println("Your computer has " + allFonts.length + " different fonts.");
+		for(int i = 0; i < allFonts.length; i++) {
+			System.out.println(allFonts[i].getName());
+			g.setFont(new Font(allFonts[i].getName(), Font.PLAIN, 15));
+			g.drawString(allFonts[i].getName(), 5 + 150 * (i / 50), 20 + 15 * (i % 50));
+		}
+	}
+}
