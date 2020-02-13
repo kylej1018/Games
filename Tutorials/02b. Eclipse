@@ -1,0 +1,44 @@
+You figured out how to get Java working on your computer!
+Honestly, Notepad + command prompt is a pretty lousy practice.  It's easy to make lots of mistakes.
+Many Java programmers use a software called Eclipse: https://www.eclipse.org/downloads/
+
+Eclipse is what's called an IDE - really just an environment for you to code in.
+It's far easier to read your code and catch your mistakes.
+
+Eclipse Layout:
+Every time you start a new assignment, you'll want to make a new Java project.
+Go to File > New > Java Project.
+At the top, you give it a name and determine where all the files will save.
+Under JRE, it should say
+  Use default JRE 'jdk1.8.0_221' and workspace compiler preferences
+The actual jdk number should match the Java you downloaded, in This PC > C: > Program Files > Java
+If not, stop and ask for help.
+When you're getting started, it's nice to have all your files in one place, so select
+  Use project folder as root for sources and class files
+What you code is a source file, a ".java" file.
+Once you compile it, your computer makes a ".class" file written in Computer Language that you can't edit but it knows how to run.
+If you had selected the other option, all the ".class" files would get their own folder (bin) separate from the folder with your ".java" files (src, short for source).
+
+Once you've made your Java Project, select File > New > Class.
+Make sure it's in the correct folder.
+Give it a name.  Eclipse will tell you if the name is invalid.
+Always select the option to create the method stub
+  public static void main(String [] args)
+But not the other two.
+
+Eventually, there will be classes that have to be run together in the same project.
+
+Now, you have a big coding area in the middle and a few windows around.  You can move these windows to where you want.
+You can also add more windows in Window > Show View
+Here's how I customize my workspace:
+In the upper left corner, I have my Package Explorer.  It lets me see all the projects I've recently opened.
+In the lower left corner, I have my Outline.
+In the upper right, I have my Console.  You probably have to go to Window > Show View to find it but it's critically important.
+In the lower right, I have Problems.
+Everything else, I close so I'm not distracted.
+
+You should try HelloWorld again in Eclipse.
+When it's all copy-pasted, it's time to run it.
+Whenever you run a new program for the first time, you have to right click main(String []) : void in the Outline window and select Run As > Java Application.
+Afterwards, you can press the green button icon with the white arrow that says "Run."
+If you can't get HelloWorld to run, stop and ask for help.
