@@ -28,6 +28,7 @@ Make sure to break this down into about 6-7 smaller tasks, such as
 ~Clicking cards to turn over
 ~Evaluate match and possible exit
 ~Joker card
+~What happens when the game ends
 */
 
 
