@@ -1,10 +1,10 @@
 Review MyFirstCode to remember the difference between print and println.
 
-Most of the time, command prompt won't compile your code and will tell you directly what your problem is.
+Most of the time, your code won't compile and you'll get told directly what your problem is.
   ; expected, line 240
 Other times, it claims not to recognize an "undefined" variable that you know you defined.  8/10 times, this is because a local variable needed to be less local.  2/10 times, you need another import statement.
 
-But there's a few times when the code compiles correctly and gets weird when running.
+But there's a few times when the code compiles correctly and gets weird when running, like a value is printed incorrectly (or not at all).  That's a bug.
 The question you should ask when debugging is, "Is my code in the wrong spot, or is my code in the right spot but messing with my variables?"
 The most helpful line you can include is:
   System.out.println("TEST");
