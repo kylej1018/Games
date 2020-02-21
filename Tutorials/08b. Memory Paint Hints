@@ -49,3 +49,11 @@ x = (# cards to the left * card width) + (# cards to the left * border width) + 
 y = (# cards above * card height) + (# cards above * border width) + right margin
 
 Just a reminder, you better not hard-code any of these numbers.  If your border is 15 pixels, you make a variable called border and set it equal to 15.
+
+One more thought.  As you start to get creative with paint and making intricate designs on your cards, you may notice something.
+If you want to draw a rectangle in your card, you may think you want to 10% margins:
+  g.drawRect(x + width/10, y + height/10, width * 8/10, height * 8/10);
+Only problem is if your width and height aren't equal, you wind up with bigger gaps on top and bottom than on right and left.
+If that bothers you, then check out this:
+  g.drawRect(x + width/10, y + width/10, width * 8/10, height - (width * 2/10));
+This offsets it by the same amount from the top as to the left.
