@@ -30,6 +30,7 @@ Change what's in the quotes for g.drawString.  What happens?  Try to find at lea
 Add 100 to the numbers in g.drawString.  What do the numbers mean?
 What if you start g.drawString and g.drawRect at the same coordinates?  What corner is the origin for g.drawString?
 Does the text change color like rectangles and ovals?
+Try changing g.drawRect to g.drawrect.  Do capitals matter in programming?
 
 HOMEWORK:
 Draw me a picture.  It should use at least one draw and at least one fill statement, two or more colors, and text in the form of g.drawString.
