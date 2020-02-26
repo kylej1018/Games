@@ -1,10 +1,10 @@
-import java.util.Scanner;
-import java.util.Random;
-
 /*
 INSTRUCTIONS
 Make an app called GuessingGame.
-Use Scanner, not KeyListener or MouseListener.
+
+You've should now have the ability to copy-paste the relevant statements from previous codes and modify them.  Thus, you get no code skeleton here.
+
+GuessingGame should not use KeyListneer or MouseListener.  Use Scanner.
 Use System.out.print, not myPaint.
 Make an appropriate class line and public static void main line.
 Your program should use System.out.print and Scanner and be entirely coded within main.
