@@ -1,5 +1,3 @@
-Review MyFirstCode to remember the difference between print and println.
-
 Most of the time, your code won't compile and you'll get told directly what your problem is.
   ; expected, line 240
 Other times, it claims not to recognize an "undefined" variable that you know you defined.  8/10 times, this is because a local variable needed to be less local.  2/10 times, you need another import statement.
