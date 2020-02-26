@@ -1,15 +1,14 @@
 There are a few different types of common variables to know.
 int = an integer number.  Could be 1, 15, -3, or 0.
-float = a decimal number.  Could be 1.01, -5.893.
+float = a decimal number.  Could be 1.01, or -5.893.
 double = basically the same as float, just takes more memory.
-boolean = literally only can have the values true, false.  Sometimes you can have an expression that is essentially a boolean, like "a > 3" or "b < c".  These expressions are either true or false.
-char = a character, surrounded by single quotes.  Could be 'a', 'g', 'A', '.', '#', or ' '.
+boolean = only can have the values true or false.
+  Sometimes you can have an expression that boils down to true or false, like "a > 3" or "b < c".  These expressions are technically booleans.
+char = a character, surrounded by single quotes.  Could be 'a' 'g' 'A' '.' '#' or ' '.
 String = a bunch of text, surrounded by double quotes.  Could be "mytext", "this is not a string", or " ".  The word String is capitalized.
 
 For example, the value 8 is an int, the value 8.0 is a float, the value '8' is a char, and the value "8" is a String.
-
-If they're declared in curly brackets, they're local variables and other parts of your code can't use them.
-The opposite of local variables is global variables, which are established right after the class line.
+Similarly, true is a boolean and "true" is a String.
 
 Variables are established by a "Declare" where you specify the type of variable (int) and the name (x).
 After the "Declare" statement is an "Initialization" statement where the variable is set equal to a value (10).
@@ -20,4 +19,6 @@ or on different lines:
   x = 10;
 
 You can also "re-initialize" a variable at any time and give it a new value if you have no need for its old one.
-Look at Tutorial 3a to review some conventions for naming your variables.
+
+Variables can be declared after the line that says public class.  These are called "global variables" and can be used everywhere in your code.
+Conversely, if variables are declared inside curly brackets, they're "local variables" and other parts of your code can't use them.
