@@ -11,13 +11,13 @@ Go to File > New > Java Project.
 At the top, you give it a name and determine where all the files will save.
 Under JRE, it should say
   Use default JRE 'jdk1.8.0_221' and workspace compiler preferences
-The actual jdk number should match the Java you downloaded, in This PC > C: > Program Files > Java
-If not, stop and ask for help.
+The actual jdk number should match the Java you downloaded.  You can check by opening a file explorer and clicking This PC > C: > Program Files > Java
+If the number doesn't match, or it can't figure out the default JRE, stop and ask for help.
 When you're getting started, it's nice to have all your files in one place, so select
   Use project folder as root for sources and class files
 What you code is a source file, a ".java" file.
 Once you compile it, your computer makes a ".class" file written in Computer Language that you can't edit but it knows how to run.
-If you had selected the other option, all the ".class" files would get their own folder (bin) separate from the folder with your ".java" files (src, short for source).
+If you had selected the other option, all the ".class" files would get their own folder, named bin, separate from the folder with your ".java" files, named src, short for source.
 
 Once you've made your Java Project, select File > New > Class.
 Make sure it's in the correct folder.
@@ -26,7 +26,7 @@ Always select the option to create the method stub
   public static void main(String [] args)
 But not the other two.
 
-Eventually, there will be classes that have to be run together in the same project.
+Eventually, there will be classes that have to be run together in the same project, so get used to making new Java Projects.
 
 Now, you have a big coding area in the middle and a few windows around.  You can move these windows to where you want.
 You can also add more windows in Window > Show View
