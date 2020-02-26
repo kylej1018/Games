@@ -1,7 +1,7 @@
 I've already built double buffering into PaintPalette.  It's nice to know what it is so you can transfer it to other projects.
 
 Odds are, your myPaint method is going to get very very large in some projects.
-In fact, your computer may call pane.repaint() in a key or mouse Listener method before myPaint even finishes.
+In fact, your computer is likely to call pane.repaint() in mouseMotionListener method before myPaint even finishes.
 That will make your computer flicker.  It looks bad.  But here's the secret.
 Instead of painting on your screen, we're going to paint on a secret invisible image.  I usually name it named buffImg, like buffered image.
 If that finishes, then it will transfer the finished buffImg  to your screen.
