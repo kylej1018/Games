@@ -15,8 +15,8 @@ While-loops execute "while" the condition is true.  They look like this:
     //do code
   }
 You probably need to make i get bigger inside the loop, or else it will never break.
-Every for loop can be replaced with a while loop (although for loops, it's easier to read what you expect).
-Not every while loop can be replaced with a for loop.  Sometimes you just don't know how much you need to do something.  There is at least one of these in Loops Lesson 1's assignments.
+Every for loop can be replaced with a while loop (although for loops are often easier to read what you expect).
+Not every while loop can be replaced with a for loop.  Sometimes you just don't know how much you need to do something.  There is at least one of these in this assignment.
 
 Here's a loop for you to run:
 	for(int i = 0; i > -1800000000  || i < -1900000000; i = i + 50000) {
