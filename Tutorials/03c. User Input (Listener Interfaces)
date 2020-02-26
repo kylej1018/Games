@@ -50,3 +50,6 @@ You don't need all three unless you implement all three.  For example, if you on
 Finally, if you are implementing KeyListener, you need the following line, which I also suggest go in public void preInit()
   pane.setFocusable(true);
 This is the only way that KeyListener knows to type onto your window.
+
+TL;DR
+Change code inside the appropriate listener method to update global variables.
