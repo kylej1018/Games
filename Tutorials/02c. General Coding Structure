@@ -46,7 +46,7 @@ anywhere in your program and it jumps to the code in public void init().
 PreInit:
 #After main, you'll see something called public void preInit() and it's usually nonessential.
 This is something that I have provided to you for your codes that require painting, clicking the mouse, or popup windows.
-I call it preInit() because it happens at the start of the code, before init().
+I call it preInit() because it runs early on in the code, before init(), which initializes most things.
 PreInit should only happen once.  You don't want two popup windows.  You should not ever have to write
  preInit();
 
