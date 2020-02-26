@@ -5,7 +5,7 @@ How many "buttons" will you need?
   How many do you need for each feature?
   How big should they be?  Try doing a g.drawRect to figure out what looks nice.
   Where will your buttons be located?
-    Design what you want your screen to look like before you start coding.  Actually write down the x and y coordinates of your buttons.
+    Design what you want your screen to look like before you start coding.  Actually write down the x and y coordinates of each of your buttons.
 Could any of your features have keyboard shortcuts that do the same thing as your onscreen buttons?  After all, some users prefer mouse, some prefer keys.
   If user types a number, brush size might change.  Bigger number = bigger size.
   If they type c or s, shape might change between circle or square.
@@ -16,11 +16,16 @@ What should be the hierarchy in myPaint?
   Hint for clearing screen:
     Draw a huge white rectangle.  It looks like a blank screen.  It should be big enough to cover the user's screen, and then some.
 
-Once you start coding, go in small spurts.  First, get a black circle around your mouse where you click (reference PrettyLines).
+Once you have these questions answered, you're almost ready to start coding.
+You need an attack plan.  You should be able to break down your program into small manageable tasks.
+Don't move onto the next task until each individual task works.
+Comment your code.  Just because comments are optional for the computer doesn't make them optional for you.  Don't learn that the hard way.
+
+First, get a black circle around your mouse where you click.  This should be similar to PrettyLines.
 Then make it follow when you drag your mouse.
-Maybe next change a color or something when you type the correct key.
-Maybe next draw one button and change a color or something if the mouse clicks inside it.
-Comment your code.  Don't learn the hard way that commenting is not optional.
+Now, make it change a color when you type the correct key.
+Now the rest of your colors
+Next draw one button onscreen and change a color if the mouse clicks inside it.
 
 Hints for buttons:
 The hard thing about buttons is that you test them in mousePressed but you draw the result in myPaint.
@@ -44,16 +49,17 @@ For each button:
     For instance, if circle is true, draw a circle.  If circle is false, draw a square.
   How can you help your user keep track of what your buttons do?
     Sure, you could just have a bunch of text in your buttons.  But that doens't look nice.
-    If you can have a symbol instead of text, you should do it.  Maybe, for instance a green circle to suggest "this button changes color to green".
-    If you just have a green circle to indicate "green," what happens if they paint the entire screen green?  Your button is hard to see.  I recommend an outline.
+    If you can have a symbol instead of text, you should do it.  Maybe, for instance a green fill to suggest "this button changes color to green".
+    If you just have a green rectangle to indicate "green," what happens if they paint the entire screen green?  Your button is hard to see.  I recommend a black outline.
     But how will they know what color they've selected?  Maybe change the outline of the "active" button to another color.
   How can you tell your user what your keys will do?
-  Maybe each button needs a drawString so the user knows what key will be equivalent to clicking the button.
+  Maybe each button needs a drawString that's one character long so the user knows what key will be equivalent to clicking the button.
 
 Cool trick for keyTyped:
 Option 1: they type two different keys and, for example the circle changes from filled to empty on 'e' and empty to filled on key 'f'.
 Option 2: they type f repeatedly and fill becomes empty and empty might become fill every time.
-  You could use an if followed by else, or use this trick:
+  Option 2a: You could use an if followed by else if
+  Option 2b: This funky little trick with the ! operator:
     boolean filled = true;
     if(condition) {
       filled = !filled; //if it's true, it becomes false.  If it's false, it becomes true.
