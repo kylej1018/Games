@@ -1,8 +1,8 @@
 Most programs we've run so far use a popup JFrame window.  You'll see the words JFrame and JPanel in PaintPalette, PrettyLines, and Picture.  Not here.
-That means we can't introduce a Listener or myPaint to this program.
-Scanner and System.out.print are much faster and easier than Listener and myPaint.  But they can't do graphics.
+That means we can't introduce a Listener or myPaint to this program, which is fine; this program requires no graphics, only text.
+Scanner and System.out.print are much faster and easier than Listener and myPaint.
 
-Remember from Tutorial 5a that you can use System.out.print or println to debug.
+Remember that you can use System.out.print or println to debug.
 You should use System.out.print to print your Loops results as well.
 
 Scanner is how you take input from the user.
@@ -10,6 +10,8 @@ Like Random, you have to declare a new Scanner object ONCE per code:
   Scanner sc = new Scanner(System.in);
 Then you can take as much input as you want with
   String s = sc.nextLine();
+Whatever the user types is stored in String s.
+  
 sc.nextLine() always gives you a String.  But sometimes you want numbers.  You need a try-catch block for that.
   int num1;
   try {
@@ -17,7 +19,7 @@ sc.nextLine() always gives you a String.  But sometimes you want numbers.  You n
   }
   catch (Exception ex) {}
 Remember, num1 has to be declared outside the try-catch curly brackets, or else it's too local.
-Don't confuse yourself by naming both your MouseEvent e and your Exception e.
+Don't confuse yourself by naming both your MouseEvent e and your Exception e.  Some codes have both, so get used to naming them differently now.
 
 What is a try-catch block?
 Exceptions happen when the user does something they're not supposed to.
@@ -25,4 +27,19 @@ If you don't try/catch, then the program will shut down as soon as the exception
 In this case, an Exception would be if your user typed something that wasn't a number and the Integer.parseInt fails.
 Should you make the computer say something snarky if an exception is found?  There's brackets after catch for that purpose.
 Sometimes you want to make a loop surrounding your try/catch block so that it stays stuck if the Integer.parseInt keeps failing.
-You could add a statment in the try block, after Integer.parseInt, that helps break the loop.  It'll only execute if Integer.parseInt finishes successfully.
+You could add a statement in the try block, after Integer.parseInt, that helps break the loop.  For example:
+Scanner sc;
+int num1 = 0;
+boolean takingInput = true;
+System.out.println("Enter a number :");
+while(takingInput) {
+  try {
+    num1 = Integer.parseInt(sc.nextLine());
+    takingInput = false;
+  }
+  catch(Exception ex) {
+    System.out.println("A number, please: ");
+  }
+}
+If the user inputs "eight" then the Integer.parseInt will fail, we exit the try block leaving takingInput unaffected, the System will print its retort, and the loop will continue.
+If the user inputs "8" then the Integer.parseInt will make num1 equal to 8, we continue through the try block, takingInput will be false, the catch doesn't apply, and the while loop breaks.
