@@ -2,7 +2,7 @@
 ~ = covention
 blank = background knowledge
 
-Open the code for PrettyLines and follow along with this tutorial.  Try to find all these items in the PrettyLines code!
+Open the code for Picture and follow along with this tutorial.  Try to find all these items in the Picture code!
 Here's the basic outline of every code:
 
 Import Statements:
@@ -21,7 +21,7 @@ Example time!
 ~If only one class is used from a package, import that class by name.  If two or more, use the * symbol.
 
 Class:
-#Below import statements is something like public class PrettyLines.
+#Below import statements is something like public class Picture.
 #Whatever the word is after "class" should be the same name as the name of your .java file.
 
 Global Variables:
@@ -29,7 +29,7 @@ Global Variables:
 #You can declare a variable anywhere (it's called a local variable) but you can only use it within those curly brackets.
  The reason there are usually lots at the beginning (global variables) is because ALL curly brackets can use them.
 #There are some things you CAN'T name your variables because they're reserved keywords for specific java functions.
- For instance, don't name your variable "class" because "class" is used at the top of your code, like public class PrettyLines.
+ For instance, don't name your variable "class" because "class" is used at the top of your code, like public class Picture.
  A complete list of keywords not to use is here: https://en.wikipedia.org/wiki/List_of_Java_keywords
 
 Main:
