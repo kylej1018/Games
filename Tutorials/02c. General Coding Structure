@@ -35,6 +35,14 @@ Global Variables:
 Main:
 #After the variables is something called public static void main(String[] args) and it's usually essential for the code.
 
+Init:
+#After main, you'll see something called public void init() and it's usually nonessential.
+
+PreInit:
+#After main, you'll see something called public void preInit() and it's usually nonessential.
+This is something that I have provided to you for your codes that require painting.
+Without it, you wouldn't get a popup window.
+
 Public Void:
 #After main is a series of curly-bracket-enclosed areas labeled public void, such as public void myPaint.
  These are called methods.  You'll learn how to make your own methods later.
