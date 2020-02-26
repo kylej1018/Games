@@ -1,11 +1,11 @@
 Sometimes you want your user to have some say over the program.  You do this by "implementing Listener interfaces."
 A Listener interface waits for an Event to happen on your computer, and then runs code based on what happened.
 An Event might be when your mouse clicks, or when your mouse leaves the active window, or you press the spacebar.
-You need to specify any interfaces in the same line as class, using the keyword Implements.  You can list as many as you want, in any order.
+You need to specify any interfaces in the same line as class, using the keyword Implements.  You can list as many as you want, in any order, separated by commas.
   public class PrettyLines implements MouseListener, KeyListener
 These are two examples of Listener interfaces.  The other common one is MouseMotionListener.
 
-If you implement a Listener, you need to have some methods in your code, even if they're blank.
+If you implement a Listener, you need to have these lines of code.  They're called methods because they have curly brackets and the words public void.
 If you implement MouseListener, you need:
   public void mousePressed(MouseEvent e) {}
   public void mouseReleased(MouseEvent e) {}
@@ -19,33 +19,34 @@ If you implement KeyListener, you need:
 If you implement MouseMotionListener, you need:
   public void mouseMoved(KeyEvent e) {}
   public void mouseDragged(KeyEvent e) {}
-If you have one Listener, you need ALL of its methods.
-They can be blank with the curly brackets just like {} but they have to be in your code.
-Any mouse methods need to say MouseEvent and the key methods need to say KeyEvent inside the parentheses.
+They have to be in your code, even if the curly brackets have nothing in them.
 
-A method executes when an event happens.  For example, when the mouse enters your screen, the mouseEntered method executes.
-If you can't tell by the name when each method executes, check out this link:
+Each method executes when its event happens.  For example, when the mouse enters your screen, the mouseEntered method executes.
+You should be able to tell by the name when each method executes.  If you're struggling with that, check out this link:
   https://www.geeksforgeeks.org/mouselistener-mousemotionlistener-java/
 You can google the KeyListener methods too.
-When a method executes, any code inside the curly brackets happens.  You can make *anything* happen on a mouse click, but here's some extra useful suggestions.
-In any of the MouseListener or MouseMotionListener methods, you might say
-  int x = e.getX();
-  int y = e.getY();
-which will, respectively, store the X and Y coordinates of the mouse event (like a click) in some int variables.
-In the KeyListener method, you can have
+
+You can add code inside any of the curly brackets.  Your computer will execute this code only when the event happens.
+Let's say you have some global int variables named x and y.
+In mouseClicked, you might have
+  x = e.getX();
+  y = e.getY();
+Now, every time you click, x and y will update with the X and Y coordinates of the click.
+What if you did that in mouseDragged?  Then X and Y would update with every movement of the mouse while you're holding down the mouse button.
+
+In the KeyListener method, you might have
   char c = e.getKeyChar();
 which will store the button you pressed in a char variable.
 At the bottom of any non-blank Listener method, you'll want to include the line
   pane.repaint();
 If you don't repaint, how would you see if anything changed when you click?
 
-There's a few lines that need to be somewhere in your code.
+There's a few lines that need to be somewhere in your code.  I suggest putting them in public void preInit.
 These actually add the Listener to your code.
   pane.addMouseListener(this);
   pane.addMouseMotionListener(this);
   pane.addKeyListener(this);
 You don't need all three unless you implement all three.  For example, if you only implement KeyListener, you only need the third one.
-I often put them in public void preInit() because I only want them to happen once.
-Finally, if you are implementing KeyListener, you need the following line, also probably in public void preInit()
+Finally, if you are implementing KeyListener, you need the following line, which I also suggest go in public void preInit()
   pane.setFocusable(true);
 This is the only way that KeyListener knows to type onto your window.
