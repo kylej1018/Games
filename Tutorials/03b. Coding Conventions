@@ -8,11 +8,11 @@ Semicolons:
 Comments:
 #You should comment often so that people using (or helping with) your code can understand it easier.
 #Use /* and */ for multi-line comments.  Use // for comments on one line.
-~You should write variable names, method names, and method parameters so it's so obvious what they do, you shouldn't have to comment.
+~You should write variables and methods such that you shouldn't have to comment because it's obvious what they represent.
 ~But you should comment many of the following:
 ~  At the top of your code, what the program does and when it was last updated
-~  Variable declarations
-~  Methods.  In a header, include the purpose, the parameters, and the return.
+~  Variable declarations, no matter how obvious the name.
+~  Methods, no matter how obvious the name.  In a header, include the purpose, the parameters, and the return.
 ~  Classes and interfaces, in a header.
 ~  Anytime you have to interact with the user - print statements, input/listener statements, System statements.
 ~  FIXMEs.  A FIXME is a line of code you know needs fixed.  If you can, specify what's wrong.
