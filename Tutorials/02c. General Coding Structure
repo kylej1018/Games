@@ -38,19 +38,17 @@ Main:
 Init:
 #After main, you'll see something called public void init() and it's usually nonessential.
 Init is short for initialization because it often initializes most of your global variables.  It also usually "starts" the game (or whatever) you've programmed.
+Init can happen whenever you reset the game.  I also usually put it in public static void main.
 You should be able to write
  init();
-anywhere in your program and it jumps to the code in public void init().  This should reset the game (or whatever).
-I usually put init(); in my main method once.
+anywhere in your program and it jumps to the code in public void init().
 
 PreInit:
 #After main, you'll see something called public void preInit() and it's usually nonessential.
-This is something that I have provided to you for your codes that require painting.
-Without it, you wouldn't get a popup window.
+This is something that I have provided to you for your codes that require painting, clicking the mouse, or popup windows.
 I call it preInit() because it happens at the start of the code, before init().
-You should not ever have to write
+PreInit should only happen once.  You don't want two popup windows.  You should not ever have to write
  preInit();
-in your code to reset the game (or whatever).  You don't want two popup windows.
 
 Public Void:
 #After main is a series of curly-bracket-enclosed areas labeled public void, such as public void myPaint.
