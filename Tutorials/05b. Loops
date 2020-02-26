@@ -3,7 +3,8 @@ For-loops execute a set number of times.  They look like this:
   for(int i = 1; i <= 100; i += 2) {
     //do code
   }
-The first bit establishes the iteration variable i, which starts at 1.  It will keep track of which loop we are on.
+In English, this loop means "Start an int i at 1.  Every time the loop goes, increase i by 2.  Continue as long as i <= 100."
+The first bit establishes the iteration variable i, which starts at 1 here.  It will keep track of which loop we are on.
 The second bit is a boolean that must be true for the loop to execute - i must be less than or equal to 100.
 The third bit happens every time the loop completes - i increments by 2.
 Thus, this loop will happen fifty times.  On the fifty-first time, i will go from 99 to 101 and the loop will "break" and the code will continue.
