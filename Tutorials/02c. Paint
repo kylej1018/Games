@@ -1,5 +1,10 @@
-Paint uses a coordinate system.  (0, 0) is at the upper left corner of your window.  (10, 5) is 10 pixels right and 5 pixels down.
+Painting uses a coordinate system.  (0, 0) is at the upper left corner of your window.  (10, 5) is 10 pixels right and 5 pixels down.
 It does not hurt your code for things to start or extend off the edge of your screen; sometimes that's easier than actually deleting an object.
+Wherever you see something like
+  public void myPaint(Graphics g) {
+that's the start of the painting area of your code.  The other curly bracket is the end of the painting area.
+Inside the painting area, you can put some lines of code, which I've stated below.
+You'll note that each line of code has parentheses.  Don't actually put "x, y, w, h".  Put numbers.  But they have to be in a specific order!
 
 g.drawRect(x, y, w, h);
 Draws the outline of a rectangle.
@@ -26,5 +31,5 @@ Sets the color to whatever myColor is.  All later ovals, rectangles, and other s
 The following are accepted colors, red, orange, yellow, green, cyan, blue, magenta, pink, white, lightGray, gray, darkGray, black
 
 g.drawString("write something in these quotes", x, y);
-Draws the string of text in those quotes.
+Draws the text in those quotes.
 The first number is the x coordinate of the leftmost point.  The second number is the y coordinate of the BOTTOMMOST point.
