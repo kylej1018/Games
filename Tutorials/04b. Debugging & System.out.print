@@ -1,0 +1,66 @@
+myPaint is a great way for the computer to express information to the programmer.
+There's a second, faster way.
+You can write
+  System.out.println("Text here");
+This doesn't show up in the popup window.  This shows up in the console.
+  If you're using Eclipse, remember you can view the console by clicking Window > Show View > Console
+The console is really just text that you can print to help yourself.
+
+If you are trying to check on the status of a variable, say an int x, you can write
+  System.out.println(x);
+You can combine text and variables like so:
+  System.out.println("Current value of x: " + x);
+
+println is pronounced "print line."
+You can also make a blank line with just
+  System.out.println();
+  
+You can use System.out.println anywhere in your program, not just in myPaint.
+The drawback?  It can't do graphics.  System.out.println is only good for text.
+
+You can make a bit of text without a new line like so:
+  System.out.print("This is all o");
+  System.out.print("ne big ");
+  System.out.println("long line of text.");
+and it will say "This is all one big long line of text." because you said System.out.print instead of System.out.println
+
+System.out.println isn't ideal for a situation where you want to share your program with another user.  It doesn't look very friendly.
+But it can help you debug really quickly.
+
+The question you should ask when debugging is, "Is my code in the wrong spot, or is my code in the right spot but messing with my variables?"
+The most helpful line you can include is:
+  System.out.println("TEST");
+If your command prompt never shows TEST, then your code never made it to that point.  It's stuck somewhere earlier, and you should TEST a few lines up to find the problem.
+If your command prompt does show TEST, then your code is in the right place but it's messing with your variables.
+Sure, you know what you expect your variable to be, and you know the computer has no reason to give it the wrong value.  Check anyways.
+  System.out.println(num);
+If your command prompt shows the variable is correct, the problem is further down.  If it's wrong, the problem is further up.
+You need to find the exact line where your program is failing, regardless of if it's altering your variable values or getting stuck.
+
+You want to click a button and have it change the color of your brush to green.
+You have a global variable Color currentBrushColor = Color.black;
+You draw a button at 50, 0 that is 15 by 15.
+In mousePressed, you have an if(50 < x && x < 65 && 0 < y && y < 15), and inside you change currentBrushColor to Color.green
+Then in myPaint, you have g.setColor(currentBrushColor);
+But, for some reason it doesn't work!  It keeps painting black.
+You'd might try the following in order, one by one, running the code each time, until you find the problem.
+  In myPaint, right after g.setColor:
+    System.out.println("trying to paint " + currentBrushColor);
+  At the bottom of mouseClicked, right before pane.repaint():
+    System.out.println("after clicking, color is " + currentBrushColor);
+  In mouseClicked, in the if statement:
+    System.out.println("TEST");
+  Above the if statement:
+    System.out.println("it thinks I've clicked at " + x + ", " + y);
+Depending on if the statements are printed and what they say, you will probably find your bug quickly.
+
+The other debugging method involves buying a duck:
+https://www.reddit.com/r/ProgrammerHumor/comments/61ng5u/duck_debugging_xpost_rtumblr/
+
+Computers are incredibly stupid.  They will only do what you tell them to, when you tell them to.
+In our example above, we made a lot of assumptions after we clicked.
+  1) The computer understood the click was in the box.
+  2) The computer changed the color correctly after clicking.
+  3) The computer later tried to repaint with the new correct color.
+  4) Nothing overwrote the new correct color.
+When something goes buggy, the only way to address it is to make the computer print out what's happening before and after every assumption so you can see which one was faulty.
