@@ -38,7 +38,7 @@ Main:
 Init:
 #After main, you'll see something called public void init() and it's usually nonessential.
 Init is short for initialization because it often initializes most of your global variables.  It also usually "starts" the game (or whatever) you've programmed.
-Init can happen whenever you reset the game.  I also usually put it in public static void main.
+Init can happen whenever you reset the game.
 You should be able to write
  init();
 anywhere in your program and it jumps to the code in public void init().
