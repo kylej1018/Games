@@ -39,6 +39,7 @@ Everything else, I close so I'm not distracted.
 
 You should try HelloWorld again in Eclipse.
 When it's all copy-pasted, it's time to run it.
+Note that Eclipse automatically compiles your code, unlike Command Prompt.
 Whenever you run a new program for the first time, you have to right click main(String []) : void in the Outline window and select Run As > Java Application.
 Afterwards, you can press the green button icon with the white arrow that says "Run."
 If you can't get HelloWorld to run, stop and ask for help.
