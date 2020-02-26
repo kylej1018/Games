@@ -12,7 +12,7 @@ cls
 Clear screen
 
 javac MyFirstCode.java
-Compiles a project.  Sometimes lists errors and the location lines.  YOu can go to a location line in Notepad by clicking Ctl+G and typing "61" or any other number.
+Compiles a project.  Sometimes lists errors and the location lines.  You can go to a location line in Notepad by clicking Ctl+G and typing "61" or any other number.
 
 java myfirstcode
 Runs a project that has been compiled.
