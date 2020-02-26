@@ -6,32 +6,34 @@ Here's the basic outline of every code:
 
 Import Statements:
 #Codes usually start with import statements.  When you downloaded Java, you downloaded a lot of helpful things, but your code won't use them unless they're imported.
-#If your code returns an error when compiling that it doesn't recognize something or it thinks you should define it, double-check with the Internet what imports you need.
+#If your code returns an error when compiling that it doesn't recognize something or it thinks you should define it, double-check what imports you need.
+You can look it up on the Internet.  Searching "java color import statement" will highlight many other people who have similar problems.
+Example time!
  import java.awt.*;
  import java.awt.event.*;
  import java.lang.Object;
  These are three distinct import statements.  The * means "everything in that package."  So the entire contents of the java.awt package are imported in the first line.
  java.awt.event is not in the java.awt package.  Common misconception.  It's a whole separate package.
  java.lang.Object IS in the java.lang folder.  I know this because Object is capitalized, meaning it's a class, but everything before it is not, meaning it's a package.
- Thus, if I have java.lang.* then I don't need java.lang.Object
+ Thus, if I had written java.lang.* then I don't need to write java.lang.Object
  These packages and the classes inside them all live in your computer system, in the same file where you downloaded Java.
 ~If only one class is used from a package, import that class by name.  If two or more, use the * symbol.
 
 Class:
 #Below import statements is something like public class PrettyLines.
-#Whatever the word is after "class" is what you need to save as the name of your java file.
+#Whatever the word is after "class" should be the same name as the name of your .java file.
 
-Variables:
+Global Variables:
 #After the class statement is often a collection of variables, like int x = 10;
-#You can declare a variable anywhere (local variable) but you can only use it within those curly brackets.  The reason there are lots at the beginning (global variables) is because ALL curly brackets can use them.
-
-Keywords:
+#You can declare a variable anywhere (it's called a local variable) but you can only use it within those curly brackets.
+ The reason there are usually lots at the beginning (global variables) is because ALL curly brackets can use them.
 #There are some things you CAN'T name your variables because they're reserved keywords for specific java functions.
- A complete list is here: https://en.wikipedia.org/wiki/List_of_Java_keywords
+ For instance, don't name your variable "class" because "class" is used at the top of your code, like public class PrettyLines.
+ A complete list of keywords not to use is here: https://en.wikipedia.org/wiki/List_of_Java_keywords
 
 Main:
 #After the variables is something called public static void main(String[] args) and it's usually essential for the code.
 
 Public Void:
-#After main is a series of curly-bracket-enclosed areas labeled public void.
+#After main is a series of curly-bracket-enclosed areas labeled public void, such as public void myPaint.
  These are called methods.  You'll learn how to make your own methods later.
