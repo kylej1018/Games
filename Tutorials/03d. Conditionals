@@ -1,5 +1,5 @@
 Sometimes you only want things to happen "if" a statement is true.
-You use a conditional statement likd this:
+You use a conditional statement like this:
   boolean b = true;
   if(b) {
     //code
@@ -10,6 +10,7 @@ Inside the parentheses is a boolean variable (above) or a boolean expression (be
   }
 If the boolean variable or expression inside the parentheses is true, the code will execute.
 If not, that code will be skipped.
+
 Here are some useful operators
   > greater than
   < less than
@@ -28,22 +29,22 @@ You can even use the ! symbol like this:
   }
 This will only execute if condition1 is false.
 
-You may also want to test if two things are true - check these examples with a and b both variables of type int.
-if(a == 3 && b < 1) "If a is 3 and b is less than 1"
-if(a == 3 || b < 1) "If a is 3 or b is less than 1"
-if(a == 3 ^ b < 1) "If a is 3 or b is less than 1, but not both"
+You may also want to test if two things are true - check these examples.  Assume I've declared and initialized ints a and b.
+if(a == 3 && b < 1) "If a is 3 AND  b is less than 1"
+if(a == 3 || b < 1) "If a is 3 OR b is less than 1"
+if(a == 3 ^ b < 1) "If a is 3 OR b is less than 1, but not both"
 if(a != 3 && !(b < 1)) "If a is not 3 and not-(b is less than 1)"
   The bottom one is equivalent to saying "If a is not 3 and b is greater than or equal to 1"
 If you want to test if a is between two numbers, you must write
   if(10 < a && a < 20)
 and not
   if(10 < a < 20)
-which gives an error.
+because it won't run.
 
 Sometimes you need "else" statements.  They look like this.
 boolean condition1 = false;
-boolean condition2 = false;
-boolean condition3 = false;
+boolean condition2 = true;
+boolean condition3 = true;
 if(condition1) {
   //code
 }
@@ -53,12 +54,18 @@ else if(condition2) {
 else if(condition 3) {
   //code
 }
+In this example, only the code in the second set of brackets got executed.
+You can have as many "else if" conditionals as you want.  This example had 2.
+You can have a final "else" statement to capture EVERYTHING not yet covered but it's optional.
+if(condition1) {
+  //code
+}
+else if(condition2) {
+  //code
+}
 else {
   //code
 }
-In this example, only the code in the brackets around the last "else" got executed.
-You can have as many "else if" conditionals as you want.  This example had 2.
-You can have a final "else" statement to capture EVERYTHING not yet covered...or just leave it out.
 
 You can put a conditional inside your conditional if you want.
 Make sure you're keeping track of your brackets and indent properly.
