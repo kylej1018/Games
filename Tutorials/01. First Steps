@@ -26,7 +26,7 @@ Now you can actually code.  Open Notepad and paste the sample code from MyFirstC
 Save that as MyFirstCode.java on your Desktop.
 Search Cortana for Command Prompt and click the first hit.
 Enter cd Desktop
-Enter javac Myfirstcode.java
+Enter javac MyFirstCode.java
 If there were errors, stop and ask for help.
 If there were no errors, enter java Myfirstcode
 
