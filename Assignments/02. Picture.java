@@ -48,6 +48,11 @@ public class Picture {
 	}
 	
 	public Picture() {
+		preInit();
+		init();
+	}
+	
+	public void preInit() {
 		pane = new JPanel() {
 			@Override
 			public void paintComponent(Graphics g) {
@@ -59,6 +64,8 @@ public class Picture {
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setVisible(true);
 	}
+	
+	public void init() {}
 
 	public void myPaint(Graphics g) {
 		Color c = Color.yellow;
