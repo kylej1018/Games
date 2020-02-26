@@ -41,7 +41,7 @@ At the bottom of any non-blank Listener method, you'll want to include the line
   pane.repaint();
 If you don't repaint, how would you see if anything changed when you click?
 
-There's a few lines that need to be somewhere in your code.  I suggest putting them in public void preInit.
+There's a few lines that need to be somewhere in your code.  I suggest putting them in public void preInit because you only want them happening once.
 These actually add the Listener to your code.
   pane.addMouseListener(this);
   pane.addMouseMotionListener(this);
