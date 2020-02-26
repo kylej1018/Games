@@ -1,9 +1,9 @@
 /*
 Last time, we worked only in the myPaint area.  We'll do some myPaint this time, but now you'll also be looking at global variables and Listener interfaces.
 Read through all the tutorials for section 3 before starting.
-You might want to brush up on Tutorial 2b.
 
 Assignment:
+Debug as needed until it runs.  Once it runs, you'll find it doesn't work so great.  Solve each of these problems, one at a time.
 1. I want to click anywhere in my window and draw a circle perfectly around that point.
 2. I want to draw a line from my point to my previous point.  How can you retain the previous x and y values after clicking?
 3. I want to type "s" and "c" and have it switch between drawing a square and circle.  Still want the line though.
