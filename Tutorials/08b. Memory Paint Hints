@@ -14,7 +14,7 @@ Example 2: Make a 2D array of a video game character's max health and mana as he
 Solution 2: This one makes some sense with two different loops.  Health and mana usually don't increase at the same rate, right?  Your array would be 3x25.
   The first loop tells you when health increases.  You'd figure out the formula, something like 3HP every five levels.
   The second loop tells you when mana increases.  It's probably a different formula, maybe 5MP every 8 levels.
-  The third row wasn't specifically asked for, but it should be the level.
+  It would be nice to have a third row be the level.
      You don't always know what will be useful later in the code.  What if one day you want to know what level you're at when you have 20HP and 15MP?
      Maybe you'll never use this.  But it's so little work now, and it would be so hard to add in later once you've forgotten your code.
   Could you combine these into one loop?  Maybe, if you were clever with the % operator.  But that sounds like a math bug waiting to happen.
@@ -23,7 +23,8 @@ Solution 3: One loop is sufficient.  Your array can be 2x100.
    Let's say your iteration variable is i, as in for(int i = 0...).  Every time i increases, you fill the spot at [0][i] with i and the spot at [1][i] with 100-i.
    Just a reminder, rows and columns don't matter.  If your array is 100x2, you fill the spot at [i][0] with i and the spot at [1][i] with 100-i.
    
-You don't always use the iteration variable for filling an array!
+You don't always use the iteration variable for filling an array.
+In example 2 above, only the third row uses the iteration variable.  Rows 1 and 2 get filled without ever using that variable.
 
 A 2D array is great for storing simple information like whether a card is visible, hidden, or removed from the game.
 To paint that, it's a basic series of conditionals and not what this tutorial is about.
@@ -41,8 +42,9 @@ The card at arr[1][2] would be at one "width" over and two "heights" down.
 In other words, to get the x and y coordinates, you need to think of each card's location as arr[x][y], and multiply x by widths and y by heights.
 
 Is that all there is?  If you do that, your cards will take up ALL the space in your grid...and that will no longer make them look like cards.
-You should plan to have a lil border around each one.  If you are drawing something two cards over, you need to add 2x whatever the border is.
-It's also nice to add a margin on the left of your playing area.  And another one on top.  That way, if you want to shift the game over, you change the value of one variable.
+You should plan to have a lil border around each one.
+If you are drawing something three cards to the right, x isn't just the value of three card "widths."  It's three card "widths" plus three borders.
+It's also nice to add a margin on the left of your playing area.  And another one on top.  That way, if you want to shift the game over, you can easily change the value of one variable.
 
 So each card should be drawn at these x, y values:
 x = (# cards to the left * card width) + (# cards to the left * border width) + left margin
