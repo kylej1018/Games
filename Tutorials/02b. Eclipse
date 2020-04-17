@@ -5,6 +5,35 @@ Many Java programmers use a software called Eclipse: https://www.eclipse.org/dow
 Eclipse is what's called an IDE - really just an environment for you to code in.
 It's far easier to read your code and catch your mistakes.
 
+The first setup thing you have to do is tell Eclipse to use the Java you downloaded.
+Go to Window > Preferences.
+On the left menu, select Java > Installed JREs
+On the right side, click Add.
+Select "Standard VM" and press Next.
+Click the button to set the Directory for JRE Home.
+Navigate to where you stored the jdk folder.  You want it to look like C:\Program Files\Java\jdk1.8.0_221
+Press "Finish."
+Do the same for your jre folder.
+Apply and close all boxes.
+
+The second setup thing you have to do is give yourself library access.  Why this isn't automatic, I don't know.
+Go to File > New > Java Project, name it Test, and press Finish.  You can delete it later, you just need it for setup.
+Go to Project > Properties.
+On the left menu, go to Java Build Path.
+Go to the Libraries tab.  You should see one entry with your jdk number after it.
+Expand your jdk.
+Select "Access rules" and press Edit on the right side.
+Remove everything.
+Apply and close all boxes.
+
+The third setup thing you have to do is update your compiler number.
+Go to Project > Properties.
+On the left menu, go to Java Compiler.
+On the upper left, click Configure Workspace Settings.
+Check the box for "Use default compliance settings."
+Make sure the Compiler compliance level is set to your jdk.  Don't compile with only half your Java power, or you'll miss out on some of the features.
+Apply and close all boxes.
+
 Eclipse Layout:
 Every time you start a new assignment, you'll want to make a new Java project.
 Go to File > New > Java Project.
@@ -39,7 +68,6 @@ Everything else, I close so I'm not distracted.
 
 You should try HelloWorld again in Eclipse.
 When it's all copy-pasted, it's time to run it.
-Note that Eclipse automatically compiles your code, unlike Command Prompt.
-Whenever you run a new program for the first time, you have to right click main(String []) : void in the Outline window and select Run As > Java Application.
-Afterwards, you can press the green button icon with the white arrow that says "Run."
+Note that Eclipse automatically compiles your code, unlike Command Prompt when it runs.
+You can press the green button icon with the white arrow that says "Run."
 If you can't get HelloWorld to run, stop and ask for help.
