@@ -30,7 +30,7 @@ You can even use the ! symbol like this:
 This will only execute if condition1 is false.
 
 You may also want to test if two things are true - check these examples.  Assume I've declared and initialized ints a and b.
-if (a == 3 && b < 1) "If a is 3 AND  b is less than 1"
+if (a == 3 && b < 1) "If a is 3 AND b is less than 1"
 if (a == 3 || b < 1) "If a is 3 OR b is less than 1"
 if (a == 3 ^ b < 1) "If a is 3 OR b is less than 1, but not both"
 if (a != 3 && !(b < 1)) "If a is not 3 and not-(b is less than 1)"
