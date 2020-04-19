@@ -27,7 +27,7 @@ You can always click the x's and !'s, and choose from the suggested fixes by dou
 Exceptions:
 Add this line, under public static void main(String[] args)
   System.out.println(10/0);
-Your code is happy to compile, there's no problem with trying to divide by 0.  Your computer knows what numbers are, and what division is.
+Your code is happy to compile, it doesn't know there's a problem with trying to divide by 0.  Your computer knows what numbers are, and what division is.
 Except that it doesn't execute successfully.  Your console, which should be open, displays all exceptions.
 In this case, it's something called an ArithmaticException at HelloWorld.java:4
 The name of the Exception often gives you a clue.  The final number tells you what line the problem is.
