@@ -43,3 +43,18 @@ while(takingInput) {
 }
 If the user inputs "eight" then the Integer.parseInt will fail, we exit the try block leaving takingInput unaffected, the System will print its retort, and the loop will continue.
 If the user inputs "8" then the Integer.parseInt will make num1 equal to 8, we continue through the try block, takingInput will be false, the catch doesn't apply, and the while loop breaks.
+
+Friendly reminder!  Catching Exception ex is heavily frowned upon, because not all exceptions should be caught and dealt with the same way.
+It's better to catch your exceptions individually - if THIS exception arises, do X, but if THAT exception arises, do Y.
+Sometimes you'll want to print different messages to your user to help them.  Telling them "That file wasn't found" is different from "That file is corrupted"
+How can you see what exceptions apply?  Take your code out of try/catch!  When you hover over the problem message in Eclipse, it'll say Unhandled Exception Types FileNotFoundException and IOException.
+You put the following in yoru code:
+try {
+  // code
+}
+catch(FileNotFoundException ex) {
+  // code
+}
+catch(IOException ex) {
+  // code
+}
