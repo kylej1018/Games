@@ -29,7 +29,7 @@ g.fillLine doesn't exist, for obvious reasons.
 g.setColor(Color.myColor);
 Sets the color to whatever myColor is.  All later ovals, rectangles, and other shapes will be affected until you g.setColor again.
 The following are accepted colors, red, orange, yellow, green, cyan, blue, magenta, pink, white, lightGray, gray, darkGray, black
-You need to write Color.red or Color.white for it to change color.  Just red or white won't work.
+You need to write g.setColor(Color.red) or Color.white for it to change color.  Just g.setColor(red) won't work.
 
 g.drawString("write something in these quotes", x, y);
 Draws the text in those quotes.
