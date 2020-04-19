@@ -8,11 +8,11 @@ If that finishes, then it will transfer the finished buffImg  to your screen.
 So the thing happening on your screen is now only one line long: "Transfer" instead of "everything in myPaint".  Flickering avoided.
 
 public void paintComponent(Graphics g) {
-	if(buffImg == null) {
-		buffImg = createImage(screenwidth, screenheight); //if we haven't made buffImg yet, make buffImg
+	if (buffImg == null) {
+		buffImg = createImage(screenwidth, screenheight); // if we haven't made buffImg yet, make buffImg
 	}
-	myPaint(buffImg.getGraphics()); //this is the long part.  It does myPaint on buffImg, not on your screen.
-	g.drawImage(buffImg, 0, 0, pane); //If the long part finishes, transfer the completed buffImg to your screen.
+	myPaint(buffImg.getGraphics()); // this is the long part.  It does myPaint on buffImg, not on your screen.
+	g.drawImage(buffImg, 0, 0, pane); // If the long part finishes, transfer the completed buffImg to your screen.
 }
 
 What if myPaint doesn't finish its job on buffImg before pane.repaint() happens?
