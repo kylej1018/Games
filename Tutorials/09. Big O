@@ -39,14 +39,17 @@ It means that Count Sort is WAY more efficient for your computer's time than Ext
 Even 2n, 3n, or 5n is WAY less than n^2.
 So this approximation turns out to be pretty useful in figuring out which to use for big data.
 As an example, let's say n = 10,000, and let's say each task takes 0.01 second.
-You could get through O(n) = n = 10,000 tasks in 100 seconds.  That's about 2 minutes (900 seconds, which is within this order of magnitude is 15 minutes).
-You could get through O(n) = n^2 = 100,000,000 tasks in 1,000,000 seconds.  That's about 11.5 days (and 9,000,000 seconds is 3 months).
+You could get through O(n) = n = 10,000 tasks in 100 seconds.  That's about 2 minutes.
+  This order of magnitude would say 100 seconds isn't too far off from 900 seconds, which is 15 minutes.
+You could get through O(n) = n^2 = 100,000,000 tasks in 1,000,000 seconds.  That's about 11.5 days.
+  This order of magnitude would say 1,000,000 seconds isn't too far off from 9,000,000 seconds, which is 3 months.
+Given a context of 11.5 days, I would say 15 minutes and 2 minutes are basically the same.
 
 Is it ever useful to use Bubble Sort?  Of course!
 But you have to know that your data is NOT worst-case scenario - as in, it's very nearly sorted already.
 
 There are even more ways to sort numbers.  One of the most efficient consists of breaking down a list into two smaller lists and then merging them.
-You got to explore this a little in Loops 2, where you combined two sorted lists.
+You got to explore this in a future Loops project, where you combined two sorted lists.
 For this, O(n) = n*log(n), which is better than Bubble but not quite as fast as Count Sort.
 But Count Sort is only good for literal sorting from small to large.
 Have you ever wondered how they sequence DNA?  3 billion base pairs in a single cell!
