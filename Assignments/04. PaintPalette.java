@@ -1,14 +1,14 @@
 /*
-Assignment: Make a drawing game.  You should be able to click and drag the mouse and draw a "smear of paint" across your screen.
-Suggested features:
-~Design an original splash screen (look up what that is if you don't know)
-~Change colors
-~Change brush sizes
-~Switch from circle to square
-~Switch from filled in to outline
-~Be able to clear screen to blank
-~Procreate and similar games have "buttons" on the screen to help the user facilitate these features.  You should too.
-*/
+ * Assignment: Make a drawing game.  You should be able to click and drag the mouse and draw a "smear of paint" across your screen.
+ * Suggested features:
+ * ~Design an original splash screen (look up what that is if you don't know)
+ * ~Change colors
+ * ~Change brush sizes
+ * ~Switch from circle to square
+ * ~Switch from filled in to outline
+ * ~Be able to clear screen to blank
+ * ~Procreate and similar games have "buttons" on the screen to help the user facilitate these features.  You should too.
+ */
 
 import java.awt.*;
 import java.awt.event.*;
@@ -18,8 +18,8 @@ public class PaintPalette implements MouseListener, MouseMotionListener, KeyList
 	JFrame window;
 	JPanel pane;
 	Dimension screen;
-	Image buffImg; //for double buffering
-	int screenwidth, screenheight; //screenwidth and height keep track of user's computer screen size
+	Image buffImg; // for double buffering
+	int screenwidth, screenheight; // screenwidth and height keep track of user's computer screen size
 
 	public static void main(String[] args) {
 		new PaintPalette();
@@ -36,14 +36,14 @@ public class PaintPalette implements MouseListener, MouseMotionListener, KeyList
 			@Override
 			public void paintComponent(Graphics g) {
 				super.paintComponent(g);
-				if(buffImg == null) { //for double-buffering
+				if(buffImg == null) { // for double-buffering
 					buffImg = createImage(screenwidth, screenheight);
 				}
-				myPaint(buffImg.getGraphics()); //don't override paint(), it produces errors
+				myPaint(buffImg.getGraphics()); // don't override paint(), it produces errors
 				g.drawImage(buffImg, 0, 0, pane);
 			}
 		};
-		screen = Toolkit.getDefaultToolkit().getScreenSize(); //resizes applet to computer screen size
+		screen = Toolkit.getDefaultToolkit().getScreenSize(); // resizes applet to computer screen size
 		screenwidth = (int)screen.getWidth();
 		screenheight = (int)screen.getHeight();
 		window.setSize(screenwidth, screenheight);
