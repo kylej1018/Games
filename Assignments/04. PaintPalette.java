@@ -36,7 +36,7 @@ public class PaintPalette implements MouseListener, MouseMotionListener, KeyList
 			@Override
 			public void paintComponent(Graphics g) {
 				super.paintComponent(g);
-				if(buffImg == null) { // for double-buffering
+				if (buffImg == null) { // for double-buffering
 					buffImg = createImage(screenwidth, screenheight);
 				}
 				myPaint(buffImg.getGraphics()); // don't override paint(), it produces errors
