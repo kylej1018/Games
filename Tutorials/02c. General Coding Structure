@@ -1,5 +1,5 @@
 # = need to know
-~ = covention
+~ = convention
 blank = background knowledge
 
 Open the code for Picture and follow along with this tutorial.  Try to find all these items in the Picture code!
@@ -8,7 +8,6 @@ Here's the basic outline of every code:
 Import Statements:
 #Codes usually start with import statements.  When you downloaded Java, you downloaded a lot of helpful things, but your code won't use them unless they're imported.
 #If your code returns an error when compiling that it doesn't recognize something or it thinks you should define it, double-check what imports you need.
-You can look it up on the Internet.  Searching "java color import statement" will highlight many other people who have similar problems.
 Example time!
  import java.awt.*;
  import java.awt.event.*;
@@ -22,7 +21,7 @@ Example time!
 
 Class:
 #Below import statements is something like public class Picture.
-#Whatever the word is after "class" should be the same name as the name of your .java file.
+#Whatever the word is after "class" has to be the same name as the name of your file.
 
 Global Variables:
 #After the class statement is often a collection of variables, like int x = 10;
@@ -44,7 +43,7 @@ You should be able to write
 anywhere in your program and it jumps to the code in public void init().
 
 PreInit:
-#After main, you'll see something called public void preInit() and it's usually nonessential.
+#After main, you'll see something called public void preInit() and it's usually not essential by Java standards but essential for our specific projects.
 This is something that I have provided to you for your codes that require painting, clicking the mouse, or popup windows.
 I call it preInit() because it runs early on in the code, before init(), which initializes most things.
 PreInit should only happen once.  You don't want two popup windows.  You should not ever have to write
