@@ -33,8 +33,8 @@ Java will round down after dividing if every number is an int!
 Decreasing Precision:
   10 / 5.0 is 2.0
 Sometimes printing 2.0 is an ugly answer and you just want 2 instead.
-You typecast like so:
-  (int)(10 / 5.0) is 2
+You typecast in one of these ways:
+  (int) (10 / 5.0) is 2
   10 / (int) 5.0 is also 2
 Since typecasting a double as an int rounds down, examine these examples:
   10.0 / 3.5 is 2.85714
