@@ -31,4 +31,5 @@
  * ~What happens when the game ends
  * 
  * Paste the relevant code sections from PaintPalette for your code skeleton.
+ * You don't need double buffering but you do need myPaint and MouseListener.
  */
