@@ -30,6 +30,6 @@
  * ~Joker card
  * ~What happens when the game ends
  * 
- * Paste the relevant code sections from PaintPalette for your code skeleton.
- * You don't need double buffering but you do need myPaint and MouseListener.
+ * Paste the relevant code sections from previous codes for your code skeleton.
+ * You need myPaint and MouseListener.  Probably no MouseMotionListener, so no need for double buffering.
  */
