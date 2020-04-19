@@ -22,7 +22,7 @@ You can make a bit of text without a new line like so:
   System.out.print("This is all o");
   System.out.print("ne big ");
   System.out.println("long line of text.");
-and it will say "This is all one big long line of text." because you said System.out.print instead of System.out.println
+and it will say "This is all one big long line of text." because you said System.out.print instead of System.out.println for the first two
 
 System.out.println isn't ideal for a situation where you want to share your program with another user.  It doesn't look very friendly.
 But it can help you debug really quickly.
@@ -37,10 +37,10 @@ Sure, you know what you expect your variable to be, and you know the computer ha
 If your command prompt shows the variable is correct, the problem is further down.  If it's wrong, the problem is further up.
 You need to find the exact line where your program is failing, regardless of if it's altering your variable values or getting stuck.
 
-You want to click a button and have it change the color of your brush to green.
+Example: You want to click a button and have it change the color of your brush to green.
 You have a global variable Color currentBrushColor = Color.black;
 You draw a button at 50, 0 that is 15 by 15.
-In mousePressed, you have an if(50 < x && x < 65 && 0 < y && y < 15), and inside you change currentBrushColor to Color.green
+In mousePressed, you have an if (50 < x && x < 65 && 0 < y && y < 15), and inside you change currentBrushColor to Color.green
 Then in myPaint, you have g.setColor(currentBrushColor);
 But, for some reason it doesn't work!  It keeps painting black.
 You'd might try the following in order, one by one, running the code each time, until you find the problem.
