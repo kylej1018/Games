@@ -61,6 +61,6 @@ Option 2: they type f repeatedly and fill becomes empty and empty might become f
   Option 2a: You could use an if followed by else if
   Option 2b: This funky little trick with the ! operator:
     boolean filled = true;
-    if(condition) {
-      filled = !filled; //if it's true, it becomes false.  If it's false, it becomes true.
+    if (condition) {
+      filled = !filled; // if it's true, it becomes false.  If it's false, it becomes true.
     }
