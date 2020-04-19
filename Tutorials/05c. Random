@@ -26,7 +26,7 @@ What if you wanted it from 1.0 to 100?
 Once in a while, you want something that is random but repeatable.
 We call this a "seed."
 If you seed a random number generator and ask it for ten numbers, it will look like ten random numbers.
-But if you make a different random number generator, set it to the same seed, and ask it for ten numbers, it will give you the same ten random numbers as above.
+But if you make two different random number generators, set them to the same seed, and ask them for ten numbers, they will give you the same ten random numbers.
 You can do this in two ways.  The first way sets the seed upon initialization of Random.
   long seed = 3.0; //a long is a type of variable with a decimal, like double or int.  It can be set to anything.
   Random r = new Random(seed);
