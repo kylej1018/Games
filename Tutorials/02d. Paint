@@ -24,7 +24,7 @@ The same as drawOval but filled in.
 
 g.drawLine(x1, y1, x2, y2);
 Draw a line from coordinates (x1, y1) to (x2, y2)
-g.fillLine doesn't exist.
+g.fillLine doesn't exist, for obvious reasons.
 
 g.setColor(Color.myColor);
 Sets the color to whatever myColor is.  All later ovals, rectangles, and other shapes will be affected until you g.setColor again.
