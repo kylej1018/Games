@@ -1,0 +1,83 @@
+Methods are useful when you have a specific function for the computer to do.
+They're best when you want to do a similar thing lots of times, but they're also good for just organizing your code better.
+You declare a method like so:
+	public static boolean checkValue(int x, int y) { //returns true if x and y are the same.
+		//code here
+	}
+public means it's accessible to other programmers borrowing your code.
+All the methods we use, like e.getX() are public, which is why we can use them.
+Obviously, our code won't be added to the official Java library...but there will come a day when we have our own library and need multiple codes in one program.
+The opposite of public is private.  Very few methods are private.
+Ultimately, since we're not creating objects yet, we don't have to really worry about accessing our methods from somewhere else.
+
+You have the option to include static after public/private.
+Don't worry about static yet, as we're not creating objects.
+
+After public and static, you have the method return - boolean in this case.
+You can return anything, an int, an array, or even nothing (void).
+This means that when you call that method, you can assign the result to a variable.
+	boolean b = checkvalue(4, 3);
+You might return a boolean, where something is true or false if it works.
+If your method transforms an int into another int, you might have it return the new int.
+If your method involves painting, you probably won't return anything.
+
+After the return is the method name, checkValue in this example.
+Remember that conventionally, method names start with a lowercase letter and anything with multiple "words" gets each word capitalized and spaces removed.
+Make your method names as descriptive as you can.
+
+Finally, you have the parameters (also called arguments).
+	When your program calls the method, they're called arguments, but when you're defining them, they're called parameters.
+They go in the parentheses.  You can have as many as you want, separated by commas, or a set of empty parentheses.
+Each parameter needs a variable type (can be primitive or not) and a name that is used in the method definition.
+You only want to pass along parameters needed to execute the method.
+If you can cut down on the number of global variables by passing more parameters, it's usually recommended.
+When you call a method and pass parameters, you communicate between two places in your code.  A global variable is recommended only if used in lots of methods.
+
+Example:
+	Making a method to paint something on repeat.
+	public void myPaint(Graphics g) {
+		Color favoriteColor;
+		if(case1) {
+			favoriteColor = Color.black;
+		}
+		if(case2) {
+			favoriteColor = Color.blue;
+		}
+		int x = 0;
+		drawCoolHouse(favoriteColor, g);
+		drawCoolRoof(Color.red, g);
+	}
+
+	public void drawCoolRoof(Color c, Graphics g) {
+
+	}
+
+	public void drawCoolHouse(Color c, Graphics g) {
+		g.setColor(c);
+		g.fillRect(0, 0, 100, 100);
+	}
+
+
+In the body of the method, you will sometimes put a return statement.  It looks like this:
+	return true;
+That return type should match the return type in the method definition line.  You'll get an error if it doesn't.
+When the return line is executed, the method stops immediately and the code returns to where the method was called.
+In case of a void method, you could have
+	return;
+It's occasionally necessary to use multiple returns in a method in various circumstances.
+	if(x == y) {
+		return true;
+	}
+	return false;
+The method will only return false if return true never happens.  No ELSE statement needed!
+
+Plan to comment every method with its intended purpose in a header.  You may also want to comment on the return type, parameters, and circumstances where the method is called.
+By convention, you want to define methods in your code, in the order they're called.
+Usually main() is first, then init(), then methods called from init(), then paint(), then methods called from paint(), then Listeners, then methods called from Listeners().
+Anything that *can* stand alone should probably get its own method, especially if you can name it something obvious.
+	public void drawSplashScreen(Graphics g) will be in a vast majority of our codes, with the Graphics argument passed from paint or myPaint.
+You want to keep your methods short, including main(), init(), paint(), and Listeners.
+I usually don't use a method if the method contains a single loop or a single conditional.  I do usually start a loop or make a conditional and call methods from within it because it's easier to read.
+
+You should practice some methods.  Focus on Warmups, Strings, Logics, Arrays, and AP-1.  We'll learn Recursion later.  Map and Functional, you're on your own.
+https://codingbat.com/java
