@@ -1,13 +1,13 @@
 /*
- * Assignment: Make a drawing game.  You should be able to click and drag the mouse and draw a "smear of paint" across your screen.
+ * Assignment: Make a drawing game.  You should be able to click and drag the mouse and draw a "smear of paint" across your screen.  This is not a small assignment.
  * Suggested features:
- * ~Design an original splash screen (look up what that is if you don't know)
+ * ~Design an original splash screen (look up what a splash screen is on Google)
  * ~Change colors
  * ~Change brush sizes
  * ~Switch from circle to square
  * ~Switch from filled in to outline
  * ~Be able to clear screen to blank
- * ~Procreate and similar games have "buttons" on the screen to help the user facilitate these features.  You should too.
+ * ~Procreate and similar games have "buttons" on the screen to help the user facilitate these features.  If the user clicks inside those buttons, it changes a variable.
  */
 
 import java.awt.*;
