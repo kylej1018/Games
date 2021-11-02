@@ -45,13 +45,13 @@ Then in myPaint, you have g.setColor(currentBrushColor);
 But, for some reason it doesn't work!  It keeps painting black.
 You'd might try the following in order, one by one, running the code each time, until you find the problem.
   In myPaint, right after g.setColor:
-    System.out.println("trying to paint " + currentBrushColor);
+    System.out.println("trying to paint " + currentBrushColor);  You can see if currentBrushColor has the value you expect.
   At the bottom of mouseClicked, right before pane.repaint():
-    System.out.println("after clicking, color is " + currentBrushColor);
+    System.out.println("after clicking, color is " + currentBrushColor);  You can see if currentBrushColor keeps that new value when you start to paint.
   In mouseClicked, in the if statement:
-    System.out.println("TEST");
+    System.out.println("TEST");  Is this part of the code even being reached?
   Above the if statement:
-    System.out.println("it thinks I've clicked at " + x + ", " + y);
+    System.out.println("it thinks I've clicked at " + x + ", " + y);  This will tell you if your computer recognizes the button that got clicked.
 Depending on if the statements are printed and what they say, you will probably find your bug quickly.
 
 The other debugging method involves buying a duck:
@@ -63,4 +63,4 @@ In our example above, we made a lot of assumptions after we clicked.
   2) The computer changed the color correctly after clicking.
   3) The computer later tried to repaint with the new correct color.
   4) Nothing overwrote the new correct color.
-When something goes buggy, the only way to address it is to make the computer print out what's happening before and after every assumption so you can see which one was faulty.
+When something goes buggy, the only way to address it is to System.out.println all important variables before and after every assumption so you can see which one was faulty.
