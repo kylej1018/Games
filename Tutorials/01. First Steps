@@ -24,7 +24,7 @@ Press OK a bunch of times to exit all these popups.
 
 Now you can actually code.  Open Notepad and paste the sample code from MyFirstCode.java in the Assignments page.
 Save that as MyFirstCode.java on your Desktop.
-Search Cortana for Command Prompt and click the first hit.
+Search your computer for Command Prompt and click the first hit.
 Enter cd Desktop
 Enter javac MyFirstCode.java
 If there were errors, stop and ask for help.
