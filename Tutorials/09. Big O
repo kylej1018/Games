@@ -49,7 +49,7 @@ Is it ever useful to use Bubble Sort?  Of course!
 But you have to know that your data is NOT worst-case scenario - as in, it's very nearly sorted already.
 
 There are even more ways to sort numbers.  One of the most efficient consists of breaking down a list into two smaller lists and then merging them.
-You got to explore this in a future Loops project, where you combined two sorted lists.
+You got to explore this in a previous Loops project, where you combined two sorted lists.
 For this, O(n) = n*log(n), which is better than Bubble but not quite as fast as Count Sort.
 But Count Sort is only good for literal sorting from small to large.
 Have you ever wondered how they sequence DNA?  3 billion base pairs in a single cell!
