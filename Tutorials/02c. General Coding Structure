@@ -2,11 +2,15 @@
 ~ = convention
 blank = background knowledge
 
-Open the code for Picture and follow along with this tutorial.  Try to find all these items in the Picture code!
+When your computer reads your code, it starts at the first line, reads until it hits a semicolon ; and then does that line.  It then moves onto the next line.
+Sometimes you can group lines together in curly brackets {}.  Lines in a bracket typically do similar things.
+
+Open the code for Picture and follow along with this tutorial.  Try to find an example of each of these items in the Picture code before starting the assignment.
 Here's the basic outline of every code:
 
 Import Statements:
 #Codes usually start with import statements.  When you downloaded Java, you downloaded a lot of helpful things, but your code won't use them unless they're imported.
+#You might import a package that makes it easy to draw things, or do mathematical operations.
 #If your code returns an error when compiling that it doesn't recognize something or it thinks you should define it, double-check what imports you need.
 Example time!
  import java.awt.*;
@@ -18,10 +22,11 @@ Example time!
  Thus, if I had written java.lang.* then I don't need to write java.lang.Object
  These packages and the classes inside them all live in your computer system, in the same file where you downloaded Java.
 ~If only one class is used from a package, import that class by name.  If two or more, use the * symbol.
+~For your first few assignments, I'll give you the imports.  After a while, you can copy them from previous codes.
 
 Class:
 #Below import statements is something like public class Picture.
-#Whatever the word is after "class" has to be the same name as the name of your file.
+#Whatever the word is after "class" has to be the same name as the name of your file (Picture with a capital P, in this case).
 
 Global Variables:
 #After the class statement is often a collection of variables, like int x = 10;
@@ -30,6 +35,7 @@ Global Variables:
 #There are some things you CAN'T name your variables because they're reserved keywords for specific java functions.
  For instance, don't name your variable "class" because "class" is used at the top of your code, like public class Picture.
  A complete list of keywords not to use is here: https://en.wikipedia.org/wiki/List_of_Java_keywords
+~We will have an assignment later that teaches you some different types of variables.
 
 Main:
 #After the variables is something called public static void main(String[] args) and it's usually essential for the code.
@@ -38,9 +44,6 @@ Init:
 #After main, you'll see something called public void init() and it's usually nonessential.
 Init is short for initialization because it often initializes most of your global variables.  It also usually "starts" the game (or whatever) you've programmed.
 Init can happen whenever you reset the game.
-You should be able to write
- init();
-anywhere in your program and it jumps to the code in public void init().
 
 PreInit:
 #After main, you'll see something called public void preInit() and it's usually not essential by Java standards but essential for our specific projects.
@@ -50,8 +53,8 @@ PreInit should only happen once.  You don't want two popup windows.  You should 
  preInit();
 
 Public Void:
-#After main is a series of curly-bracket-enclosed areas labeled public void, such as public void myPaint.
+#After main is a series of curly-bracket-enclosed areas labeled public void, such as public void myPaint (Graphics g).
  These are called methods.  You'll learn how to make your own methods later.
 
-#Finally, notice that almost every line ends in a semicolon.  Each line is one task for the computer to do.
+#Reminder, almost every line ends in a semicolon.  Each line is one task for the computer to do.
 #The only exceptions are the lines that have an open curly bracket.  These allow tasks to be grouped together.
