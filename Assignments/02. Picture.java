@@ -1,6 +1,6 @@
 /*
  * INSTRUCTIONS:
- * We're going to look at and edit the area called public void myPaint(Graphics g).  Don't worry about the rest.
+ * We're going to look at and edit the area just after the line public void myPaint(Graphics g).  Don't worry about the rest of the code.
  * Read Tutorial 2a and 2b.
  * Copy-paste this code into an Eclipse class named Picture.
  * Read Tutorial 2c.
