@@ -1,0 +1,26 @@
+Useful commands:
+
+In Assignment 1, you ran your first code using Command Prompt and a Notepad file saved on your desktop.
+That should be the last time you use those tools, but in the event you want to use them, here are some tips.
+They're in the form of examples, followed by what each one does.
+
+cd Desktop/mycodingprojects/InProgress/MySecondCode
+cd lets you change directory to Desktop/mycodingprojects/InProgress/MySecondCode
+The computer will only look in the directory you're currently in for the path you put.
+You have to navigate to the directory (folder) that has your code.  You might not save it on your Desktop.
+
+cd ..
+Change directory up a folder from where it's currently at
+
+dir
+Lists all contents of a directory
+
+cls
+Clear screen
+
+javac MyFirstCode.java
+Compiles a project.
+Sometimes instead of compiling, you'll get errors and the location line of that error.  You can go to a location line in Notepad by clicking Ctl+G and typing "61" or any other number.
+
+java myfirstcode
+Runs a project that has been successfully compiled.
