@@ -45,3 +45,15 @@ float letter = "A";
 char letter = "A";
 String letter = "A";
 char letter = 'A';
+
+Which of these will throw an error?
+double number = 8.0;
+boolean done = false;
+int averageGrade = 89.7;
+String done = "true";
+
+Which of these will throw an error?
+string myName = "Archibald";
+int number;
+float t = 79.0 + 3.1;
+char c = "'";
