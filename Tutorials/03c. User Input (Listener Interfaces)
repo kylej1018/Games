@@ -52,4 +52,4 @@ Finally, if you are implementing KeyListener, you need the following line, which
 This is the only way that KeyListener knows to type onto your window.
 
 TL;DR
-This assignment is all about changing code inside the appropriate listener method to update global variables that are then used in myPaint.
+This assignment teaches you about changing code inside the appropriate listener method to update global variables that are then used in myPaint.
