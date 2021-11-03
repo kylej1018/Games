@@ -2,17 +2,21 @@
 ~ = convention
 blank = background knowledge
 
-When your computer reads your code, it starts at the first line, reads until it hits a semicolon ; and then does that line.  It then moves onto the next line.
+Once you write a program, it goes through two stages: compile and execute.
+When Java compiles your code, it turns it into a language the computer understands.
+Java will also try to find errors in your code.  If it does, it will highlight them and stop compiling.
+When your computer executes your code, it starts at the first line, reads until it hits a semicolon ; and then does what that line tells it.  It then moves onto the next line.
 Sometimes you can group lines together in curly brackets {}.  Lines in a bracket typically do similar things.
 
 Open the code for Picture and follow along with this tutorial.  Try to find an example of each of these items in the Picture code before starting the assignment.
 Here's the basic outline of every code:
 
 Import Statements:
-#Codes usually start with import statements.  When you downloaded Java, you downloaded a lot of helpful things, but your code won't use them unless they're imported.
+#Codes usually start with import statements.  When you downloaded Java, you downloaded a lot of helpful tools, or "libraries", but your code won't use them unless they're imported.
 #You might import a package that makes it easy to draw things, or do mathematical operations.
 #If your code returns an error when compiling that it doesn't recognize something or it thinks you should define it, double-check what imports you need.
-Example time!
+#You can import one item, called a class, or a folder full of items called a package.
+Example time!  This is way more detail than you need to know for this assignment.
  import java.awt.*;
  import java.awt.event.*;
  import java.lang.Object;
@@ -20,41 +24,51 @@ Example time!
  java.awt.event is not in the java.awt package.  Common misconception.  It's a whole separate package.
  java.lang.Object IS in the java.lang folder.  I know this because Object is capitalized, meaning it's a class, but everything before it is not, meaning it's a package.
  Thus, if I had written java.lang.* then I don't need to write java.lang.Object
- These packages and the classes inside them all live in your computer system, in the same file where you downloaded Java.
+ These packages and the classes inside them all live in your computer system, in the same folder where you downloaded Java.
+~Usually you don't want to import more than you need, because that's inefficient for your computer.
 ~If only one class is used from a package, import that class by name.  If two or more, use the * symbol.
 ~For your first few assignments, I'll give you the imports.  After a while, you can copy them from previous codes.
 
 Class:
 #Below import statements is something like public class Picture.
+#Picture is the name of the class.  Every line in the curly brackets after Picture is the contents of the class.
 #Whatever the word is after "class" has to be the same name as the name of your file (Picture with a capital P, in this case).
 
 Global Variables:
 #After the class statement is often a collection of variables, like int x = 10;
 #You can declare a variable anywhere (it's called a local variable) but you can only use it within those curly brackets.
- The reason there are usually lots at the beginning (global variables) is because ALL curly brackets can use them.
-#There are some things you CAN'T name your variables because they're reserved keywords for specific java functions.
- For instance, don't name your variable "class" because "class" is used at the top of your code, like public class Picture.
- A complete list of keywords not to use is here: https://en.wikipedia.org/wiki/List_of_Java_keywords
+~The reason there are usually lots at the beginning (global variables) is because ALL curly brackets can use them.
 ~We will have an assignment later that teaches you some different types of variables.
 
 Main:
 #After the variables is something called public static void main(String[] args) and it's usually essential for the code.
 
-Init:
-#After main, you'll see something called public void init() and it's usually nonessential.
-Init is short for initialization because it often initializes most of your global variables.  It also usually "starts" the game (or whatever) you've programmed.
-Init can happen whenever you reset the game.
+Constructor:
+#After main you'll see public Picture().  This is called a constructor.
+#It must be called the same thing as the class and have those parentheses after.  Those parentheses will often be empty.
+#Picture is the name of the constructor.  Every line in the curly brackets after Picture() is the contents of the constructor.
+~This one calls preInit() and init().  These are useful methods I'm about to explain.  Most things we do in this course will have that in their constructor.
 
-PreInit:
-#After main, you'll see something called public void preInit() and it's usually not essential by Java standards but essential for our specific projects.
-This is something that I have provided to you for your codes that require painting, clicking the mouse, or popup windows.
-I call it preInit() because it runs early on in the code, before init(), which initializes most things.
-PreInit should only happen once.  You don't want two popup windows.  You should not ever have to write
- preInit();
+preInit:
+#After main, you'll see something called public void preInit() and it's not essential by Java standards but essential for our specific projects.
+~This is something that I have provided to you for your codes that require painting, clicking the mouse, or popup windows.
+~You shouldn't have to change things in it until you understand painting, clicking the mouse, or popup windows.
+~I call it preInit() because it runs early on in the code, before init(), which initializes most things.
+~PreInit should only happen once.  You don't want two popup windows for the same program.
+
+init:
+#After main, you'll see something called public void init() and it's usually helpful but not essential.
+~Init is short for initialization because it often sets the initial value of most global variables.  It also usually "starts" the game (or whatever) you've programmed.
+~You'll have to change things in it once you learn how to initialize global variables.
+~Init can happen whenever you reset the game.
+~In the case of Picture, init's curly brackets are empty.  There's nothing that needs initializing.
 
 Public Void:
-#After main is a series of curly-bracket-enclosed areas labeled public void, such as public void myPaint (Graphics g).
- These are called methods.  You'll learn how to make your own methods later.
+#After main is a series of curly-bracket-enclosed areas labeled public void, such as public void myPaint(Graphics g).  These are called methods.
+#Picture only has one method.  myPaint.  It's the one we use to draw.
+#If your program calls a method (we'll learn how to do that later), your code will immediately jump to that method and execute its contents.
+~In future assignments, we will use public void methods for using the mouse and the keyboard.
+~Even later on, you will get to create your own methods from scratch.
 
 #Reminder, almost every line ends in a semicolon.  Each line is one task for the computer to do.
 #The only exceptions are the lines that have an open curly bracket.  These allow tasks to be grouped together.
