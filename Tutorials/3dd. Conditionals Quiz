@@ -1,0 +1,35 @@
+Which of the following is improper?
+if(x > 5) {
+if(b) {
+if(worstCase == true) {
+if(m == 'm') {
+
+Which of the following four lines is incorrectly spaced?
+if(x != 0) {
+  x = x - 1;
+  g.drawString("x just decreased by one", 30, 30);
+  }
+
+Which of the following will execute?
+if(false == false)
+if(true != true)
+if(4 < 4)
+if((true == true) != true)
+
+Which of the following is not a boolean expression?
+s == "false"
+3 * 3 > 3 + 3
+true == !(false == true)
+4 = 0
+
+Which of the following will execute?
+if(true == false || false != true)
+if(x == false && x == true)
+if(!true != !false && !(!false != !true))
+if(false == false && false)
+
+Which of the following is not valid?
+boolean b = 10 < x < 50;
+boolean b = !!true;
+boolean b = !(true == !false);
+boolean b = x == 3;
