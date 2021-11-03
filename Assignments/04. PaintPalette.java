@@ -1,5 +1,6 @@
 /* INSTRUCTIONS
  * Make a drawing game.  You should be able to click and drag the mouse and draw a "smear of paint" across your screen.  This is not a small assignment.
+ * 
  * Suggested features:
  * ~Design an original splash screen (look up what a splash screen is on Google)
  * ~Change colors
