@@ -4,12 +4,13 @@ You can write
   System.out.println("Text here");
 This doesn't show up in the popup window.  This shows up in the console.
   If you're using Eclipse, remember you can view the console by clicking Window > Show View > Console
-The console is really just text that you can print to help yourself.
+The console is really just text that you can look at when the program is running, to help yourself debug.
 
 If you are trying to check on the status of a variable, say an int x, you can write
   System.out.println(x);
 You can combine text and variables like so:
   System.out.println("Current value of x: " + x);
+This works even if x is an int, float, boolean, or char.
 
 println is pronounced "print line."
 You can also make a blank line with just
@@ -24,8 +25,7 @@ You can make a bit of text without a new line like so:
   System.out.println("long line of text.");
 and it will say "This is all one big long line of text." because you said System.out.print instead of System.out.println for the first two
 
-System.out.println isn't ideal for a situation where you want to share your program with another user.  It doesn't look very friendly.
-But it can help you debug really quickly.
+System.out.println isn't ideal for a situation where you want to share your program with another user.  It doesn't look very aesthetic.
 
 The question you should ask when debugging is, "Is my code in the wrong spot, or is my code in the right spot but messing with my variables?"
 The most helpful line you can include is:
