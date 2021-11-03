@@ -1,0 +1,47 @@
+Which variable type is "true"?
+boolean   String    char    double
+
+Which variable type is true?
+boolean   String    char    double
+
+Which variable type is '?'?
+boolean   String    char    double
+
+Which variable type is 1.0?
+float    int    char    boolean
+
+Which variable type is '3'?
+int   String    char    None of the above
+
+Which variable type would you use for storing the number of students in a class?
+boolean   double    String    int
+
+Which variable type would you use for storing the average test score in a class?
+float   int   String    char
+
+Which data type would you use for storing letter grades (without - or +) for students in a class?
+String    int   char    boolean
+
+How would you declare and initialize a variable storing a person's name?
+string name = "Jeff";
+String name = Jeff;
+name String = "Jeff";
+String name = "Jeff";
+
+How would you declare and initialize a variable storing the tax rate?
+int taxRate = 5.1;
+float taxRate = 5.1;
+taxRate = "5.1";
+double taxRate = "5.1";
+
+How would you declare a variable that tells you that someone passed a class?
+boolean passed = 'true':
+passed = true;
+boolean passed = true;
+String passed = "true";
+
+How would you declare a variable for your favorite letter of the alphabet?
+float letter = "A";
+char letter = "A";
+String letter = "A";
+char letter = 'A';
