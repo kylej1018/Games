@@ -1,4 +1,5 @@
-/* Make a memory matching game.  It should include the following:
+/* INSTRUCTIONS
+ * Make a memory matching game.  It should include the following:
  * 
  * Splashscreen.
  * Start a game.
