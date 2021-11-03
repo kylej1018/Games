@@ -1,5 +1,4 @@
-/*
- * INSTRUCTIONS
+/* INSTRUCTIONS
  * Make an app called GuessingGame.
  * 
  * You've should now have the ability to copy-paste the relevant statements from previous codes and modify them.  Thus, you get no code skeleton here.
