@@ -6,3 +6,14 @@ Technically, your computer reads a 2D array as an array (size 3) of arrays (each
 
 You could even have three, four, or higher dimensional arrays.
   int[][][][] arr = new int[4][4][4][4];
+
+Here's an example of how you might populate a 2D array and access one element.
+int[][] arr = new int[5][3];
+int x = 10;
+for(int i = 0; i < arr.length; i++) {
+  for(int j = 0; j < arr[i].length; j++) {
+    arr[i][j] = x;
+    x = x + 2;
+  }
+}
+System.out.print(arr[4][0]);
