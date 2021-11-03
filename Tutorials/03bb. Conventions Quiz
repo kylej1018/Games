@@ -35,16 +35,16 @@ public class BadJavaJokes {
 Which of the following is a proper variable name?
 pu//MyFinger    ImmaFailThisQuiz    forever&Ever    1999isTheBestPrinceSong
 
-Which of these lines is missing a space?
+Which of these four lines is missing a space?
 public void myPaint(Graphics g) {
   y = 4+3; //more like y did you not declare this variable?
   g.drawRect(x, 5, 16, 30);
 }
 
-Which of these lines does not have too many spaces?
+Which of these four lines does not have too many spaces?
 public void myPaint(Graphics g) {
   char c = ' $ ';
-    g.fillOval (7, t, zx + 4, 0); //zx is a bad variable name because it's not obvious what it does
+  g.fillOval (7, t, zx + 4, 0); //zx is a bad variable name because it's not obvious what it does
   }
 
 Which of the following is a proper constant name?
