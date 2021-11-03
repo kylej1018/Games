@@ -1,0 +1,66 @@
+Which of the following is a valid variable name?
+ifElse    If    If Else   "ifElse"
+
+Which of the following is a value that cannot be assigned to a variable?
+"3"   "3'   '3'   3
+
+Which of the following lines ends with invalid punctuation?
+import java.awt.*;
+int x = y + (z - 6);
+public void addNumber() {}
+String s = "needs coffee;"
+
+Which of the following will fail to compile?
+int x = 1; //starting variable
+int x = 1; /*x is a variable measuring distance
+            *from earth to the sun in astronomical units
+int x //= 3;
+//int x = 1;
+
+Which of the following is a proper class name?
+physicalEducation   $cience   OrganicChemistry   Computerscience
+
+Which of the following is false for a file called tyrannosaurus?
+It should have been capitalized
+It requires at least one global variable
+The class must also be called tyrannosaurus
+The constructor must also be called tyrannosaurus
+
+Which of the following is a heading for a constructor?
+public Coffee() {
+public static void main(String[] args) {
+public void drinkingCoffee() {
+public class BadJavaJokes {
+
+Which of the following is a proper variable name?
+pu//MyFinger    ImmaFailThisQuiz    forever&Ever    1999isTheBestPrinceSong
+
+Which of these lines is missing a space?
+public void myPaint(Graphics g) {
+  y = 4+3; //more like y did you not declare this variable?
+  g.drawRect(x, 5, 16, 30);
+}
+
+Which of these lines does not have too many spaces?
+public void myPaint(Graphics g)    {
+  char c = ' $ ';
+    g.fillOval (7, t, zx + 4, 0); //zx is a bad variable name because it's not obvious what it does
+  }
+
+Which of the following is a proper constant name?
+MAX_EMPLOYEES   PayRate   INCOME    youAreHired
+
+Which of the following keywords is always used when declaring constants?
+constructor   final   int   class
+
+Which of the following is most likely to be a global variable?
+The key that the user just pressed
+A boolean describing if x is less than 100
+The color you want to paint your rectangle
+Pi
+
+Which of the following is most likely to be a constant?
+Your enthusiasm to be taking this quiz
+A number that increases by one every time you click the mouse
+The password to your bank account
+Pi
