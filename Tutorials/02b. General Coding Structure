@@ -38,6 +38,7 @@ Global Variables:
 #After the class statement is often a collection of variables, like int x = 10;
 #You can declare a variable anywhere (it's called a local variable) but you can only use it within those curly brackets.
 ~The reason there are usually lots at the beginning (global variables) is because ALL curly brackets can use them.
+~In theory, you don't need global variables, but almost every code has at least one.
 ~We will have an assignment later that teaches you some different types of variables.
 
 Main:
