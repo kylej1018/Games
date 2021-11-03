@@ -1,12 +1,17 @@
-You won't know what every term in this document means yet.  Please refer back to it often.
 # = need to know
 ~ = etiquette or convention
+
+Coding conventions are for making your code more readable, and for making your computer more efficient when running it.
+Occasionally, those two goals will work opposite one another.  Sometimes you get to decide which is more important in each moment.
+
+You won't know what every term in this document means yet.  Please refer back to it often.
+
 
 Semicolons:
 #Basically every line in java ends with a semicolon.  The only ones that don't open a curly bracket, or close an existing curly bracket.
 
 Comments:
-#You should comment often so that people using (or helping with) your code can understand it easier.
+#You must comment often so that people using (or helping with) your code can understand it easier.
 #Use /* and */ for multi-line comments.  Use // for comments on one line.
 ~You should write variables and methods such that you shouldn't have to comment because it's obvious what they represent.
 ~But you should comment many of the following:
@@ -19,13 +24,13 @@ Comments:
 ~  Loops.
 
 Naming things:
-#Anything with multiple "words" gets each word capitalized and spaces removed like so:
+#Any name with multiple "words" gets each word capitalized and spaces removed like so:
   thisIsAnExample
 #Don't start a name with a number, but you can put a number in the middle of the name.
 #Don't name things any of these keywords: https://en.wikipedia.org/wiki/List_of_Java_keywords
 ~Variable and method names start with a lowercase letter.
   double salary = 18.50;
-~Constants are all capitals with undercases and get the keyword "final"
+~Constants are all capitals with undercases and get the keyword "final."
   final int MAXIMUM_PEOPLE_ALLOWED = 100;
 ~Class and interfaces start with a capital letter.
   public class MyFirstCode
