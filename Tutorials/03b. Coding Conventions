@@ -27,7 +27,7 @@ Naming things:
 #Any name with multiple "words" gets each word capitalized and spaces removed like so:
   thisIsAnExample
 #Don't start a name with a number, but you can put a number in the middle of the name.
-#Don't name things any of these keywords: https://en.wikipedia.org/wiki/List_of_Java_keywords
+#There are some things you can't name a variable, because it means something else.  Like class, or import.  Full list here: https://en.wikipedia.org/wiki/List_of_Java_keywords
 ~Variable and method names start with a lowercase letter.
   double salary = 18.50;
 ~Constants are all capitals with undercases and get the keyword "final."
