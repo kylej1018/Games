@@ -1,6 +1,10 @@
 /*
  * INSTRUCTIONS:
- * We're going to look at and edit the area just after the line public void myPaint(Graphics g).  Don't worry about the rest of the code.
+ * We're going to learn how to make a program draw a picture today.
+ * To do so, we're going to look at and edit the area just after the line public void myPaint(Graphics g).
+ * The rest of the code will help it run, and you'll learn another piece with each new assignment.
+ * For today, don't worry about anything except what's inside the curly brackets after public void myPaint(Graphics g).
+ *
  * Read Tutorial 2a and 2b.
  * Copy-paste this code into an Eclipse class named Picture.
  * Read Tutorial 2c.
