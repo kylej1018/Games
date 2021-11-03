@@ -42,7 +42,7 @@ public void myPaint(Graphics g) {
 }
 
 Which of these lines does not have too many spaces?
-public void myPaint(Graphics g)    {
+public void myPaint(Graphics g) {
   char c = ' $ ';
     g.fillOval (7, t, zx + 4, 0); //zx is a bad variable name because it's not obvious what it does
   }
