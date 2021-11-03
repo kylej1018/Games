@@ -1,6 +1,6 @@
 /*
  * Last time, we worked only in the myPaint area.  We'll do some myPaint this time, but now you'll also be looking at global variables and Listener interfaces.
- * Read through all the tutorials for section 3 before starting.
+ * Read through the instructions, and then all the tutorials for section 3 before starting.
  * 
  * INSTRUCTIONS:
  * Debug as needed until it runs.  Once it runs, you'll find it doesn't work so great.  Solve each of these problems, one at a time.
@@ -10,7 +10,7 @@
  * 4. Add something cool to this code.
  * Another shape or color is cool.
  * A circle radius that changes size with each click is cool.
- * Text, titles, instructions is cool.
+ * Text, a title, instructions are cool.
  * Can you think of anything else?
  */
 
