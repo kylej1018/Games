@@ -1,9 +1,12 @@
 Useful commands:
+
+You have to navigate to the directory (folder) that has your code.
+
 cd Desktop/mycodingprojects/InProgress/PrettyLines
-change directory to Desktop/mycodingprojects/InProgress/PrettyLines
+Change directory to Desktop/mycodingprojects/InProgress/PrettyLines
 
 cd ..
-Change directory up a folder
+Change directory up a folder from where it's currently at
 
 dir
 Lists all contents of a directory
