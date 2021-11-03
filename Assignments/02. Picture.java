@@ -5,11 +5,11 @@
  * The rest of the code will help it run, and you'll learn another piece with each new assignment.
  * For today, don't worry about anything except what's inside the curly brackets after public void myPaint(Graphics g).
  *
- * Read Tutorial 2a and 2b.
+ * Read Tutorial 2a.
  * Copy-paste this code into an Eclipse class named Picture.
- * Read Tutorial 2c.
+ * Read Tutorial 2b.
  * Try the assignment below.
- * Don't open Tutorial 2d until you've tried this assignment and want to check your answers.
+ * Don't open Tutorial 2c until you've tried this assignment and want to check your answers.
  * 
  * Try to run this code as it is.  Errors?  What kind of error?  What line is the error?  Can you figure out how to debug it?
  * Okay, now it's time to experiment.  I'm not going to tell you what each line of the code in myPaint does, but I'm going to teach you how to figure it out yourself.
