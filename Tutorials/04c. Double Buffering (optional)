@@ -1,4 +1,4 @@
-I've already built double buffering into PaintPalette.  It's nice to know what it is so you can transfer it to other projects.
+I've already built double buffering into PaintPalette.  It's an advanced subject but nice to know what it is so you can transfer it to other projects.
 
 Odds are, your myPaint method is going to get very very large in some projects.
 In fact, your computer is likely to call pane.repaint() in mouseMotionListener method before myPaint even finishes.
@@ -11,7 +11,7 @@ public void paintComponent(Graphics g) {
 	if (buffImg == null) {
 		buffImg = createImage(screenwidth, screenheight); // if we haven't made buffImg yet, make buffImg
 	}
-	myPaint(buffImg.getGraphics()); // this is the long part.  It does myPaint on buffImg, not on your screen.
+	myPaint(buffImg.getGraphics()); // this is the long part.  It does myPaint, but on buffImg, not on your screen.
 	g.drawImage(buffImg, 0, 0, pane); // If the long part finishes, transfer the completed buffImg to your screen.
 }
 
