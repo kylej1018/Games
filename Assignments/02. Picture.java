@@ -38,6 +38,7 @@
  * Try changing g.drawRect to g.drawrect.  Do capitals matter in programming?  If you put two spaces instead of one somewhere, does that matter?  Or an extra blank line?
  * 
  * HOMEWORK:
+ * Read Tutorial 2c if you haven't already.
  * Draw me a picture.  It should use at least one draw and at least one fill statement, two or more colors, and text in the form of g.drawString.
  */
 
