@@ -11,7 +11,7 @@ Sometimes you don't want to re-initialize an int variable, you just want it to c
 You can do x *= 2, which is faster than typing x = x * 2.
 x -= 5 subtracts 5 from x.
 i += 1 increments i by 1.
-i++ also increments i by 1 and is faster than i += 1 or i = i + 1 but all three mean the same thing.
+i++ also increments i by 1 and is faster to type than i += 1 or i = i + 1 but all three mean the same thing.
 i-- is equivalent to i-= 1 and i = i - 1
 
 Variable Precision:
