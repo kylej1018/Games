@@ -1,4 +1,4 @@
-/*
+/*INSTRUCTIONS
  * Complete all these assignments.  Note that you can do this all within main and the results will be in the console.
  * Print the task # before each answer.
  * Print the operation you're trying to do, with numbers, such as "67 + 103 = " so that you can check your own math.
