@@ -35,7 +35,7 @@ In your paint area, you'd draw that with the line - g.fillRect(x, y, width heigh
 But what are x and y?
 
 Well, for the card in the upper left, at arr[0][0], x and y can be 0, 0.
-The card at arr[1][1] wouldn't be at the x and y coordinates 1, 1...that'd be really quiet.
+The card at arr[1][1] wouldn't be at the x and y coordinates 1, 1...that'd be a really tiny game.
 It would be one "width" over and one "height" down.
 The card at arr[2][2] would be at two "widths" over and one "height" down.
 The card at arr[1][2] would be at one "width" over and two "heights" down.
@@ -44,7 +44,7 @@ In other words, to get the x and y coordinates, you need to think of each card's
 Is that all there is?  If you do that, your cards will take up ALL the space in your grid...and that will no longer make them look like cards.
 You should plan to have a lil border around each one.
 If you are drawing something three cards to the right, x isn't just the value of three card "widths."  It's three card "widths" plus three borders.
-It's also nice to add a margin on the left of your playing area.  And another one on top.  That way, if you want to shift the game over, you can easily change the value of one variable.
+It's also nice to add a margin on the left of your playing area.  And another one on top.
 
 So each card should be drawn at these x, y values:
 x = (# cards to the left * card width) + (# cards to the left * border width) + left margin
