@@ -71,13 +71,21 @@ It's occasionally necessary to use multiple returns in a method in various circu
 	return false;
 The method will only return false if return true never happens.  No ELSE statement needed!
 
+Another method example:
+	public int sumArray(int [] arr) { //intended to sum all the numbers in an array.  Takes an array as parameter and returns the sum as an int.
+		int sum = 0;
+		for(int i = 0; i < arr.length; i++) {
+			sum += arr[i];
+		}
+		return sum;
+	}
+
 Plan to comment every method with its intended purpose in a header.  You may also want to comment on the return type, parameters, and circumstances where the method is called.
 By convention, you want to define methods in your code, in the order they're called.
 Usually main() is first, then init(), then methods called from init(), then paint(), then methods called from paint(), then Listeners, then methods called from Listeners().
 Anything that *can* stand alone should probably get its own method, especially if you can name it something obvious.
 	public void drawSplashScreen(Graphics g) will be in a vast majority of our codes, with the Graphics argument passed from paint or myPaint.
 You want to keep your methods short, including main(), init(), paint(), and Listeners.
-I usually don't use a method if the method contains a single loop or a single conditional.  I do usually start a loop or make a conditional and call methods from within it because it's easier to read.
 
 You should practice some methods.  Focus on Warmups, Strings, Logics, Arrays, and AP-1.  We'll learn Recursion later.  Map and Functional, you're on your own.
 https://codingbat.com/java
