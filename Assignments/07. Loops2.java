@@ -1,4 +1,4 @@
-/*
+/* INSTRUCTIONS
  * Download the Arrays.zip in the "Extras" section of this Github and unzip it.
  * Fix the FIXME line to reflect where you saved it.
  * Complete all these assignments.  Print the task # before each answer.
