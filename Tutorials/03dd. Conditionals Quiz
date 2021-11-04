@@ -33,3 +33,49 @@ boolean b = 10 < x < 50;
 boolean b = !!true;
 boolean b = !(true == !false);
 boolean b = x == 3;
+
+What is the value of x after this code runs?
+int x = 0;
+if (x > 20) {
+  x = 10;
+}
+else if (x < 15) {
+  x = 5;
+}
+else {
+  x = -300;
+}
+0   10    5   -300
+
+
+What is the value of x after this code runs?
+int x = 3;
+if (x < 10) {
+  x = 0;
+}
+else if (x > -5) {
+  x = 3;
+}
+else if (x == 3) {
+  x = -5;
+}
+3   0   10   -5
+
+What is the value of x after this code runs?
+int x = 3;
+if (x < 10) {
+  x = 0;
+}
+if (x > -5) {
+  x = 3;
+}
+if (x == 3) {
+  x = -5;
+}
+3   0   10    -5
+
+Which of the following will fail to execute if boolean b is true?
+if(b)
+if(b != b)
+if(b == true)
+if(b != false)
