@@ -1,4 +1,4 @@
-Sometimes you only want things to happen "if" a statement is true.
+Sometimes you only want things to happen "if" a condition is true.
 You use a conditional statement like this:
   boolean b = true;
   if (b) {
