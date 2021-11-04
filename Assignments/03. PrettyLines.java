@@ -7,7 +7,7 @@
  * 2. I want to draw a line from my point to my previous point.  How can you retain the previous x and y values after clicking? (hint: Tutorial 3c)
  * 3. I want to type "s" and "c" and have it switch between drawing a square and circle.  Still want the line though. (hint: Tutorial 3d)
  * 4. Add something cool to this code.
- * Another shape or color is cool.
+ * Another color is cool.
  * A circle radius that changes size with each click is cool.
  * Text, a title, instructions are cool.
  * Can you think of anything else?
