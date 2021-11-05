@@ -1,6 +1,6 @@
 COLORS
 Sometimes, you want a color that's different from the ones we used in PaintPalette.  They're kind of cheesy.
-To do that, you need to make your own like so:
+To do that, you need to make your own using the keyword "new" like so:
   Color myColor = new Color(80, 70, 60);
   g.setColor(myColor);
 The three numbers in the parentheses are the red, green, and blue values.  They can each go from 0 to 255.
