@@ -10,8 +10,8 @@
  * If they don't match, the next click by the player, regardless of where, reverts the cards.
  * 
  * The player has a sequence of three clicks - first card, second card, revert.  Computer needs a variable to track which we're on.
- * Each card has one of three values: Faceup (additional values based on size), Facedown, or Exited.
-
+ * Each card has a few different possible values: Facedown, Exited, or Faceup.  I suggest Faceup be a different number for each card design.
+ *
  * Extra optional things to add:
  * ~Easy/hard mode.  Hard mode has more cards.
  * ~Scoring.
@@ -32,5 +32,6 @@
  * ~What happens when the game ends
  * 
  * Paste the relevant code sections from previous codes for your code skeleton.
+ * The usual import statements, a constructor, init(), and reset; you'll use reset.
  * You need myPaint and MouseListener.  Probably no MouseMotionListener, so no need for double buffering.
  */
