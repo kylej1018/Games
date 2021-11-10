@@ -9,6 +9,7 @@
  * ~Switch from filled in to outline
  * ~Be able to clear screen to blank
  * ~Procreate and similar games have "buttons" on the screen to help the user facilitate these features.  If the user clicks inside those buttons, it changes a variable.
+ * Keyboard shortcuts are also an acceptable way to facilitate these changes.  We've already explored using 'c' and 's' to switch shapes in the previou assignment.
  */
 
 import java.awt.*;
@@ -27,11 +28,10 @@ public class PaintPalette implements MouseListener, MouseMotionListener, KeyList
 	}
 	
 	public PaintPalette() {
-		preinit();
 		init();
 	}
 	
-	public void preInit() {
+	public void init() {
 		window = new JFrame("PaintPalette");
 		pane = new JPanel() {
 			@Override
@@ -56,6 +56,11 @@ public class PaintPalette implements MouseListener, MouseMotionListener, KeyList
 		window.add(pane);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setVisible(true);
+		reset();
+	}
+	
+	public void reset() {
+		
 	}
 
 	public void myPaint(Graphics g) {}
