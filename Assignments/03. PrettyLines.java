@@ -34,12 +34,7 @@ public class PrettyLines implements MouseListener, KeyListener {
 		init();
 	}
 
-	public PrettyLines() {
-		preInit();
-		init();
-	}
-
-	public void preInit() {
+	public void init() {
 		pane = new JPanel() {
 			@Override
 			public void paintComponent(Graphics g) {
@@ -53,9 +48,10 @@ public class PrettyLines implements MouseListener, KeyListener {
 		window.add(pane);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setVisible(true);
+		reset();
 	}
 	
-	public void init() {}
+	public void reset() {}
 	
 	public void myPaint(Graphics g) {
 		g.setColor(color.black);
