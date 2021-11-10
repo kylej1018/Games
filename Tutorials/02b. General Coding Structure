@@ -48,24 +48,25 @@ Constructor:
 #After main you'll see public Picture().  This is called a constructor.
 #It must be called the same thing as the class and have those parentheses after.  Those parentheses will often be empty.
 #Picture is the name of the constructor.  Every line in the curly brackets after Picture() is the contents of the constructor.
-~This one calls init() and reset().  These are useful methods I'm about to explain.  Most things we do in this course will have that in their constructor.
+~This one calls init().  Most things we do in this course will have that in their constructor.
 
-init:
+Init:
 #After main, you'll see something called public void init() and it's not essential by Java standards but essential for our specific projects.
 ~This is something that I have provided to you for your codes that require painting, clicking the mouse, or popup windows.
 ~You shouldn't have to change things in it until you understand painting, clicking the mouse, or popup windows.
 ~I call it init() because it runs early on in the code and initializes some things.
 ~init() should only happen once.  You don't want two popup windows for the same program.
+~The very last line of init() calls reset().
 
-reset:
-#After main, you'll see something called public void reset() and it's usually helpful but not essential.
-~reset often "starts" the game (or whatever) you've programmed.  It also initializes any variables not given a value in init().
+Reset:
+#After init(), you'll see something called public void reset() and it's usually helpful but not essential.
+~Reset often "starts" the game (or whatever) you've programmed.  It also initializes any variables not given a value in init().
 ~You'll have to change things in it once you learn how to initialize global variables.
 ~Init can happen whenever you reset the game.
 ~In the case of Picture, reset's curly brackets are empty.  There's nothing that needs initializing.
 
 Public Void:
-#After reset is a series of curly-bracket-enclosed areas labeled public void, such as public void myPaint(Graphics g).  These are called methods.
+#After reset() is a series of curly-bracket-enclosed areas labeled public void, such as public void myPaint(Graphics g).  These are called methods.
 #Picture only has one method.  myPaint.  It's the one we use to draw.
 #If your program calls a method (we'll learn how to do that later), your code will immediately jump to that method and execute its contents.
 ~In future assignments, we will use public void methods for using the mouse and the keyboard.
