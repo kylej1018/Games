@@ -1,0 +1,18 @@
+Here are some useful tools for arrays.
+
+1. Declare and initialize an array in one line
+String[] aArray = new String[5];
+String[] bArray = {"aaa", "bbb", "ccc", "ddd", "eee"};
+
+2. Print an array that's not Strings
+int[] intArray = {1, 2, 3, 4, 5}
+String[] stringArray = Arrays.toString(intArray);
+System.out.println(stringArray);
+
+This snippet will make the system print [1, 2, 3, 4, 5].
+Why does System.out.println(intArray) not work?
+If the array isn't a String, it tries to print the reference to the array, rather than the values in the array.
+
+3. Check if a String array contains a certain value
+String[] stringArray = {"aaa", "bbb", "ccc", "ddd", "eee"};
+boolean b = Arrays.asList(stringArray).contains("aaa");
