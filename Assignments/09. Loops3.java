@@ -1,4 +1,4 @@
-/*
+/* INSTRUCTIONS
  * Fix the FIXME line to reflect where you saved the Arrays folder.
  * Complete all these assignments.  Print the task # before each answer.
  * Do not change anything in these arrays.
