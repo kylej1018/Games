@@ -23,6 +23,7 @@ Clicks for everything else.
 Check for 4-in-a-row.
 When game is over, paint the highlighted winner & replay offer when game is over.
 Paint score & rules
+(optional) Let players pick their own colors.
 
 Game Statuses:
 1) Splash
