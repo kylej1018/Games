@@ -19,6 +19,15 @@ or on different lines:
   x = 10;
 
 You can also "re-initialize" a variable at any time and give it a new value if you have no need for its old one.
+When this happens, don't use the type or it'll be flagged as an error.  So
+  int x = 5;
+  x = 10; //is ok
+  x = 15; //is ok
+  int x = 20; //is not ok
 
 Variables can be declared after the line that says public class.  These are called "global variables" and can be used everywhere in your code.
 Conversely, if variables are declared inside curly brackets, they're "local variables" and other parts of your code outside the brackets can't use them.
+
+If you need several similar variables, you can declare them all on one line.
+  int x, y, z;
+  int a = 1, b = 2, c = 3;  
