@@ -17,8 +17,8 @@ If you implement KeyListener, you need:
   public void keyPressed(KeyEvent e) {}
   public void keyReleased(KeyEvent e) {}
 If you implement MouseMotionListener, you need:
-  public void mouseMoved(KeyEvent e) {}
-  public void mouseDragged(KeyEvent e) {}
+  public void mouseMoved(MouseEvent e) {}
+  public void mouseDragged(MouseEvent e) {}
 They have to be in your code, even if the curly brackets have nothing in them.
 
 Each method executes when its event happens.  For example, when the mouse enters your screen, the mouseEntered method executes.
