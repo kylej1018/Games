@@ -41,3 +41,5 @@ int x = 100;
     }
     System.out.println(x + "");
   }
+Break can be particularly useful when you're testing the value of an array in a while-loop.
+After all, you don't want throw an error when your iteration variable gets too big.
