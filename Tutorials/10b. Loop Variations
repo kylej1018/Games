@@ -1,0 +1,43 @@
+Sometimes you want not to initialize any variables.  You would do so like this:
+  int k = 15; //maybe this happens way earlier in the code
+  for (; k > 0; k--) {
+    //code here
+  }
+
+Sometimes multiple iteration variables are useful.  Separate them with commas.
+  for (int i = 50, j = 0; i <= 100; i += 10, j += 1) {
+    //code here
+  }
+  
+  for (int a = 10, int b = 5; a <= 20; a++) {
+    //code here
+  }
+
+
+Have you encountered any loops you definitely want to execute once, no matter what?  You can use the do-while loop.
+  int x = 1;
+  do {
+      System.out.println(x + "" );
+      x++;
+    } while(x != 7);
+  }
+
+You also may want to use break or continue.
+Break will end the loop you're currently in.  If you're inside mutliple loops, it will only break one loop - the innermost.
+int x = 100;
+  while (x > 1) {
+  x = x / 2
+    if (x == 25) { //this example ends the loop when x is 25.
+      break;
+    }
+    System.out.println(x + "");
+  }
+Continue will skip one iteration of the loop you're currently in.
+int x = 100;
+  while (x > 1) {
+  x = x / 2
+    if (x == 25) { //this example skips over printing when x is 25.
+      continue;
+    }
+    System.out.println(x + "");
+  }
