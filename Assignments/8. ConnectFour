@@ -27,5 +27,6 @@ Paint score & rules
 
 Game Statuses:
 1) Splash
-2) Playing
-3) Endgame
+2) Playing, P1's turn
+3) Playing, P2's turn
+4) Endgame
