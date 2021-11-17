@@ -5,7 +5,7 @@ String[] aArray = new String[5];
 String[] bArray = {"aaa", "bbb", "ccc", "ddd", "eee"};
 
 2. Print an array that's not Strings
-int[] intArray = {1, 2, 3, 4, 5}
+int[] intArray = {1, 2, 3, 4, 5};
 String[] stringArray = Arrays.toString(intArray);
 System.out.println(stringArray);
 
