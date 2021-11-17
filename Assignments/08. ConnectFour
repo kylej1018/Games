@@ -1,35 +1,37 @@
-Connect4
-Make a 2-player Connect 4 game.
-
-Rules:
-The board is 7-across by 6-up.
-A turn consists of adding a checker to any column; it drops to the bottommost available spot.
-It is then the other player's turn.
-The game is over when the computer detects 4-in-a-row horizontally, vertically, or diagonally.
-The computer should highlight the winning lineup and offer to play again.
-
-Suggestions:
-Your board should consist of a 2-D array.  Each element may be empty or have a checker from Player 1 or Player 2.
-A valid move should occur if the mouse is within a column width.
-If that column is full, no move is allowed.
-MouseClicked is essential. MouseMoved could give the impression that you're dragging the next checker along.
-Scoreboard & button for rules
-
-To-do:
-Splash screen
-Paint current status of board.
-When click, add checker, if game is in progress.
-Check for 4-in-a-row.
-When game is over, paint the highlighted winner & replay offer when game is over.
-Paint score & rules
-(optional) Let players pick their own colors.
-
-Game Statuses:
-1) Splash
-2) Playing, P1's turn
-3) Playing, P2's turn
-4) Endgame
-
-Paste the relevant code sections from previous codes for your code skeleton.
-The usual import statements, a constructor, init(), and reset.
-You need myPaint and MouseListener.  Probably no MouseMotionListener, so no need for double buffering.
+/* INSTRUCTIONS
+ * Connect4
+ * Make a 2-player Connect 4 game.
+ * 
+ * Rules:
+ * The board is 7-across by 6-up.
+ * A turn consists of adding a checker to any column; it drops to the bottommost available spot.
+ * It is then the other player's turn.
+ * The game is over when the computer detects 4-in-a-row horizontally, vertically, or diagonally.
+ * The computer should highlight the winning lineup and offer to play again.
+ * 
+ * Suggestions:
+ * Your board should consist of a 2-D array.  Each element may be empty or have a checker from Player 1 or Player 2.
+ * A valid move should occur if the mouse is within a column width.
+ * If that column is full, no move is allowed.
+ * MouseClicked is essential. MouseMoved could give the impression that you're dragging the next checker along.
+ * Scoreboard & button for rules
+ * 
+ * To-do:
+ * Splash screen
+ * Paint current status of board.
+ * When click, add checker, if game is in progress.
+ * Check for 4-in-a-row.
+ * When game is over, paint the highlighted winner & replay offer when game is over.
+ * Paint score & rules
+ * (optional) Let players pick their own colors.
+ * 
+ * Game Statuses:
+ * 1) Splash
+ * 2) Playing, P1's turn
+ * 3) Playing, P2's turn
+ * 4) Endgame
+ * 
+ * Paste the relevant code sections from previous codes for your code skeleton.
+ * The usual import statements, a constructor, init(), and reset.
+ * You need myPaint and MouseListener.  Probably no MouseMotionListener, so no need for double buffering.
+ */
