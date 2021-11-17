@@ -1,0 +1,19 @@
+You'll be once again working in a two-dimensional array.
+
+In ConnectFour, we discussed the following formulas.
+x = (# checkers to the left * checker width) + left margin
+y = (# checkers above * checker height) + top margin
+
+Is that all there is?  If you do that, your cards will take up ALL the space in your grid...and that will no longer make them look like cards.
+You should plan to have a lil border around each one.
+If you are drawing something three cards to the right, x isn't just the value of three card "widths."  It's three card "widths" plus three borders.
+
+x = (# cards to the left * (card width + border)) + left margin
+
+One more thought.  As you start to get creative with paint and making intricate designs on your cards, you may notice something.
+If you want to draw a rectangle in your card, you may think you want 10% margins:
+  g.drawRect(x + width/10, y + height/10, width * 8/10, height * 8/10);
+Only problem is if your width and height aren't equal, you wind up with bigger gaps on top and bottom than on right and left.
+If that bothers you, then check out this:
+  g.drawRect(x + width/10, y + width/10, width * 8/10, height - (width * 2/10));
+This offsets it by the same amount from the top as to the left.
