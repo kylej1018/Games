@@ -6,10 +6,12 @@
  * Player chooses a card, it flips over.
  * Player chooses a second card, it flips over.
  * If they match, cards "exit" the game (stay flipped over or move to side?)
- * If they don't match, the next click by the player, regardless of where, reverts the cards.
+ * If they don't match, the next click by the player, regardless of where, reverts the cards to facedown.
  * 
  * The player has a sequence of three clicks - first card, second card, revert.  Computer needs a variable to track which we're on.
  * Each card has a few different possible values: Facedown, Exited, or Faceup.  I suggest Faceup be a different number for each card design.
+ *
+ * Cards should be drawn as rounded rectangles, not normal rectangles.
  *
  * Extra optional things to add:
  * ~Easy/hard mode, selected right after splashscreen.  Hard mode has more cards.
