@@ -1,4 +1,4 @@
-It's good to know how to use break or continue.
+It's good to know how to use break or continue to make loops a little easier.
 Break will end the loop you're currently in.  If you're inside mutliple loops, it will only break one loop - the innermost.
 int x = 100;
   while (x > 1) {
@@ -18,9 +18,9 @@ int x = 100;
     System.out.println(x + "");
   }
 Break can be particularly useful when you're testing the value of an array in a while-loop.
-After all, you don't want throw an error when your iteration variable gets too big.
+After all, you don't want throw an error when your iteration variable gets too big for the array you're testing.
 
-Extra Loops tricks:
+OTHER LOOPS TRICKS:
 Sometimes you want not to initialize any variables.  You would do so like this:
   int k = 15; //maybe this happens way earlier in the code
   for (; k > 0; k--) {
