@@ -2,7 +2,6 @@
  * Make a memory matching game.  It should include the following:
  * 
  * Splashscreen.
- * Start a game.
  * Computer shuffles and distributes cards, facedown, in a grid.
  * Player chooses a card, it flips over.
  * Player chooses a second card, it flips over.
@@ -13,21 +12,19 @@
  * Each card has a few different possible values: Facedown, Exited, or Faceup.  I suggest Faceup be a different number for each card design.
  *
  * Extra optional things to add:
- * ~Easy/hard mode.  Hard mode has more cards.
+ * ~Easy/hard mode, selected right after splashscreen.  Hard mode has more cards.
  * ~Scoring.
- * 	When a player makes a match, score +10.
  * 	Game could keep track of how many times a cards is turned over.  If >2, score -5.
  * ~Button to side for rules.
  * ~Reset button: ask if easy or hard.
- * ~If hard mode, add a Joker card.  If clicked, it is removed from game but reveals some surrounding cards until next click.
+ * ~If hard mode, add a Joker card.  If clicked, it is removed from game but reveals some nearby cards until next click.
  * 
  * Make sure to break this down into about 6-7 smaller tasks, such as
  * ~Splash & initial prompt
  * ~Initialization of arrays
- * ~Game display w/ score, rules, drawing cards
+ * ~Game display w/ score, rules, facedown cards
  * ~The actual design of faceup cards
  * ~Clicking cards to turn over
  * ~Evaluate match and possible exit
- * ~Joker card
  * ~What happens when the game ends
  */
