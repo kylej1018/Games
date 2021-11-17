@@ -12,7 +12,7 @@ jar cfm MyProgram.jar manifest.txt *
 You can replace the star with MyProgram.class as long as there's only one.  But if there's more than one class after compiling, the * means "everything in this folder."
 Sometimes you get multiple classes when you have an interface, like KeyListener or MouseListener.
 6. Your new jar file should open on double-click, along with command prompt. Steps 7-8 get rid of command prompt, so only do them if you're not using it.
-7. Make a text document named MyProgram.bat containing the following:
+7. Using notepad, make a new document named MyProgram.bat containing the following:
 start javaw -jar -Xms1024m -Xmx1024m MyProgram.jar
 8. Bat file should open on double-click without command prompt.
 9. Recommended: Make a shortcut to your jar (or bat if you have one) file somewhere more convenient.
