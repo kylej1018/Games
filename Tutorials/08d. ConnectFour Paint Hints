@@ -49,3 +49,9 @@ x = (# checkers to the left * checker width) + left margin
 y = (# checkers above * checker height) + top margin
 
 Just a reminder, you better not hard-code any of these numbers.  If your left margin is 15 pixels, you make a variable called leftMargin and set it equal to 15.
+
+The problem with ConnectFour is that the checker drops to the bottom-most spot in any column.  The "y" value of your array fills starting at the largest value.
+How can you fix that?
+When checking to see where a checker should drop, you can either:
+(a) for (int i = 6; i >= 0; i--), or
+(b) use a normal loop, with a break statement.
