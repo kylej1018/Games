@@ -30,8 +30,4 @@
  * ~Evaluate match and possible exit
  * ~Joker card
  * ~What happens when the game ends
- * 
- * Paste the relevant code sections from previous codes for your code skeleton.
- * The usual import statements, a constructor, init(), and reset; you'll use reset.
- * You need myPaint and MouseListener.  Probably no MouseMotionListener, so no need for double buffering.
  */
