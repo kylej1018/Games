@@ -1,0 +1,30 @@
+SHAPES
+g.drawOval and g.drawRect are great.
+There's another one called g.drawPolygon(xPoints, yPoints, nPoints)
+Instead of taking an x, y, width, and height in the parentheses, g.drawPolygon only takes the following:
+  An array of ints representing the x-coordinates of the vertices (xPoints)
+  An array of ints representing the y-coordinates of the vertices (yPoints)
+  The number of vertices (nPoints)
+
+So if you want to draw, say, an isoceles triangle pointing right, you would have to do the following.
+  int [] triangleX = new int[3];
+  triangleX[0] = 10;
+  triangleX[1] = 10;
+  triangleX[2] = 40;
+  int [] triangleY = new int[3];
+  triangleY[0] = 50;
+  triangleY[1] = 90;
+  triangleY[2] = 70;
+  g.drawPolygon(triangleX, triangleY, 3);
+This will draw a point up high (10, 50), a point a little lower (10, 90), and a point over to the right (40, 70).
+You could also do g.fillPolygon if you want your triangle filled in.
+
+Finally, you may want to note the following shapes, which have a fill variation too:
+g.drawArc(x, y, width, height, startAngle, arcAngle)
+g.draw3DRect(x, y, width, height, raised)
+  Note that "raised" is a boolean, not a number
+g.drawRoundRect(x, y, width, height, arcWidth, arcHeight)
+  This last one is excellent for drawing cards.
+  If your arcWidth and arcHeight are equal to x and y, you will draw an oval.
+  If your arcWidth and arcHeight are 0, you will draw a rectangle.
+  If you arcWidth and arcHeight, are, like x / 5 and y / 5, you will have a nice rounded rectangle.
