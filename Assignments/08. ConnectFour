@@ -29,3 +29,7 @@ Game Statuses:
 2) Playing, P1's turn
 3) Playing, P2's turn
 4) Endgame
+
+Paste the relevant code sections from previous codes for your code skeleton.
+The usual import statements, a constructor, init(), and reset.
+You need myPaint and MouseListener.  Probably no MouseMotionListener, so no need for double buffering.
