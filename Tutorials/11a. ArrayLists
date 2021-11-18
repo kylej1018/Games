@@ -1,0 +1,35 @@
+Sometimes you wish you had an array that could change size.  That's why we have ArrayLists.
+You declare it like so:
+  ArrayList<String> arr = new ArrayList<String>();
+You can figure out how long an ArrayList is with int x = arr.size();
+You can access an element in an ArrayList with int x = arr.get(5), which returns the element at Index 5.
+You can assign an element in an ArrayList with arr.set(5, "I love java"), which assigns the value "I love java" to Index 5.
+You can add an element to the end of an ArrayList with arr.add("My first list");
+You can add an element at a certain index (say 0), it looks like arr.add(0, "This is added at the first spot, which is index 0"), which will shift everything after it to a higher index.
+You can remove an element at a certain index (say 0), it looks like arr.remove(0), which will shift everything after it to a lower index.
+
+Let's clarify the biggest differences between arrays and ArrayLists.
+//1. Declaration
+String[] arr1 = new int[10];
+ArrayList<String> arr2 = new ArrayList<String>();
+//2. Accessing elements
+arr1[0]
+arr2.get(0)
+//3. Printing elements
+System.out.println(Arrays.toString(arr1));
+System.out.println(arr2);
+//4. You have to know how big your array is when you make it, but ArrayLists expand and contract as needed.
+//5. Arraylists let you add and delete elements.
+
+Why don't we use ArrayLists all the time?
+Firstly, computer capacity.  If you're making a huge game, they can take up extra memory.
+More importantly, ArrayLists can't store "primitive" variables.  Ints, doubles, floats, chars, and booleans are all primitive variables.
+What can you store in an ArrayList?  Strings.  Colors.  Fonts.  Anything with a capital letter.
+You can also store other arrays or other ArrayLists.
+
+There are ways to convert between the two:
+//array to ArrayList:
+String[] stringArray = { "a", "b", "c", "d", "e" };
+ArrayList<String> stringList = new ArrayList<String>(Arrays.asList(stringArray)); //only try this with primitive variables
+//ArrayList to array:
+String[] stringArrary2 = stringList.toArray();
