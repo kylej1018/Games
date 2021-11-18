@@ -1,0 +1,34 @@
+Sometimes you wish you had an array that could change size.  That's why we have ArrayLists.
+You declare it like so:
+  ArrayList <String> arr = new ArrayList<String>();
+You can figure out how long an ArrayList is with int x = arr.size();
+You can access an element in an ArrayList with int x = arr.get(5), which returns the element at Index 5.
+You can assign an element in an ArrayList with arr.set(5, "I love java"), which assigns the value "I love java" to Index 5.
+You can add an element to the end of an ArrayList with arr.add("My first list");
+You can add an element at a certain index (say 0), it looks like arr.add(0, "This is added at the first spot, which is index 0"), which will shift everything after it to a higher index.
+You can remove an element at a certain index (say 0), it looks like arr.remove(0), which will shift everything after it to a lower index.
+You can turn an ArrayList into an array with arr.toArray();
+
+Once again, the first element is arr.get(0), the second element is arr.get(1), and so on.
+
+Why don't we use ArrayLists all the time?
+ArrayLists can't store "primitive" variables.  Ints, doubles, floats, chars, and booleans are all primitive variables.
+What can you store in an ArrayList?  Strings.  Colors.  Even other arrays or ArrayLists.
+This also explains why there's no easy function to turn an array into an ArrayList - it would fail if it contained a primitive variable.
+If you're desperate, you can try:
+String[] stringArray = { "a", "b", "c", "d", "e" };
+ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(stringArray));
+System.out.println(arrayList);
+// [a, b, c, d, e]
+
+and back
+String[] stringArray = { "a", "b", "c", "d", "e" };
+ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(stringArray));
+String[] stringArr = new String[arrayList.size()];
+arrayList.toArray(stringArr);
+for (String s : stringArr)
+	System.out.println(s);
+
+
+iterative for loops
+
