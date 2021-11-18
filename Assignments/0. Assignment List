@@ -9,10 +9,10 @@ ConnectFour
 Loops3
 Memory
 Loops4
-TicTaTToe
-Loops5
 Hangman
+Loops5
 Mystery (methods)
+Madlibs (reading & writing file)
 Blackjack (Images & music)
 Solitaire
 Mosaic (Image Manipulation)
@@ -26,13 +26,15 @@ SpaceInvaders (class)
 GridWorld: CircleBug, SpiralBug, SnoozeBug, DrugBug, JumpBug, Langton's Ant
 SimonSays (GUI)
 Conway
-Website (accounts, connection)
+Website
 Minichef
 ~
+Space Race
 Wordflash
+Tic-Tac-Toe
 ButtonClick
 Battleship
-Madlibs
+Connect Four w/ AI
 Clue
 LogicPuzzle
 Mastermind
@@ -55,6 +57,7 @@ ShootingGallery
 Backgammon
 Jigsaw
 Tetris
+Rummy
 BubbleBuster
 FruitNinja
 Euchre
@@ -74,10 +77,10 @@ OrbitingSheep
 TowerDefense
 Roguelike
 Tycoon
-Tycoon II
 MortalKombat
 Deckbuilder
 CivilizationEvolution
 Procedural Generation
 Horror
 LegoSH
+Legoland
