@@ -8,6 +8,8 @@
  * Finally, when you want to print the contents of an array named arr, use this line:
  * 	printArray(arr);
  * I made printArray for this code, it won't work in other codes.
+ *
+ * In future lessons, you will learn how to read files, and you will learn how to make your own methods like printArray.  Just focus on loops and arrays for now.
  */
 
 import java.io.*;
