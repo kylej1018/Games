@@ -6,7 +6,7 @@
  * When the game starts, ask user to choose between inputting an Answer or a "Random" option.
  * If random, select a random element from hangman_prompts to be the Answer.
  * Present a series of blank lines representing the letters in Answer - leave punctuation intact.
- *   hint: String has a method str.isLetter())
+ *   hint: boolean b = Character.isLetter(c); will be true if c is a ldtter
  * It should display nicely on the screen - if it's more than 75 chars, start a new line at the next space.
  * Allow the user to guess a letter using KeyListener.  Make sure it's a letter, or it doesn't count.
  * For each letter guessed, if it's correct, it should fill in all the places where Answer contains that letter.
