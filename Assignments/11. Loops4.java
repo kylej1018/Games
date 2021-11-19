@@ -46,8 +46,8 @@ public class Loops4 {
 				input = br.readLine();
 			}
 		}
-		catch(Exception e) {
-			e.printStackTrace();
+		catch(Exception ex) {
+			ex.printStackTrace();
 		}
 		return arr;
 	}
