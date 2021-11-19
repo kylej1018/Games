@@ -33,7 +33,7 @@ public class Hangman implements KeyListener {
 	int screenWidth, screenHeight;
 	Random r;
 
-	ArrayList<String> possibleAnswers = populate();
+	ArrayList<String> possibleAnswers;
 
 	public static void main(String[] args) {
 		new Hangman();
@@ -45,6 +45,7 @@ public class Hangman implements KeyListener {
 
 	public void init() {
 		r = new Random();
+		possibleAnswers = populate();
 
 		window = new JFrame("Memory");
 		pane = new JPanel() {
