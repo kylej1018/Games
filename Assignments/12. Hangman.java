@@ -16,6 +16,7 @@
  * If they guess all the letters before the hanged man is completely drawn, they win.
  * If the hanged man is completely drawn before they guess all the letters, they lose.
  * The program offers to play again.
+ */
 
 import java.awt.*;
 import java.awt.event.*;
