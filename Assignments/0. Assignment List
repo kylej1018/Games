@@ -12,12 +12,12 @@ Loops4
 Hangman
 Loops5
 Mystery (methods)
-Madlibs (reading & writing file)
+Madlibs (reading & writing files, exceptions)
 Blackjack (Images & music)
 Solitaire (ArrayList of Integers)
 Mosaic (Image Manipulation)
 Trivia (ASCII)
-???
+??? (extra methods for arrays)
 HanoiTower & Sierpinski splash (recursion & code efficiency)
 BoxedIn
 MazeGenerator & MazeSolver w/ dragon curve
