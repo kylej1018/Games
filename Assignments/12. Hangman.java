@@ -1,8 +1,8 @@
 /* INSTRUCTIONS
  * Create a Hangman game for users to play.
- * Download the hangman_prompts.txt file in the "Extras" section of this Github, or write your own list of hangman prompts.
+ * Download the hangman_prompts.txt file in the "Extras" section of this Github, or write your own list of hangman prompts saved as a text file.
  * Fix the FIXME line to reflect where you saved it.
- 
+ *
  * When the game starts, ask user to choose between inputting an Answer or a "Random" option.
  * If random, select a random element from hangman_prompts to be the Answer.
  * Present a series of blank lines representing the letters in Answer - leave punctuation intact.
