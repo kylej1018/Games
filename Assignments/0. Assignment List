@@ -23,7 +23,7 @@ BoxedIn
 MazeGenerator & MazeSolver w/ dragon curve
 Snake (timer)
 SpaceInvaders (class)
-GridWorld: CircleBug, SpiralBug, SnoozeBug, DrugBug, JumpBug, Langton's Ant
+GridWorld: CircleBug, SpiralBug, SnoozeBug, DrugBug, JumpBug, Langton's Ant (reading online docs)
 SimonSays (GUI)
 Conway
 Website
