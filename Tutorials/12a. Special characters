@@ -1,4 +1,4 @@
-If you use backslashes, you need two because backslash is a special character for Strings.
+There are some special characters for Strings.
 	"\t" prints a tab
 	"\b" prints a backspace
 	"\n" prints a new line; "\r" is a carriage return, which do the same thing on most systems.  It's like Enter vs. Ctl+Enter
