@@ -1,0 +1,48 @@
+Generating an Answer
+At the start, the user should choose between inputting their own answer or selecting one of yours from the possibleAnswers ArrayList.
+Selecting a random one isn't too hard.  Maybe they push a button.  Or maybe your computer detects \n with an empty String.
+And as long as the user only enters characters, building an answer with each KeyTyped, until they push \n isn't too bad.
+But what if they type Shift?  Or they bump the alt key accidentally?
+If you add it to the String, it shows up as a Unicode character.  It all but ruins your game.
+Instead, there's a function that looks like this.  Inside keyPressed:
+  char c = e.getKeyChar();
+  int n = Character.getType(c);
+If you System.out.print(n), you'll see that the lowercase alphabet is 2, the uppercase alphabet is 1.  Punctuation, symbols, and numbers also have their own outputs.
+Shift, Backspace, Caps Lock, and Alt all have a value of 0.  Escape has a value of 15.
+You should test out the different keys on your keyboard.
+So now you can make an if statement, where if Character.getType(c) is not 0 or 15, add it to the answer.
+
+How about backspace?
+KeyListener can detect those too:
+if (e.getKeyCode() == KeyEvent.VK_BACK_SPACE), then do something.
+That something should involve making your String one letter shorter using the substring method.
+
+Guessing a Letter
+As the user guesses a letter, the display goes from _ _ _ _ to filling in letters, right?
+Your program has to keep track of the original answer, as well as the current display.  I suggest a String for each.
+I also suggest a temporary String for when a letter is guessed.
+At each guess, you check every letter in the answer.  If it's there, you update the temp with the letter from answer, otherwise you update the temp with the letter from display.
+This should probably work regardless of what's capitalized.  You should check that when comparing.
+if  lowercase version of answer at i == lowercase version of keylistener, then that's a match.
+
+Painting a String
+This is where the display String, with underscores, gets its time to shine.
+When first creating display, if a char is a punctuation, symbol, or number, it should probably stay as is:  _ _ _ ' _  Only letters become underscores.
+Reminder:
+char c;
+boolean b = Character.isLetter(c);
+
+Another thought on Painting:
+____ __ ___ doesn't tell us much.
+_ _ _ _   _ _   _ _ _ is much more informative.  So I recommend painting a space between letters.
+
+Splitting up a String into Various Lines:
+Some people will type long phrases.
+It makes sense intuitively to split it up after it takes up most of your screen (let's say 40 characters for this example).
+Except then you're often splitting it up between words.  That looks bad.
+So you want to find the last space.  Remember your str.lastIndexOf(' ') method can be stored in an int, and then you can create two substrings.
+It really would make sense if your display looks like an ArrayList of Strings, each one slightly less than 40 characters, plus your last one which might be even shorter.
+Make a new ArrayList every time you paint?  Totally allowed.
+Make an ArrayList for the display once at the beginning of your code?  Also totally allowed.
+
+You'll probably have to review your Strings methods frequently.  Most of them will get used.
