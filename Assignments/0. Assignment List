@@ -22,7 +22,7 @@ HanoiTower & Sierpinski splash (recursion & code efficiency)
 BoxedIn
 MazeGenerator & MazeSolver w/ dragon curve
 Snake (timer)
-SpaceInvaders (class)
+SpaceInvaders (class, constructors, extends, override)
 GridWorld: CircleBug, SpiralBug, SnoozeBug, DrugBug, JumpBug, Langton's Ant (reading online docs)
 SimonSays (GUI)
 Conway
