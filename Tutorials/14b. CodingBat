@@ -1,2 +1,9 @@
 You should practice writing some methods.  Once you have at least one star on Warmups, Strings, Logics, Arrays, and AP-1, continue with the assignment.
 https://codingbat.com/java
+
+You are encouraged to return to CodingBat and try to complete every assignment you can.
+On one hand, you'll learn much about return statements, parameters, and loops.  That's great.
+More importantly, after you try to run a code, you'll see several examples of arguments and whether they worked.
+These will really help you think of The One Exception the more you do.
+For a String input, it'll always try "".  Your code should work there as well as for a normal String.
+For a number input, it'll always try 0, a negative number, a decimal.  Your code should work there as well as for a normal number.
