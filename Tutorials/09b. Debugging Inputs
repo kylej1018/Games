@@ -1,0 +1,42 @@
+This tutorial isn't more relevant for this assignment than any other.  But we need to talk about it sometime.
+USERS ARE STUPID.  They will try to break your code.
+
+Let's say your program asks the user for an array size and fills it with random numbers, then prints the first one.
+Scanner s = new Scanner(System.in);
+Random r = new Random();
+int[] arr = new int[Integer.parseInt(s.nextLine())];
+for(int i = 0; i < arr.length; i++) {
+  arr = r.nextInt();
+}
+System.out.println(arr[0]);
+
+That code looks great at first pass, right?
+How many ways are there to mess it up?  What are the solutions?
+1. User puts 0.
+>arr[0] doesn't exist if the size is 0.  arr[0] is the first element.
+>if (array size > 0) then print arr[0].
+>else tell the user to put a different number
+2. User puts -1
+>int[] arr = new int... doesn't work because you can't make an array of size -1
+>if (array size > -1) then make array
+>else tell the user to put a different number
+3. User puts 1.1
+>Integer.parseInt doesn't work
+>Change it to Double.parseDouble
+3.1 As a result, array declaration from Step 2 doesn't work again
+>another if statement
+>else tell the user to put a different number
+3.2 That if statement might wind up comparing a double to an int.  Better convert that.
+4. User puts a letter
+>Double.parseDouble doesn't work
+...and so on and so on.
+
+Sometimes it's not the users.  Sometimes it's another part of your code that passes along an unhelpful variable.
+Okay, so you've designed the perfect loop to do something.  It takes an input and builds a String, or it creates an array, or it paints every rectangle on your screen.
+
+But sometimes not every input goes perfectly into your loop.  Are there letters leftover after your String?
+You'll get an error.  Index out of bounds is the most common one.  And every time, it means you didn't think of that one case.
+
+TL;DR
+arr[0] is great until your array size is 0.
+Try to think of every possible value your variables might be assigned.
