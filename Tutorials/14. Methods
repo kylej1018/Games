@@ -14,12 +14,12 @@ You have the option to include static after public/private.
 Don't worry about static yet, as we're not creating objects.
 
 After public and static, you have the method return - boolean in this case.
-You can return anything, an int, an array, or even nothing (void).
+You can return anything, an int, an array, or even nothing (void).  It's what comes out of the method.
 This means that when you call that method, you can assign the result to a variable.
 	boolean b = checkvalue(4, 3);
 You might return a boolean, where something is true or false if it works.
 If your method transforms an int into another int, you might have it return the new int.
-If your method involves painting, you probably won't return anything.
+If your method involves painting, you probably won't return anything (void).
 
 After the return is the method name, checkValue in this example.
 Remember that conventionally, method names start with a lowercase letter and anything with multiple "words" gets each word capitalized and spaces removed.
@@ -44,8 +44,8 @@ Example:
 			favoriteColor = Color.blue;
 		}
 		int x = 0;
-		drawCoolHouse(favoriteColor, g);
-		drawCoolRoof(Color.red, g);
+		drawCoolHouse(favoriteColor, g); //this is a call to a method written below
+		drawCoolRoof(Color.red, g); //this is a call to another method written below
 	}
 
 	public void drawCoolRoof(Color c, Graphics g) {
@@ -65,10 +65,12 @@ When the return line is executed, the method stops immediately and the code retu
 In case of a void method, you could have
 	return;
 It's occasionally necessary to use multiple returns in a method in various circumstances.
-	if(x == y) {
-		return true;
+	public boolean compare (int x, int y) {
+		if(x == y) {
+			return true;
+		}
+		return false;
 	}
-	return false;
 The method will only return false if return true never happens.  No ELSE statement needed!
 
 Another method example:
@@ -84,8 +86,10 @@ Plan to comment every method with its intended purpose in a header.  You may als
 By convention, you want to define methods in your code, in the order they're called.
 Usually main() is first, then init(), then methods called from init(), then paint(), then methods called from paint(), then Listeners, then methods called from Listeners().
 Anything that *can* stand alone should probably get its own method, especially if you can name it something obvious.
-	public void drawSplashScreen(Graphics g) will be in a vast majority of our codes, with the Graphics argument passed from paint or myPaint.
+	public void drawSplashScreen(Graphics g) should start being in a vast majority of your codes, with the Graphics argument passed from paint or myPaint.
 You want to keep your methods short, including main(), init(), paint(), and Listeners.
+
+One other benefit of methods is a lot fewer global variables.  They can probably just be passed as arguments.
 
 You should practice some methods.  Focus on Warmups, Strings, Logics, Arrays, and AP-1.  We'll learn Recursion later.  Map and Functional, you're on your own.
 https://codingbat.com/java
