@@ -12,3 +12,6 @@ What if the user puts -1?
 What if the user puts 0?
 What if the user puts $?
 These are the kinds of questions you also want to be asking your loops if you change your iteration variable inside the loop.
+
+Once you fix the One Exception, there sometimes is One More Exception.  And One More after that.
+Being able to figure out what they are quickly is a huge help when debugging.
