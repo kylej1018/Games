@@ -90,3 +90,5 @@ Anything that *can* stand alone should probably get its own method, especially i
 You want to keep your methods short, including main(), init(), paint(), and Listeners.
 
 One other benefit of methods is a lot fewer global variables.  They can probably just be passed as arguments.
+
+Note that methods are different from constructors.  Constructors have no return type, not even void.
