@@ -1,7 +1,7 @@
 Adventure:
 Make a game in which a character must travel between 4 or more locations using WASD.
 Each location should be represented as a box, with one painted differently to denote current location.
-There should be a storyline which your character has to go to different locations and perform various tasks to advance.
+There should be a storyline which your character has to go to different locations.  Going to them in the right order advances the story.
 The story should be printed on the left side of the screen, updated as needed.
 There should be one method per location that focuses on painting it according to the current story status, with a Graphics parameter.
 There should be one method per location that focuses on allowing travel according to the current story status, with a parameter for direction.
