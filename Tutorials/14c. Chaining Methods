@@ -1,0 +1,21 @@
+It's important to keep track of what type of variable each method is returning.
+If a method returns the correct type, it can be submitted as an argument.
+So if you have a method greaterThan(int a, int b) that returns an int and another method addToArray(int[] arr, int x), you can combine them in two ways.
+Option 1:
+int bigger = greaterThan(8, 10);
+addToArray(arr, bigger);
+
+Option 2:
+addToArray(arr, greaterThan(8, 10));
+
+As you can imagine, sometimes there are benefits to smashing everything together in one line.
+This works well for, say, really complex paint jobs because (a) you don't want them to take up much space, and (b) it's easy to see when you debug.
+However, Option 1 works well for actual number crunching because it's easier to keep track of your code and thus, easier to catch errors.
+But you could continue the process to really extreme places...
+
+g.drawLine(startingPoint(bigger(x, y)), startingPoint(smaller(x, y)), createNewArray()[nextLocation()], Integer.parseInt(sc.nextLine()));
+
+You can imagine what each variable might be, but a line like this requires a lot of other parts of your code to work correct.
+If createNewArray() actually creates and populates an array of ints, and if nextLocation() always returns a valid index, then that will work.
+But any deviation from that set of assumptions, and the line won't work, and it might take you forever to figure out why.
+That said, there's always something satisfying about seeing a bunch of ))))))))) closing correctly.
