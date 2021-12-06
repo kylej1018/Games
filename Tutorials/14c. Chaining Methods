@@ -15,7 +15,7 @@ But you could continue the process to really extreme places...
 
 g.drawLine(startingPoint(bigger(x, y)), startingPoint(smaller(x, y)), createNewArray()[nextLocation()], Integer.parseInt(sc.nextLine()));
 
-You can imagine what each variable might be, but a line like this requires a lot of other parts of your code to work correct.
+You can imagine what each variable might be, but a line like this requires a lot of other parts of your code to work correctly.
 If createNewArray() actually creates and populates an array of ints, and if nextLocation() always returns a valid index, then that will work.
-But any deviation from that set of assumptions, and the line won't work, and it might take you forever to figure out why.
+But any deviation from that set of assumptions, and the line won't work, and it might take someone forever to figure it out...especially if that person didn't write it initially.
 That said, there's always something satisfying about seeing a bunch of ))))))))) closing correctly.
