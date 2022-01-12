@@ -16,7 +16,8 @@ And to that end, here are some tips.
     Example: In paint, I'm painting forty boxes.  I can't quite fit them all on one screen but they're too small to really deserve their own method.
     Solution: Make four methods - paintBoxes1, paintBoxes2, paintBoxes3, and paintBoxes4.  Each covers ten boxes.  Easy to read, easy to troubleshoot.
   NO MORE BIG BLOCKS OF TEXT!
-5. Reminder: Ctl + Shift + P will bounce between curly brackets.  Very handy when figuring out method sizes.
-6. Name your methods something intuitive.
-7. Comment above each method what it does. It will be fogotten after a month.
+5. But you also don't want thousands of methods, each only a line or two long.  That's also not very readable.
+6. Reminder: Ctl + Shift + P will bounce between curly brackets.  Very handy when figuring out method sizes.
+7. Name your methods something intuitive.
+8. Comment above each method what it does. It will be fogotten after a month.
   Also get in the habit of commenting WHEN each method gets called.  Every paint refresh?  Under certain conditions?  Only once, right when the game is loaded?
