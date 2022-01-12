@@ -7,6 +7,7 @@ You can assign an element in an ArrayList with arr.set(5, "I love java"), which 
 You can add an element to the end of an ArrayList with arr.add("My first list");
 You can add an element at a certain index (say 0), it looks like arr.add(0, "This is added at the first spot, which is index 0"), which will shift everything after it to a higher index.
 You can remove an element at a certain index (say 0), it looks like arr.remove(0), which will shift everything after it to a lower index.
+You can remove an element, it looks like arr.remove(s), which removes the first time s appears and shift everything after it to a lower index. (s might be a String, for instance).
 
 Let's clarify the biggest differences between arrays and ArrayLists.
 //1. Declaration
