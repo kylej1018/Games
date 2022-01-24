@@ -7,6 +7,7 @@ There should be one method per location that focuses on painting it according to
 There should be one method per location that focuses on allowing travel according to the current story status, with a parameter for direction.
 
 Suggestions:
-Unsafe locations (or unsafe actions) depending on the story status.  A health bar might add some stakes.
+Unsafe locations (or unsafe actions) depending on the story status?  A health bar might add some stakes.
 Do travel path options change?
 An inventory on the right side of the screen?
+A secret code the user has to put in, recycling some elements of the Hangman code?
