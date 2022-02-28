@@ -1,0 +1,25 @@
+/* INSTRUCTIONS:
+ * Make a Madlibs game that serves two functions.
+ *
+ * Function 1: The user plays MadLibs.
+ * The computer should have at least one ~ten-sentence story saved in a text file.
+ * It should be missing one or two key words per sentence, marked as <VERB>, <NOUN>, <COLOR>, <CELEBRITY>, etc.
+ * The user should then be prompted to input the necessary verbs, nouns, colors, celebrities, etc. needed to finish the story.
+ * Note that the user should NOT be able to see the story - the point of the game is to have funny words that don't match the context.
+ * Once the user has entered all the words, the story should print with their entries. Example:
+ * "GEORGE BUSH crept up to the haunted house and pulled a RHINOCEROS out of his pocket.  Suddenly, he saw a SUSHI ROLL in the window.  He GARGLED and ran away swiftly."
+ * The computer should also store in another text file (or several?) various verbs, nouns, colors, celebrities, etc. that users have inputted.
+ *
+ * Function 2: The computer plays MadLibs.
+ * The computer should prompt the user to make a ~ten-sentence story saved in a text file.
+ * The user should be reminded to remove some key words per sentence and replace them with <VERB>, <NOUN>, <COLOR>, <CELEBRITY>, etc.
+ * The computer should then fill in a random verb, noun, color, celebrity, etc. from its saved text files at each spot.
+ * If the user enters a new prompt the computer has not seen, it should say, "I don't know any SONGS.  Can you give me some examples?" and adjust its text files accordingly.
+ *
+ * Which function the game takes will have to be figured out in the splashscreen.
+ *
+ * Additional possible functions:
+ * Function 3: Two users play MadLibs, switching the computer back and forth between them.
+ * What if a user inputs profanity or an incorrect part of speech?  Maybe the computer stores it in a 'temporary' text file and won't use it yet.
+ *      Maybe this game should include a "Review other user inputs" page where the admin user can declare various verbs, nouns, colors, celebrities, etc. valid or deletable.
+ */
