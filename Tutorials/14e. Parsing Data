@@ -1,0 +1,23 @@
+In Tutorial 05d, we talked about parseInt.
+The idea was, you take the String "8" and turn it into an int 8 using the following:
+int x = Integer.parseInt("8");
+
+We can do that for any data type, it turns out.
+boolean b = Boolean.parseBoolean("true");
+double x = Double.parseDouble("10.5");
+
+Reminder that if you're taking user input on this, you'll need to handle exceptions as discussed in Tutorial 05d.
+
+Where would you use this?
+Idea 1. As your user travels on their Adventure, they might enter a number of items to pick up.
+   It might be easier to turn their keyPressed into a String and parse it, rather than turn ten different key presses into their respective int.
+Idea 2. If your user is collecting things, it might be handy to keep an ArrayList of whether they've picked up an item.
+   But of course, you can't have an ArrayList of booleans.  That's a primitive data type.
+   If you had an ArrayList of Strings that were either "true" or "false", you could parse that out.
+   
+Comparing two primitive data types is always faster than using the equals() method for Strings.
+String s1, s2;
+if(s1.equals(s2))
+is slower for your computer to run than
+String s1;
+if(Boolean.parseBoolean(s1))
