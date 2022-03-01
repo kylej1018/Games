@@ -1,0 +1,64 @@
+It's time to learn how to save information between game sessions!
+You know how when the game is no longer running, there's currently no way to access your old high scores?
+It's time we learned one way to save information like scores into an external file, and then access it back when the game starts running again.
+This lesson will focus on .txt files, using Scanner.
+
+If Scanner sounds familiar, it's because we talked about it during Loops.  Scanner was how the user was able to input data into the command prompt.
+The way we initialized it was as follows:
+Scanner s = new Scanner(System.in);
+The parameter System.in tells Scanner to read what the user types into the System.
+To read a text file already on your computer, you'll need a different parameter:
+File f = new File("C:\\Users\\kylej\\Desktop\\Games\\Java\\Eclipse\\Test\\Test.txt");
+Scanner s = new Scanner(f);
+
+You can see that File takes a String parameter.
+You can either hard-code the location, like we did in Loops, or you can ask the user to enter a String of the file's location.
+
+The most common way to read a text file is creating an ArrayList of Strings, where each entry is one line of the text file.
+ArrayList<String> arr = new ArrayList<String>();
+String fileLocation = "wherever text file is";
+Scanner s = new Scanner(new File(fileLocation));
+while(s.hasNextLine()) {
+  arr.add(s.nextLine());
+}
+
+You'll also notice that new File and new Scanner can be chained into the same line here.
+But Scanner has a very cool trick up its sleeve - it can parse data.
+Obviously, a text file only stores strings.  But if your text file contains numbers separated by spaces, tabs, or new lines, you can do this:
+while (s.hasNextInt()) {
+  int a = s.nextInt();
+  System.out.println(a):
+}
+While reading your text file, it will generate ints.  This works for s.nextBoolean, s.nextFloat, and s.nextDouble.
+
+What if your text file looks like this?
+
+1 2 3
+4
+5
+
+You have a couple options.
+while (s.hasNextInt()) {
+  System.out.println(s.nextInt());
+}
+will make:
+1
+2
+3
+4
+5
+
+HOWEVER
+while (s.hasNextLine()) {
+  System.out.println(s.nextLine());
+}
+will make:
+1 2 3
+4
+5
+
+Footnote to this tutorial - there are different tools available to read text files.
+Scanner is nice because you can read different data types.
+Another is called BufferedReader, which works faster but only reads Strings.
+If you get to a point in your career where you want to use BufferedReader, it will be accepted in this course.
+You can look at online examples or the bottom of the Loops 5 assignment.
