@@ -68,6 +68,12 @@ Reset:
 Public Void:
 #After reset() is a series of curly-bracket-enclosed areas labeled public void, such as public void myPaint(Graphics g).  These are called methods.
 #Picture only has one method.  myPaint.  It's the one we use to draw.
+#We'll learn more about methods later, but when a code has a parentheses, it is calling the method.  In this example, myPaint is being called:
+ myPaint(g);
+#Sometimes the computer doesn't know what "myPaint" means, so you have to explain your method later in the code with curly brackets.
+ public void myPaint(Graphics g) {
+   g.drawRect(a, b, c, d);
+ }
 #If your program calls a method (we'll learn how to do that later), your code will immediately jump to that method and execute its contents.
 ~In future assignments, we will use public void methods for using the mouse and the keyboard.
 ~Even later on, you will get to create your own methods from scratch.
