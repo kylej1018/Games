@@ -61,4 +61,4 @@ Footnote to this tutorial - there are different tools available to read text fil
 Scanner is nice because you can read different data types.
 Another is called BufferedReader, which works faster but only reads Strings.
 If you get to a point in your career where you want to use BufferedReader, it will be accepted in this course.
-You can look at online examples or the bottom of the Loops 5 assignment.
+You can look at online examples for how to use it when that time comes.
