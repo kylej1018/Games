@@ -4,7 +4,7 @@ int x = Integer.parseInt("8");
 
 We can do that for any data type, it turns out.
 boolean b = Boolean.parseBoolean("true");
-double x = Double.parseDouble("10.5");
+float x = Float.parseFloat("10.5");
 
 Reminder that if you're taking user input on this, you'll need to handle exceptions as discussed in Tutorial 05d.
 
