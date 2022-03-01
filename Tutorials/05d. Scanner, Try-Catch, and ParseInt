@@ -48,7 +48,7 @@ Friendly reminder!  Catching Exception ex is heavily frowned upon, because not a
 It's better to catch your exceptions individually - if THIS exception arises, do X, but if THAT exception arises, do Y.
 Sometimes you'll want to print different messages to your user to help them.  Telling them "That file wasn't found" is different from "That file is corrupted"
 How can you see what exceptions apply?  Take your code out of try/catch!  When you hover over the problem message in Eclipse, it'll say Unhandled Exception Types FileNotFoundException and IOException.
-You put the following in yoru code:
+You put the following in your code:
 try {
   // code
 }
