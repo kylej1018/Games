@@ -4,7 +4,7 @@
  * Do not change anything in these arrays.
  * Use printArray(arr) to print the contents of an array.  Remember that this command will not work for other codes.
  */
-import java.io.*;
+import java.io.File;
 import java.util.*;
 public class Loops3 {
 	public static String loc = "C:\\Users\\kylej\\Desktop\\"; \\FIXME
