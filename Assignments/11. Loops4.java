@@ -25,44 +25,36 @@ public class Loops4 {
 		// #24. Make an array of only the palindromes in stringArray2
   }
     
-	public static int [] populateNum(String s) { // this is how the computer reads the text files.  Don't mess with this.
-		ArrayList <String> arr1 = populateStr(s);
-		int [] arr2 = new int[arr1.size()];
-		for(int i = 0; i < arr1.size(); i++) {
+	public static int[] populateNum(String str) { // this is how the computer reads the text files. Don't mess with this.
+		ArrayList<String> arr1 = populateStr(str);
+		int[] arr2 = new int[arr1.size()];
+		for (int i = 0; i < arr1.size(); i++) {
 			arr2[i] = Integer.parseInt(arr1.get(i));
 		}
 		return arr2;
 	}
 
-	public static ArrayList <String> populateStr(String s) { // this is how the computer reads the text files.  Don't mess with this.
-		ArrayList <String> arr = new ArrayList<String>();
-		String loc2 = loc + "\\" + s + ".txt";
+	public static ArrayList<String> populateStr(String str) { // this is how the computer reads the text files. Don't mess with this.
+		ArrayList<String> arr = new ArrayList<String>();
+		String loc2 = loc + "\\" + str + ".txt";
 		try {
-			File f = new File(loc2);
-			BufferedReader br = new BufferedReader(new FileReader(f));
-			String input = br.readLine();
-			while(input != null) {
+			Scanner s = new Scanner(new File(loc2));
+			while(s.hasNextLine()) {
+				String input = s.nextLine();
 				arr.add(input);
-				input = br.readLine();
 			}
-		}
-		catch(Exception ex) {
+			s.close();
+		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 		return arr;
 	}
-    
-  public static void printArray (int [] arr) { // this prints your arrays for you
-		for(int i = 0; i < arr.length; i++) {
-			System.out.print(" "+arr[i]);
-		}
-		System.out.println();
+
+	public static void printArray(int[] arr) {
+		System.out.println(Arrays.toString(arr));
 	}
 
-	public static void printArray (ArrayList <String> arr) { // this prints your arrays for you
-		for(int i = 0; i < arr.size(); i++) {
-			System.out.print(" "+arr.get(i));
-		}
-		System.out.println();
+	public static void printArray(ArrayList<String> arr) {
+		 System.out.println(arr);
 	}
 }
