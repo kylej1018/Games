@@ -3,7 +3,7 @@
  * Print the task # before each answer.
  * Print the operation you're trying to do, with numbers, such as "67 + 103 = " so that you can check your own math.
  */
-import java.io.*;
+import java.io.File;
 import java.util.*;
 public class Loops {
 	public static void main (String [] args) {
