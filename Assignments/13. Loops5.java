@@ -4,7 +4,7 @@
  * Do not change anything in these arrays.
  * Use printArray(arr) to print the contents of an array or ArrayList.  Remember that this command will not work for other codes.
 */
-import java.io.*;
+import java.io.File;
 import java.util.*;
 public class Loops5 {
 	public static String loc = "C:\\Users\\kylej\\Desktop\\"; \\FIXME
@@ -17,7 +17,7 @@ public class Loops5 {
 		ArrayList <String> stringArray2 = populateStr("StringArray2");
 		ArrayList <String> keywordCipher = populateStr("KeywordCipher");
 
-		Scanner sc = new Scanner(System.in);
+		Scanner s = new Scanner(System.in);
     
 		// #25. Prompt user input.  Translate the input to Pig Latin and print it out.
 		// #26. Prompt user input. Alphabetize each word in the sentence but don't reverse the whole sentence. {the quick brown fox} --> {eht cikqu bnorw fox}
@@ -33,44 +33,36 @@ public class Loops5 {
 		// #30. Identify the keyword in Kyle's keyword cipher.  The encoded phrase is the first element in keywordCipher.  The remaining elements in the list are possible keywords you'll have to try.  Only one will make a coherent sentence.  Print the keywords and their sentences.
   }
     
-	public static int [] populateNum(String s) { // this is how the computer reads the text files.  Don't mess with this.
-		ArrayList <String> arr1 = populateStr(s);
-		int [] arr2 = new int[arr1.size()];
-		for(int i = 0; i < arr1.size(); i++) {
+	public static int[] populateNum(String str) { // this is how the computer reads the text files. Don't mess with this.
+		ArrayList<String> arr1 = populateStr(str);
+		int[] arr2 = new int[arr1.size()];
+		for (int i = 0; i < arr1.size(); i++) {
 			arr2[i] = Integer.parseInt(arr1.get(i));
 		}
 		return arr2;
 	}
 
-	public static ArrayList <String> populateStr(String s) { // this is how the computer reads the text files.  Don't mess with this.
-		ArrayList <String> arr = new ArrayList<String>();
-		String loc2 = loc + "\\" + s + ".txt";
+	public static ArrayList<String> populateStr(String str) { // this is how the computer reads the text files. Don't mess with this.
+		ArrayList<String> arr = new ArrayList<String>();
+		String loc2 = loc + "\\" + str + ".txt";
 		try {
-			File f = new File(loc2);
-			BufferedReader br = new BufferedReader(new FileReader(f));
-			String input = br.readLine();
-			while(input != null) {
+			Scanner s = new Scanner(new File(loc2));
+			while(s.hasNextLine()) {
+				String input = s.nextLine();
 				arr.add(input);
-				input = br.readLine();
 			}
-		}
-		catch(Exception ex) {
+			s.close();
+		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 		return arr;
 	}
-    
-  public static void printArray (int [] arr) { // this prints your arrays for you
-		for(int i = 0; i < arr.length; i++) {
-			System.out.print(" "+arr[i]);
-		}
-		System.out.println();
+
+	public static void printArray(int[] arr) {
+		System.out.println(Arrays.toString(arr));
 	}
 
-	public static void printArray (ArrayList <String> arr) { // this prints your arrays for you
-		for(int i = 0; i < arr.size(); i++) {
-			System.out.print(" "+arr.get(i));
-		}
-		System.out.println();
+	public static void printArray(ArrayList<String> arr) {
+		 System.out.println(arr);
 	}
 }
