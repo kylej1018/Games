@@ -1,0 +1,31 @@
+We're going to learn a tool called PrintWriter.
+Instead of reading .txt files, this should create .txt files.
+Your games should now be capable of storing data between sessions.
+This might include a save point, an achievement, or a "learning" curve for the computer.
+
+PrintWriter requires you to have something called a FileWriter object, which takes a String parameter.
+That String parameter is the name of the file that is going to be created.
+So if you give it the name "Output.txt", it will create a text file (usually recommended).
+"Output.docx" will make a Word document (recommended if you expect the user to read it).
+You can also save it somewhere else by putting the full path name, like "C:\\Users\\kylej\\Desktop\\output.txt".
+
+The way you write a file is like this:
+FileWriter file = new FileWriter("output.txt");
+PrintWriter pw = new PrintWriter(file);
+pw.println("This is what you will see in the file.");
+pw.close();
+
+You can use print, prinln, printf, or any other print tool you used with System.out.
+
+This is also an opportunity to talk about file organization.
+When reading files, sometimes it makes sense to put them in a folder called src, short for source.
+When writing files, sometimes it makes sense to put them in a folder called bin.
+When starting a new Eclipse project, you have the opportunity to create these folders, or to just use the "home" folder. It's up to you what each code requires.
+
+Reminder that you need a try-catch block to handle exceptions.  Tutorial 15.3 will remind you how those work.
+
+Footnote to this tutorial - like in reading, there are different tools available to write text files.
+PrintWriter is nice because it has a lot of built-in functions.
+Another is called BufferedWriter, which, like BufferedReader, works faster.
+If you get to a point in your career where you want to use BufferedWriter, it will be accepted in this course.
+You can look at online examples for how to use it when that time comes.
