@@ -1,6 +1,7 @@
 It's time to learn how to save information between game sessions!
 You know how when the game is no longer running, there's currently no way to access your old high scores?
 It's time we learned one way to save information like scores into an external file, and then access it back when the game starts running again.
+This trick can also be used to save big chunks of text, rather than hard-coding them like we did in Adventure.
 This lesson will focus on .txt files, using Scanner.
 
 If Scanner sounds familiar, it's because we talked about it during Loops.  Scanner was how the user was able to input data into the command prompt.
