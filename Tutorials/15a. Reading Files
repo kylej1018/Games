@@ -13,7 +13,7 @@ File f = new File("C:\\Users\\kylej\\Desktop\\Games\\Java\\Eclipse\\Test\\Test.t
 Scanner s = new Scanner(f);
 
 You can see that File takes a String parameter.
-You can either hard-code the location, like we did in Loops, or you can ask the user to enter a String of the file's location.
+You can either hard-code the location, like we did in Loops, or you can ask the user to enter a String of the file's location and store it in a variable.
 
 The most common way to read a text file is creating an ArrayList of Strings, where each entry is one line of the text file.
 ArrayList<String> arr = new ArrayList<String>();
@@ -57,6 +57,8 @@ will make:
 1 2 3
 4
 5
+
+Reminder that you need a try-catch block to handle exceptions.  Tutorial 15.3 will remind you how those work.
 
 Footnote to this tutorial - there are different tools available to read text files.
 Scanner is nice because you can read different data types.
