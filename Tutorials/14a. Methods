@@ -31,6 +31,7 @@ They go in the parentheses.  You can have as many as you want, separated by comm
 Each parameter needs a variable type (can be primitive or not) and a name that is used in the method definition.
 You only want to pass along parameters needed to execute the method.
 If you can cut down on the number of global variables by passing more parameters, it's usually recommended.
+Empty parentheses are okay.
 When you call a method and pass parameters, you communicate between two places in your code.  A global variable is recommended only if used in lots of methods.
 
 Example:
@@ -64,6 +65,7 @@ That return type should match the return type in the method definition line.  Yo
 When the return line is executed, the method stops immediately and the code returns to where the method was called.
 In case of a void method, you could have
 	return;
+But it will stop the method immediately and return.
 It's occasionally necessary to use multiple returns in a method in various circumstances.
 	public boolean compare (int x, int y) {
 		if(x == y) {
