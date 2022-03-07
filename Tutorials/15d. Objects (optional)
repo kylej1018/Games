@@ -1,0 +1,27 @@
+At this point, you might be noticing something about File f = new File(loc) and Scanner s = new Scanner(f).
+Compare them to int a = 5 or String[] arr = new String[5];
+It's almost as though File and Scanner are variables, right?  They kind of are!
+If you think of f and s are the names of these variables, it looks like a declaration and initialization.
+But if you look at the bit after the word "new", it looks a little like a method call.
+
+When you downloaded java, it came with lots and lots of different variable types.  Not just ints, booleans, Strings, and arrays.
+Those are traditional variables, and you wouldn't have to import anything to use them.
+But when you import a tool, it basically gives you access to a new variable type.
+We don't call it a variable.  We call it an Object.
+
+All objects must be declared and initialized like a variable.
+They then get the keyword new.
+They then get parentheses and parameters as though you're calling a method.
+We don't call it a method if it follows the word new.  We call it a constructor.
+A constructor constructs an Object.
+Objects are always capitalized.
+
+We will get to a point where we are constructing our own Objects.
+But as you're gaining tools to use, you may be starting to notice patterns in how you use them.
+This is intentional.
+All of these tools follow this pattern:
+ArrayList<String> arr = new ArrayList<String>();
+Color c = new Color(Color.black);
+Scanner s = new Scanner(f);
+
+So don't be afraid to name them something more useful.
