@@ -5,10 +5,10 @@ This trick can also be used to save big chunks of text, rather than hard-coding 
 This lesson will focus on .txt files, using Scanner.
 
 If Scanner sounds familiar, it's because we talked about it during Loops.  Scanner was how the user was able to input data into the command prompt.
-The way we initialized it was as follows:
+The way we did it was as follows:
 Scanner s = new Scanner(System.in);
 The parameter System.in tells Scanner to read what the user types into the System.
-To read a text file already on your computer, you'll need a different parameter:
+But to read a text file already on your computer, you'll need a different parameter:
 File f = new File("C:\\Users\\kylej\\Desktop\\Games\\Java\\Eclipse\\Test\\Test.txt");
 Scanner s = new Scanner(f);
 
@@ -58,7 +58,7 @@ will make:
 4
 5
 
-Reminder that you need a try-catch block to handle exceptions.  Tutorial 15.3 will remind you how those work.
+Reminder that you need a try-catch block to handle exceptions.
 
 Footnote to this tutorial - there are different tools available to read text files.
 Scanner is nice because you can read different data types.
