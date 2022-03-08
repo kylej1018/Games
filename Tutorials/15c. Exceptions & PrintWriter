@@ -52,7 +52,10 @@ Null is a handy keyword that simply means "empty."  The variable exists and it r
 You can assign anything to be null - Strings, ArrayLists.
 Null is usually used in cases like this, where declaration and initialization are separated.
 Putting the initializiation in a conditional or a loop makes Java think it may not happen (even if you know it will).
-This also explains the phrasing behind NullPointerException - it just means something is empty.
+This also explains the phrasing behind NullPointerException, which comes up if you invoke a method on something uninitialized - it just means something is empty.
+For instance, you'd get that exception for trying this:
+ArrayList<String> arr;
+int x = arr.size();
 
 But this tutorial is about more than just null.  It's also about organization.
 As your codes get more complicated, and as you keep advancing through CodingBat puzzles, you'll want to review some of the past tutorials.
