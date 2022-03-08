@@ -1,4 +1,4 @@
-In Tutorial 05d, we introduced the idea of Try-Catch.  That one might be worth revisiting when writing files.
+This tutorial's primary purpose is to solidify how you should be reviewing old tutorials.
 
 Question: How do you write a file gradually, updating it at several different moments in your code?
 And, ideally, without putting your ENTIRE code in the try-catch block, which is bad form for the many places an exception might be caught.
@@ -9,7 +9,7 @@ pw.println("output");
 pw.close();
 
 Problem: when assigning your FileWriter to be a new FileWriter, Eclipse says there's an unhandled exception.
-Solution: Put it in the try-catch block.
+Solution: Put it in the try-catch block (Tutorial 05d for review).
 try {
   FileWriter file = new FileWriter(loc);
 }
@@ -53,3 +53,8 @@ You can assign anything to be null - Strings, ArrayLists.
 Null is usually used in cases like this, where declaration and initialization are separated.
 Putting the initializiation in a conditional or a loop makes Java think it may not happen (even if you know it will).
 This also explains the phrasing behind NullPointerException - it just means something is empty.
+
+But this tutorial is about more than just null.  It's also about organization.
+As your codes get more complicated, and as you keep advancing through CodingBat puzzles, you'll want to review some of the past tutorials.
+Variables and Coding Conventions are just as important now as ever.
+Most of the tutorials that probably confused you at first pass might make more sense now that you've seen them in practice.
