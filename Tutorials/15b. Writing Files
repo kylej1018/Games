@@ -17,11 +17,6 @@ pw.close();
 
 You can use print, prinln, printf, or any other print tool you used with System.out.
 
-This is also an opportunity to talk about file organization.
-When reading files, sometimes it makes sense to put them in a folder called src, short for source.
-When writing files, sometimes it makes sense to put them in a folder called bin.
-When starting a new Eclipse project, you have the opportunity to create these folders, or to just use the "home" folder. It's up to you what each code requires.
-
 Reminder that you need a try-catch block to handle exceptions.  Tutorial 15.3 will remind you how those work.
 
 Footnote to this tutorial - like in reading, there are different tools available to write text files.
