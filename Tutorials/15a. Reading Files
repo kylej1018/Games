@@ -14,6 +14,7 @@ Scanner s = new Scanner(f);
 
 You can see that File takes a String parameter.
 You can either hard-code the location, like we did in Loops, or you can ask the user to enter a String of the file's location and store it in a variable.
+You can also just enter the text file's name, like "Test.txt" if it's saved in the Eclipse project folder.
 
 The most common way to read a text file is creating an ArrayList of Strings, where each entry is one line of the text file.
 ArrayList<String> arr = new ArrayList<String>();
