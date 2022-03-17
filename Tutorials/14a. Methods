@@ -30,6 +30,7 @@ Finally, you have the parameters (also called arguments).
 They go in the parentheses.  You can have as many as you want, separated by commas, or a set of empty parentheses.
 Each parameter needs a variable type (can be primitive or not) and a name that is used in the method definition.
 You only want to pass along parameters needed to execute the method.
+You must pass arguments in the same order you define the parameters.  If you define them as int x, String s, ArrayList<String> arr, you have to pass an int, String, and ArrayList<String>, in that order.
 If you can cut down on the number of global variables by passing more parameters, it's usually recommended.
 Empty parentheses are okay.
 When you call a method and pass parameters, you communicate between two places in your code.  A global variable is recommended only if used in lots of methods.
@@ -38,6 +39,8 @@ Example:
 	Making a method to paint something on repeat.
 	public void myPaint(Graphics g) {
 		Color favoriteColor;
+		boolean case1 = true;
+		boolean case2 = true;
 		if(case1) {
 			favoriteColor = Color.black;
 		}
@@ -45,29 +48,38 @@ Example:
 			favoriteColor = Color.blue;
 		}
 		int x = 0;
-		drawCoolHouse(favoriteColor, g); //this is a call to a method written below
+		drawCoolBox(favoriteColor, g); //this is a call to a method written below
 		drawCoolRoof(Color.red, g); //this is a call to another method written below
 	}
 
 	public void drawCoolRoof(Color c, Graphics g) {
-
+		g.setColor(c);
+		g.drawLine(0, 50, 50, 0);
 	}
 
-	public void drawCoolHouse(Color c, Graphics g) {
+	public void drawCoolBox(Color c, Graphics g) {
 		g.setColor(c);
 		g.fillRect(0, 0, 100, 100);
+		drawCoolRoof(Color.yellow, g);
 	}
 
+Notice that the methods drawCoolRoof and drawCoolBox are outside of myPaint.
+Notice also that myPaint is technically a method.
+Notice also that you can call any method in any order, from anywhere, any number of total times.
+Finally, notice in myPaint that the call to drawCoolBox passes two variables, but the call to drawCoolRoof passes one "hard-coded" value and one variable.
+	While it is allowed to hard-code variables in this way, it becomes very difficult to change later on.  Also, very difficult to fix in the event of bugs.
 
-In the body of the method, you will sometimes put a return statement.  It looks like this:
+In the body of a method, you will often put a return statement.  It looks like this:
 	return true;
 That return type should match the return type in the method definition line.  You'll get an error if it doesn't.
+In this case, the return type should be boolean, as in public boolean isGreaterThan(int a, int b) {
+You might have deduced this already, but you don't need a return statement in a method that returns void.
 When the return line is executed, the method stops immediately and the code returns to where the method was called.
 In case of a void method, you could have
 	return;
 But it will stop the method immediately and return.
 It's occasionally necessary to use multiple returns in a method in various circumstances.
-	public boolean compare (int x, int y) {
+	public boolean compare (int x, int y) { // returns true if the two int parameters are equal and false otherwise.
 		if(x == y) {
 			return true;
 		}
@@ -76,21 +88,24 @@ It's occasionally necessary to use multiple returns in a method in various circu
 The method will only return false if return true never happens.  No ELSE statement needed!
 
 Another method example:
-	public int sumArray(int [] arr) { //intended to sum all the numbers in an array.  Takes an array as parameter and returns the sum as an int.
+	public int sumArray(int [] arr) { // intended to sum all the numbers in an array.  Takes an array as parameter and returns the sum as an int.
 		int sum = 0;
-		for(int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			sum += arr[i];
 		}
 		return sum;
 	}
 
-Plan to comment every method with its intended purpose in a header.  You may also want to comment on the return type, parameters, and circumstances where the method is called.
+Note the return type matches the return statement.
+Note the method names - you can probably tell what it's supposed to do even before you get to the comment.
+
+Plan to comment every method with its intended purpose, preferably in a header.  You may also want to comment on the return type, parameters, and circumstances where the method is called.
 By convention, you want to define methods in your code, in the order they're called.
 Usually main() is first, then init(), then methods called from init(), then paint(), then methods called from paint(), then Listeners, then methods called from Listeners().
 Anything that *can* stand alone should probably get its own method, especially if you can name it something obvious.
-	public void drawSplashScreen(Graphics g) should start being in a vast majority of your codes, with the Graphics argument passed from paint or myPaint.
+	public void drawSplashScreen(Graphics g) should start being in a vast majority of your codes, with the Graphics argument passed from myPaint.
 You want to keep your methods short, including main(), init(), paint(), and Listeners.
 
 One other benefit of methods is a lot fewer global variables.  They can probably just be passed as arguments.
 
-Note that methods are different from constructors.  Constructors have no return type, not even void.
+Note that methods are different from constructors.  Constructors have no return type, not even void.  More on constructors in future tutorials.
