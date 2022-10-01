@@ -1,6 +1,7 @@
 Go to this site: https://www.oracle.com/technetwork/java/javase/downloads/index.html
 Download the latest version of Java.  Make sure you're downloading something that says JDK, JRE is not enough.
 Finish whatever installation is required by your system.
+  If it asks, you want the Eclipse IDE for Java Developers.
 Take note of the path - something like C:\Program Files\Java\jdk1.8.0_221\bin
   If you don't know how to do this, open your file explorer and click This PC, then Windows (C:).
   Click Program Files and look for a folder saying "Java."  If not, back up a step, it's in Program Files (x86).
