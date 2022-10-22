@@ -19,18 +19,18 @@ public class Loops5 {
 
 		Scanner s = new Scanner(System.in);
     
-		// #25. Prompt user input.  Translate the input to Pig Latin and print it out.
-		// #26. Prompt user input. Alphabetize each word in the sentence but don't reverse the whole sentence. {the quick brown fox} --> {eht cikqu bnorw fox}
-		// #27. Prompt user input and perform a reverse cipher
+		// #26. Prompt user input.  Translate the input to Pig Latin and print it out.
+		// #27. Prompt user input. Alphabetize each word in the sentence but don't reverse the whole sentence. {the quick brown fox} --> {eht cikqu bnorw fox}
+		// #28. Prompt user input and perform a reverse cipher
 			// original: ABCDEFGHIJKLMNOPQRSTUVWXYZ
 			// coded:    ZYXWVUTSRQPONMLKJIHGFEDCBA
-		// #28. Prompt two user inputs.  The second is a number to dictate advancement of the first in an advance cipher.
+		// #29. Prompt two user inputs.  The second is a number to dictate advancement of the first in an advance cipher.
 			// original:  ABCDEFGHIJKLMNOPQRSTUVWXYZ
 			// coded (3): XYZABCDEFGHIJKLMNOPQRSTUVW
-		// #29. Prompt two user inputs.  The second is a keyword to encode the first in a keyword cipher.
+		// #30. Prompt two user inputs.  The second is a keyword to encode the first in a keyword cipher.
 			// original: ABCDEFGHIJKLMNOPQRSTUVWXYZ
 			// coded:    SKELINGTOABCDFHJMPQRUVWXYZ (keyword = SKELLINGTON, but you can't have duplicate letters)
-		// #30. Identify the keyword in Kyle's keyword cipher.  The encoded phrase is the first element in keywordCipher.  The remaining elements in the list are possible keywords you'll have to try.  Only one will make a coherent sentence.  Print the keywords and their sentences.
+		// #BONUS. Identify the keyword in Kyle's keyword cipher.  The encoded phrase is the first element in keywordCipher.  The remaining elements in the list are possible keywords you'll have to try.  Only one will make a coherent sentence.  Print the keywords and their sentences.
   }
     
 	public static int[] populateNum(String str) { // this is how the computer reads the text files. Don't mess with this.
