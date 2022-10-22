@@ -17,5 +17,9 @@ public class Loops {
 		// #7. Find the factorial of a random number <= 15
 		// #8. Find Fibonacci sequence up to a random number of iterations <= 20 (0, 1, 1, 2, 3, 5, 8, 13, 21...) (look up what this sequence is)
 		// #9. Find the Collatz sequence of a number <= 50 (look up what this is)
+		// #10. Generate a random four-digit number and find the number of iterations to get to Kaprekar's constant (look up what this means)
+		//	Hint on #10. To find a single digit in a four-digit number, use int division to chop off everything to the right.  1524 / 100 = 15.
+		//	Then use % to find the remainder.  15 % 10 = 5.
+		//	Don't forget that before you calculate iterations, you have to check the four-digit number can't have all four digits be the same!
 	}
 }
