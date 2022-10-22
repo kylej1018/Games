@@ -17,12 +17,12 @@ public class Loops4 {
 		ArrayList <String> stringArray2 = populateStr("StringArray2");
 		ArrayList <String> keywordCipher = populateStr("KeywordCipher");
     
-		// #19. Find and delete duplicates in stringArray1 {abc, def, ghi, jkl, abc, mno} --> {abc, def, ghi, jkl, mno}
-		// #20. Add elements to stringArray2 so all have same number of entries as letters in name {a, bc, def, gh} --> {a, bc, bc, def, def, def, gh, gh}
-		// #21. Create an arraylist spelling numbers in unsortedIntArray {1, 2, 3, 4} --> {one, two, three, four}
-		// #22. Alphabetize stringArray2 "insertsort", where the next element is placed in a new array between already alphabetically organized words.
-		// #23. Invert each word in stringArray2 {the quick brown fox} --> {eht kciuq nworb xof}
-		// #24. Make an array of only the palindromes in stringArray2
+		// #20. Find and delete duplicates in stringArray1 {abc, def, ghi, jkl, abc, mno} --> {abc, def, ghi, jkl, mno}
+		// #21. Add elements to stringArray2 so all have same number of entries as letters in name {a, bc, def, gh} --> {a, bc, bc, def, def, def, gh, gh}
+		// #22. Create an arraylist spelling numbers in unsortedIntArray {1, 2, 3, 4} --> {one, two, three, four}
+		// #23. Alphabetize stringArray2 "insertsort", where the next element is placed in a new array between already alphabetically organized words.
+		// #24. Invert each word in stringArray2 {the quick brown fox} --> {eht kciuq nworb xof}
+		// #25. Make an array of only the palindromes in stringArray2
   }
     
 	public static int[] populateNum(String str) { // this is how the computer reads the text files. Don't mess with this.
