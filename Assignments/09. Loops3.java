@@ -16,13 +16,13 @@ public class Loops3 {
 		
 		Random r = new Random();
 		
-		// #17. Take sortedIntArray1 and randomize it in a new array.
-		// #18. "extractsort" unsortedIntArray. The next smallest element goes to the end in new array {1, 4, 2, 3} --> {} {1} {1, 2} {1, 2, 3} {1, 2, 3, 4}
-		// #19. "bubblesort" unsortedIntArray. Trade misplaced duos. {1, 4, 2, 3, 1} --> {1, 2, 4, 3, 1} {1, 2, 3, 4, 1} {1, 2, 3, 1, 4} {1, 2, 1, 3, 4} {1, 1, 2, 3, 4}
-		// #20. "countsort" unsortedIntArray  Find range & make a 2D array.  First dimension = all ints in range.  In second dimension, number of occurrences of each int.
+		// #15. Take sortedIntArray1 and randomize it in a new array.
+		// #16. "extractsort" unsortedIntArray. The next smallest element goes to the end in new array {1, 4, 2, 3} --> {} {1} {1, 2} {1, 2, 3} {1, 2, 3, 4}
+		// #17. "bubblesort" unsortedIntArray. Trade misplaced duos. {1, 4, 2, 3, 1} --> {1, 2, 4, 3, 1} {1, 2, 3, 4, 1} {1, 2, 3, 1, 4} {1, 2, 1, 3, 4} {1, 1, 2, 3, 4}
+		// #18. "countsort" unsortedIntArray  Find range & make a 2D array.  First dimension = all ints in range.  In second dimension, number of occurrences of each int.
 		  // {1, 5, 1, 6, 2, 2, 3, 1, 5} --> {1, 2, 3, 4, 5, 6} --> {1, 1, 1, 2, 2, 3, 5, 5, 6}
 		  //                                 {3, 2, 1, 0, 2, 1}
-		// #21. Generate a random four-digit number and find the number of iterations to get to Kaprekar's constant (look up what this means)
+		// #19. Generate a random four-digit number and find the number of iterations to get to Kaprekar's constant (look up what this means)
 		//	Hint on #21. To find a single digit in a four-digit number, use int division to chop off everything to the right.  1524 / 100 = 15.
 		//	Then use % to find the remainder.  15 % 10 = 5.
 		//	Don't forget that before you calculate iterations, you have to check the four-digit number can't have all four digits be the same!
