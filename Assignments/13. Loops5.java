@@ -30,7 +30,7 @@ public class Loops5 {
 		// #30. Prompt two user inputs.  The second is a keyword to encode the first in a keyword cipher.
 			// original: ABCDEFGHIJKLMNOPQRSTUVWXYZ
 			// coded:    SKELINGTOABCDFHJMPQRUVWXYZ (keyword = SKELLINGTON, but you can't have duplicate letters)
-		// #BONUS. Identify the keyword in Kyle's keyword cipher.  The encoded phrase is the first element in keywordCipher.  The remaining elements in the list are possible keywords you'll have to try.  Only one will make a coherent sentence.  Print the keywords and their sentences.
+		// #31. Identify the keyword in Kyle's keyword cipher.  The encoded phrase is the first element in keywordCipher.  The remaining elements in the list are possible keywords you'll have to try.  Only one will make a coherent sentence.  Print the keywords and their sentences.
   }
     
 	public static int[] populateNum(String str) { // this is how the computer reads the text files. Don't mess with this.
