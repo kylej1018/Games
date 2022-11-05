@@ -1,9 +1,7 @@
-This tutorial's primary purpose is to solidify how you should be reviewing old tutorials.
-
 Question: How do you write a file gradually, updating it at several different moments in your code?
 And, ideally, without putting your ENTIRE code in the try-catch block, which is bad form for the many places an exception might be caught.
 Normally the syntax goes like this:
-FileWriter file = new FileWriter(loc);
+FileWriter file = new FileWriter(loc); //where loc is a String location on your computer where that file might be found, like "Desktop/MyFile.txt"
 PrintWriter pw = new PrintWriter(file);
 pw.println("output");
 pw.close();
